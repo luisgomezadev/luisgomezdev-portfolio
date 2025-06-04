@@ -49,11 +49,12 @@ export const PROJECTS = [
     experience: "Experiencia Personal",
     technologies: [
       "HTML",
-      "CSS",
-      "Sass",
+      "Tailwind CSS",
       "TypeScript",
       "Angular",
-      "Angular Material"
+      "Java",
+      "Spring Boot",
+      "MySQL"
     ]
   },
   {
