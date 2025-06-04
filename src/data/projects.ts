@@ -2,7 +2,7 @@ export const PROJECTS = [
   {
     title: "Aldea",
     description: "Software de planificación estratégica empresarial diseñado para centralizar la definición, seguimiento y análisis de objetivos organizacionales. Responsable del desarrollo frontend con Angular, enfocado en la integración de microservicios, arquitectura modular basada en componentes y diseño de interfaces centradas en la experiencia de usuario.",
-    image: "src/assets/projects_images/aldea.webp",
+    image: "/projects_images/aldea.webp",
     className: 'lg:row-span-4 lg:col-span-4',
     experience: "Experiencia Laboral",
     technologies: [
@@ -17,7 +17,7 @@ export const PROJECTS = [
   {
     title: "Zona ser Afiliado",
     description: "Oficina virtual de Mutualser EPS a través de la cual los afiliados y prestadores pueden gestionar sus servicios de salud de forma virtual. Encargado del mantenimiento de la aplicación frontend en la sección de portabilidad, que permite a los afiliados gestionar su cambio de EPS de manera sencilla y rápida.",
-    image: "src/assets/projects_images/zonaser.webp",
+    image: "/projects_images/zonaser.webp",
     className: 'lg:row-span-3 lg:col-span-4',
     experience: "Experiencia Laboral",
     technologies: [
@@ -44,7 +44,7 @@ export const PROJECTS = [
   {
     title: "PlayMatch",
     description: "Aplicación web que permitirá registrar y consultar canchas sinteticas, hacer reservas y gestionar equipos. Está en desarrollo.",
-    image: "src/assets/projects_images/playmatch.webp",
+    image: "/projects_images/playmatch.webp",
     className: 'lg:row-span-3 lg:col-span-4',
     experience: "Experiencia Personal",
     technologies: [

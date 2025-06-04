@@ -1,15 +1,24 @@
 ---
+import Aldea from "@/assets/projects_images/aldea.webp";
+import PlayMatch from "@/assets/projects_images/playmatch.webp";
+import ZonaSer from "@/assets/projects_images/zonaser.webp";
+
 import Section from "./Section.astro";
-import { PROJECTS } from "../data/projects";
 import CardItem from "./CardItem.astro";
 import ProjectIcon from "../assets/icons/ProjectIcon.astro";
 import ButtonLink from "./ButtonLink.astro";
 import GitHub from "../assets/icons/GitHub.astro";
 
+import { PROJECTS } from "../data/projects";
+
 const { id } = Astro.props;
 ---
 
-<Section title="Proyectos" id={id} subtitle="Algunos de los proyectos que he desarrollado">
+<Section
+  title="Proyectos"
+  id={id}
+  subtitle="Algunos de los proyectos que he desarrollado"
+>
   <div
     class="w-full grid auto-rows-[auto] lg:auto-rows-[150px] grid-cols-8 gap-4"
   >

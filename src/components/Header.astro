@@ -1,5 +1,5 @@
 ---
-import Background from "@/assets/images/background_perfil.webp";
+import Memoji from "@/assets/images/memoji.png";
 import GitHub from "../assets/icons/GitHub.astro";
 import LinkedIn from "../assets/icons/LinkedIn.astro";
 import ButtonLink from "./ButtonLink.astro";
@@ -16,7 +16,7 @@ const { id } = Astro.props;
     <div class="absolute bg_gradient top-0 left-0 bottom-0 right-0 z-[2]"></div>
     <img
       class="absolute w-full h-full object-cover left-0 top-0"
-      src={Background.src}
+      src="/images/background_perfil.webp"
       alt="Fondo de perfil"
     />
     <div class="absolute z-[3] left-0 bottom-0 flex flex-col p-5">
@@ -60,7 +60,7 @@ const { id } = Astro.props;
     class="col-span-3 lg:col-span-1 row-span-1 flex items-center justify-center flex-col gap-3"
   >
     <div class="relative flex items-center justify-center">
-      <img class="w-12" src="src/assets/images/memoji.png" alt="Memoji" />
+      <img class="w-12" src="/images/memoji.png" alt="Memoji" />
       <div
         class="w-22 h-22 bg-[#98D0FF] absolute rounded-full opacity-30 border-2 border-white animate__animated animate__pulse animate__infinite animate__fast"
       >
