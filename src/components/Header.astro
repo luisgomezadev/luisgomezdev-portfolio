@@ -2,6 +2,7 @@
 import GitHub from "../assets/icons/GitHub.astro";
 import LinkedIn from "../assets/icons/LinkedIn.astro";
 import CvIcon from "../assets/icons/CvIcon.astro";
+import EmailIcon from "../assets/icons/EmailIcon.astro";
 
 import ButtonLink from "./ButtonLink.astro";
 import CardItem from "./CardItem.astro";
@@ -26,7 +27,7 @@ const { id } = Astro.props;
       >
       <span class="text-lg font-medium leading-9">Desarrollador Full-Stack</span
       >
-      <div class="flex flex-wrap items-center gap-2 mt-1 lg:gap-3">
+      <div class="flex flex-wrap items-center gap-3 mt-1">
         <ButtonLink href="https://github.com/LuisGomez11">
           <GitHub color="#000" size={20} />
           <span class="hidden lg:flex">GitHub</span>
@@ -35,7 +36,14 @@ const { id } = Astro.props;
           <LinkedIn color="#000" size={20} />
           <span class="hidden lg:flex">LinkedIn</span>
         </ButtonLink>
-        <ButtonLink href="/files/CV_Luis_Gomez_2025.pdf">
+        <ButtonLink href="mailto:luisgomez24g@gmail.com">
+          <EmailIcon color="#000" size={20} />
+          <span class="hidden lg:flex">Email</span>
+        </ButtonLink>
+        <ButtonLink
+          class="inline-flex lg:hidden"
+          href="/files/CV_Luis_Gomez_2025.pdf"
+        >
           <CvIcon color="#000" size={20} />
           <span class="hidden lg:flex">Descargar CV</span>
         </ButtonLink>
