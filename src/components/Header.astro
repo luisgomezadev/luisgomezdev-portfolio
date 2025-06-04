@@ -1,7 +1,8 @@
 ---
-import Memoji from "@/assets/images/memoji.png";
 import GitHub from "../assets/icons/GitHub.astro";
 import LinkedIn from "../assets/icons/LinkedIn.astro";
+import CvIcon from "../assets/icons/CvIcon.astro";
+
 import ButtonLink from "./ButtonLink.astro";
 import CardItem from "./CardItem.astro";
 
@@ -33,6 +34,10 @@ const { id } = Astro.props;
         <ButtonLink href="https://www.linkedin.com/in/luisgomezdev/">
           <LinkedIn color="#000" size={20} />
           <span class="hidden lg:flex">LinkedIn</span>
+        </ButtonLink>
+        <ButtonLink href="/files/CV_Luis_Gomez_2025.pdf">
+          <CvIcon color="#000" size={20} />
+          <span class="hidden lg:flex">Descargar CV</span>
         </ButtonLink>
       </div>
     </div>
