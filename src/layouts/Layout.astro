@@ -10,10 +10,31 @@ const { title, description } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="src/assets/images/LG_logo.jpg" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <title>{title}</title>
+    <meta
+      name="keywords"
+      content="Luis Gómez, Software Developer, Web Developer, FullStack Developer, Angular, TypeScript, JavaScript, Java, Bootstrap, Desarrollador"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://luisgomeza.vercel.app/" />
+    <meta property="og:title" content="Luis Gómez | Portafolio" />
+    <meta property="og:site_name" content="Luis Gómez | Portafolio" />
+    <meta
+      property="og:description"
+      content="Bienvenidos a mi portafolio. Soy Luis Gómez, ingeniero de sistemas y desarrollador web con más de cuatro años de experiencia en el diseño, desarrollo y mantenimiento de aplicaciones web."
+    />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://luisgomeza.vercel.app/" />
+    <meta property="twitter:title" content="Luis Gómez | Portafolio" />
+    <meta
+      property="twitter:description"
+      content="Bienvenidos a mi portafolio. Soy Luis Gómez, ingeniero de sistemas y desarrollador web con más de cuatro años de experiencia en el diseño, desarrollo y mantenimiento de aplicaciones web."
+    />
   </head>
   <body class="bg-black text-gray-100">
     <Navbar />
