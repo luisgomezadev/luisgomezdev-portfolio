@@ -1,0 +1,56 @@
+---
+import Section from "./Section.astro";
+import { PROJECTS } from "../data/projects";
+import CardItem from "./CardItem.astro";
+import ProjectIcon from "../assets/icons/ProjectIcon.astro";
+import ButtonLink from "./ButtonLink.astro";
+import GitHub from "../assets/icons/GitHub.astro";
+
+const { id } = Astro.props;
+---
+
+<Section title="Proyectos" id={id} subtitle="Algunos de los proyectos que he desarrollado">
+  <div
+    class="w-full grid auto-rows-[auto] lg:auto-rows-[150px] grid-cols-8 gap-4"
+  >
+    {
+      PROJECTS.map((project, index) => (
+        <CardItem
+          class={`py-8 px-12 row-span-1 col-span-8 ${project.className}`}
+        >
+          <div class="flex flex-col h-full gap-2">
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-3 opacity-50 mb-2">
+                <ProjectIcon class="w-6 h-6" />
+                <span class="text-lg font-semibold uppercase">
+                  {project.experience}
+                </span>
+              </div>
+              {project.link && (
+                <ButtonLink href={project.link}>
+                  <GitHub color="#000" size={20} />
+                  <span class="hidden lg:flex">Repo</span>
+                </ButtonLink>
+              )}
+            </div>
+            <h3 class="text-2xl font-bold mb-2">{project.title}</h3>
+            <p class="text-base opacity-70">{project.description}</p>
+            <div class="flex items-center flex-wrap gap-2 mb-4 ">
+              {project.technologies.map((t) => (
+                <span class="text-sm font-semibold">{t}</span>
+              ))}
+            </div>
+            {project.image && (
+              <img
+                class="w-full h-60 object-cover rounded-lg"
+                src={project.image}
+                alt={project.title}
+                loading="lazy"
+              />
+            )}
+          </div>
+        </CardItem>
+      ))
+    }
+  </div>
+</Section>

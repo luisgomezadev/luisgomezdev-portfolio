@@ -1,0 +1,85 @@
+---
+import Background from "@/assets/images/background_perfil.webp";
+import GitHub from "../assets/icons/GitHub.astro";
+import LinkedIn from "../assets/icons/LinkedIn.astro";
+import ButtonLink from "./ButtonLink.astro";
+import CardItem from "./CardItem.astro";
+
+const { id } = Astro.props;
+---
+
+<section
+  id={id}
+  class="w-full grid auto-rows-[172px] grid-cols-6 gap-4 scroll-mt-30"
+>
+  <CardItem class="col-span-6 lg:col-span-4 row-span-2">
+    <div class="absolute bg_gradient top-0 left-0 bottom-0 right-0 z-[2]"></div>
+    <img
+      class="absolute w-full h-full object-cover left-0 top-0"
+      src={Background.src}
+      alt="Fondo de perfil"
+    />
+    <div class="absolute z-[3] left-0 bottom-0 flex flex-col p-5">
+      <span class="text-3xl font-bold leading-7"
+        >Luis Alberto Gómez Arteaga</span
+      >
+      <span class="text-lg font-medium leading-9">Desarrollador Full-Stack</span
+      >
+      <div class="flex flex-wrap items-center gap-2 mt-1 lg:gap-3">
+        <ButtonLink href="https://github.com/LuisGomez11">
+          <GitHub color="#000" size={20} />
+          <span class="hidden lg:flex">GitHub</span>
+        </ButtonLink>
+        <ButtonLink href="https://www.linkedin.com/in/luisgomezdev/">
+          <LinkedIn color="#000" size={20} />
+          <span class="hidden lg:flex">LinkedIn</span>
+        </ButtonLink>
+      </div>
+    </div>
+  </CardItem>
+  <CardItem
+    class="col-span-6 lg:col-span-2 row-span-1 flex flex-col py-5 px-7 gap-2"
+  >
+    <h2 class="text-2xl font-bold z-[1]">Sobre mí</h2>
+    <p class="text-base w-full z-[1] opacity-70">
+      Ingeniero de Sistemas y Desarrollador Web de Cartagena, Colombia.
+      Apasionado por crear soluciones tecnológicas eficientes.
+    </p>
+  </CardItem>
+  <CardItem
+    class="col-span-3 lg:col-span-1 row-span-1 flex items-center justify-center flex-col gap-2"
+  >
+    <p class="text-7xl z-[1] font-bold flex items-center gap-1">
+      <span>+</span><span>3</span>
+    </p>
+    <p class="text-sm font-semibold max-w-fit opacity-70 z-[1]">
+      Años de experiencia
+    </p>
+  </CardItem>
+  <CardItem
+    class="col-span-3 lg:col-span-1 row-span-1 flex items-center justify-center flex-col gap-3"
+  >
+    <div class="relative flex items-center justify-center">
+      <img class="w-12" src="src/assets/images/memoji.png" alt="Memoji" />
+      <div
+        class="w-22 h-22 bg-[#98D0FF] absolute rounded-full opacity-30 border-2 border-white animate__animated animate__pulse animate__infinite animate__fast"
+      >
+      </div>
+    </div>
+    <div class="mt-3">
+      <span class="text-sm font-semibold max-w-fit opacity-70"
+        >Cartagena, Colombia</span
+      >
+    </div>
+  </CardItem>
+</section>
+<style>
+  .bg_gradient {
+    background: #000000;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.014) 100%
+    );
+  }
+</style>
