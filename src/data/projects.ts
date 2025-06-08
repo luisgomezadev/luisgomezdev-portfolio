@@ -43,7 +43,7 @@ export const PROJECTS = [
   },
   {
     title: "PlayMatch",
-    description: "Aplicación web que permitirá registrar y consultar canchas sinteticas, hacer reservas y gestionar equipos. Está en desarrollo.",
+    description: "Api que permite registrar y consultar canchas sinteticas, hacer reservas, gestionar equipos, entre otras cosas. Se está implementando Spring Security...",
     image: "/projects_images/playmatch.webp",
     link: "https://github.com/LuisGomez11/Backend-PlayMatch",
     className: 'lg:row-span-3 lg:col-span-4',
