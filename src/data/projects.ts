@@ -49,10 +49,6 @@ export const PROJECTS = [
     className: 'lg:row-span-3 lg:col-span-4',
     experience: "Experiencia Personal",
     technologies: [
-      "HTML",
-      "Tailwind CSS",
-      "TypeScript",
-      "Angular",
       "Java",
       "Spring Boot",
       "MySQL"
