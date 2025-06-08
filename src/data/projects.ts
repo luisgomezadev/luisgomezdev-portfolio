@@ -43,7 +43,7 @@ export const PROJECTS = [
   },
   {
     title: "PlayMatch",
-    description: "Api desarrollada con Spring Boot utilizando una arquitectura hexagonal que permite registrar y consultar canchas sinteticas, hacer reservas, gestionar equipos, entre otras cosas. Se está implementando Spring Security...",
+    description: "Api desarrollada con Spring Boot utilizando una arquitectura hexagonal que permite registrar y consultar canchas sinteticas, hacer reservas, gestionar equipos, entre otras cosas. Esta aplicación es parte de un proyecto personal que busca facilitar la organización de partidos de fútbol entre amigos.",
     image: "/projects_images/playmatch.webp",
     link: "https://github.com/LuisGomez11/Backend-PlayMatch",
     className: 'lg:row-span-3 lg:col-span-4',
@@ -51,6 +51,8 @@ export const PROJECTS = [
     technologies: [
       "Java",
       "Spring Boot",
+      "Spring Data JPA",
+      "Spring Security",
       "MySQL"
     ]
   },
