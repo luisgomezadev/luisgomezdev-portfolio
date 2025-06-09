@@ -1,6 +1,6 @@
-# 💻 Portafolio | Luis Gómez
+# ⚽ Api de PlayMatch
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Astro-100%25-orange" alt="Astro 100%">
-  <img src="https://img.shields.io/badge/TailwindCSS-100%25-blue" alt="TailwindCSS 100%">
+  <img src="https://img.shields.io/badge/Java-100%25-orange" alt="Java 100%">
+  <img src="https://img.shields.io/badge/Spring boot-100%25-green" alt="Spring 100%">
 </div>
