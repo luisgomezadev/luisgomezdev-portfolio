@@ -1,6 +1,6 @@
 ---
-import Navbar from "../components/Navbar.astro";
-import Footer from "../components/Footer.astro";
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
 
 const { title, description } = Astro.props;
 ---
@@ -36,7 +36,7 @@ const { title, description } = Astro.props;
       content="Bienvenidos a mi portafolio. Soy Luis Gómez, ingeniero de sistemas y desarrollador web con más de cuatro años de experiencia en el diseño, desarrollo y mantenimiento de aplicaciones web."
     />
   </head>
-  <body class="bg-gray-800 text-gray-200">
+  <body class="text-gray-200 bg-gray-800">
     <Navbar />
     <main class="container max-w-6xl mx-auto px-4 mt-22 mb-14 flex flex-col gap-20">
       <slot />
@@ -46,14 +46,14 @@ const { title, description } = Astro.props;
 </html>
 
 <style is:global>
-  @import "tailwindcss";
-  @import "animate.css/animate.min.css";
+  @import 'tailwindcss';
+  @import 'animate.css/animate.min.css';
   html,
   body {
     margin: 0;
     padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      "Helvetica Neue", Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+      sans-serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
   }
