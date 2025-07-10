@@ -22,13 +22,13 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LuisGomez11/luisgomezdev-portfolio.git"
+    "url": "git+https://github.com/luisgomezadev/luisgomezdev-portfolio.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/LuisGomez11/luisgomezdev-portfolio/issues"
+    "url": "https://github.com/luisgomezadev/luisgomezdev-portfolio/issues"
   },
-  "homepage": "https://github.com/LuisGomez11/luisgomezdev-portfolio#readme"
+  "homepage": "https://github.com/luisgomezadev/luisgomezdev-portfolio#readme"
 }

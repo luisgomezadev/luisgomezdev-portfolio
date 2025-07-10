@@ -1,19 +1,16 @@
 ---
-import GitHub from "../assets/icons/GitHub.astro";
-import LinkedIn from "../assets/icons/LinkedIn.astro";
-import CvIcon from "../assets/icons/CvIcon.astro";
-import EmailIcon from "../assets/icons/EmailIcon.astro";
+import GitHub from '../assets/icons/GitHub.astro';
+import LinkedIn from '../assets/icons/LinkedIn.astro';
+import CvIcon from '../assets/icons/CvIcon.astro';
+import EmailIcon from '../assets/icons/EmailIcon.astro';
 
-import ButtonLink from "./ButtonLink.astro";
-import CardItem from "./CardItem.astro";
+import ButtonLink from './ButtonLink.astro';
+import CardItem from './CardItem.astro';
 
 const { id } = Astro.props;
 ---
 
-<section
-  id={id}
-  class="w-full grid auto-rows-[172px] grid-cols-6 gap-4 scroll-mt-30"
->
+<section id={id} class="w-full grid auto-rows-[172px] grid-cols-6 gap-4 scroll-mt-30">
   <CardItem class="col-span-6 lg:col-span-4 row-span-2">
     <div class="absolute bg_gradient top-0 left-0 bottom-0 right-0 z-[2]"></div>
     <img
@@ -22,13 +19,10 @@ const { id } = Astro.props;
       alt="Fondo de perfil"
     />
     <div class="absolute z-[3] left-0 bottom-0 flex flex-col p-5">
-      <span class="text-3xl font-bold leading-7"
-        >Luis Alberto Gómez Arteaga</span
-      >
-      <span class="text-lg font-medium leading-9">Desarrollador Full-Stack</span
-      >
+      <span class="text-3xl font-bold leading-7">Luis Alberto Gómez Arteaga</span>
+      <span class="text-lg font-medium leading-9">Desarrollador Full-Stack</span>
       <div class="flex flex-wrap items-center gap-3 mt-1">
-        <ButtonLink href="https://github.com/LuisGomez11">
+        <ButtonLink href="https://github.com/luisgomezadev">
           <GitHub color="#000" size={20} />
           <span class="hidden lg:flex">GitHub</span>
         </ButtonLink>
@@ -40,23 +34,18 @@ const { id } = Astro.props;
           <EmailIcon color="#000" size={20} />
           <span class="hidden lg:flex">Email</span>
         </ButtonLink>
-        <ButtonLink
-          class="inline-flex lg:hidden"
-          href="/files/CV_Luis_Gomez_2025.pdf"
-        >
+        <ButtonLink class="inline-flex lg:hidden" href="/files/CV_Luis_Gomez_2025.pdf">
           <CvIcon color="#000" size={20} />
           <span class="hidden lg:flex">Descargar CV</span>
         </ButtonLink>
       </div>
     </div>
   </CardItem>
-  <CardItem
-    class="col-span-6 lg:col-span-2 row-span-1 flex flex-col py-5 px-7 gap-2"
-  >
+  <CardItem class="col-span-6 lg:col-span-2 row-span-1 flex flex-col py-5 px-7 gap-2">
     <h2 class="text-2xl font-bold z-[1]">Sobre mí</h2>
     <p class="text-base w-full z-[1] opacity-80">
-      Ingeniero de Sistemas y Desarrollador Web de Cartagena, Colombia.
-      Apasionado por crear soluciones tecnológicas eficientes.
+      Ingeniero de Sistemas y Desarrollador Web de Cartagena, Colombia. Apasionado por crear
+      soluciones tecnológicas eficientes.
     </p>
   </CardItem>
   <CardItem
@@ -65,9 +54,7 @@ const { id } = Astro.props;
     <p class="text-7xl z-[1] font-bold flex items-center gap-1">
       <span>+</span><span>4</span>
     </p>
-    <p class="text-sm font-semibold max-w-fit opacity-80 z-[1]">
-      Años de experiencia
-    </p>
+    <p class="text-sm font-semibold max-w-fit opacity-80 z-[1]">Años de experiencia</p>
   </CardItem>
   <CardItem
     class="col-span-3 lg:col-span-1 row-span-1 flex items-center justify-center flex-col gap-3"
@@ -80,19 +67,13 @@ const { id } = Astro.props;
       </div>
     </div>
     <div class="mt-3">
-      <span class="text-sm font-semibold max-w-fit opacity-80"
-        >Cartagena, Colombia</span
-      >
+      <span class="text-sm font-semibold max-w-fit opacity-80">Cartagena, Colombia</span>
     </div>
   </CardItem>
 </section>
 <style>
   .bg_gradient {
     background: #000000;
-    background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0.014) 100%
-    );
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.014) 100%);
   }
 </style>

@@ -45,7 +45,7 @@ export const PROJECTS = [
     title: "PlayMatch",
     description: "Aplicación desarrolada con Spring Boot y Angular que permite registrar y consultar canchas sinteticas, hacer reservas, gestionar equipos, entre otras cosas. Esta aplicación es parte de un proyecto personal que busca facilitar la organización de partidos de fútbol entre amigos.",
     image: "/projects_images/playm.webp",
-    link: "https://github.com/LuisGomez11/Backend-PlayMatch",
+    link: "https://github.com/luisgomezadev/Backend-PlayMatch",
     live: 'https://playmatch-lgsoftworks.vercel.app/',
     className: 'lg:row-span-3 lg:col-span-4',
     experience: "Experiencia Personal",
@@ -61,7 +61,7 @@ export const PROJECTS = [
   {
     title: "Agenda de Personas",
     description: "Aplicación Full Stack desarrollada durante mi formación inicial. Implementa operaciones CRUD sobre un listado de personas, con backend en Spring Boot y frontend en Angular, utilizando Bootstrap para diseño responsivo.",
-    link: "https://github.com/LuisGomez11/api-angular-spring",
+    link: "https://github.com/luisgomezadev/api-angular-spring",
     className: 'lg:row-span-2 lg:col-span-4',
     experience: "Experiencia Personal",
     technologies: [
