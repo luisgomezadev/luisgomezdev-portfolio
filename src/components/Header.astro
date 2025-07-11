@@ -3,6 +3,10 @@ import GitHub from '../assets/icons/GitHub.astro';
 import LinkedIn from '../assets/icons/LinkedIn.astro';
 import CvIcon from '../assets/icons/CvIcon.astro';
 import EmailIcon from '../assets/icons/EmailIcon.astro';
+import AngularIcon from '../assets/icons/AngularIcon.astro';
+import TypeScriptIcon from '../assets/icons/TypeScriptIcon.astro';
+import SpringIcon from '../assets/icons/SpringIcon.astro';
+import VueIcon from '../assets/icons/VueIcon.astro';
 
 import ButtonLink from './ButtonLink.astro';
 import CardItem from './CardItem.astro';
@@ -10,70 +14,102 @@ import CardItem from './CardItem.astro';
 const { id } = Astro.props;
 ---
 
-<section id={id} class="w-full grid auto-rows-[172px] grid-cols-6 gap-4 scroll-mt-30">
-  <CardItem class="col-span-6 lg:col-span-4 row-span-2">
-    <div class="absolute bg_gradient top-0 left-0 bottom-0 right-0 z-[2]"></div>
-    <img
-      class="absolute w-full h-full object-cover left-0 top-0"
-      src="/images/background_perfil.webp"
-      alt="Fondo de perfil"
-    />
-    <div class="absolute z-[3] left-0 bottom-0 flex flex-col p-5">
-      <span class="text-3xl font-bold leading-7">Luis Alberto Gómez Arteaga</span>
-      <span class="text-lg font-medium leading-9">Desarrollador Full-Stack</span>
-      <div class="flex flex-wrap items-center gap-3 mt-1">
-        <ButtonLink href="https://github.com/luisgomezadev">
-          <GitHub color="#000" size={20} />
-          <span class="hidden lg:flex">GitHub</span>
-        </ButtonLink>
-        <ButtonLink href="https://www.linkedin.com/in/luisgomezdev/">
-          <LinkedIn color="#000" size={20} />
-          <span class="hidden lg:flex">LinkedIn</span>
-        </ButtonLink>
-        <ButtonLink href="mailto:luisgomez24g@gmail.com">
-          <EmailIcon color="#000" size={20} />
-          <span class="hidden lg:flex">Email</span>
-        </ButtonLink>
-        <ButtonLink class="inline-flex lg:hidden" href="/files/CV_Luis_Gomez_2025.pdf">
-          <CvIcon color="#000" size={20} />
-          <span class="hidden lg:flex">Descargar CV</span>
-        </ButtonLink>
+<section
+  id={id}
+  class="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-5rem)] py-12 scroll-mt-30"
+>
+  <div class="flex flex-col gap-6">
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 dark:text-white">
+      Hola, soy Luis Gómez Arteaga
+    </h1>
+    <h2
+      class="text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-800 dark:text-white flex items-center aos-init aos-animate"
+      data-aos-delay="600"
+      data-aos="fade-right"
+    >
+      <span class="typing-text">Desarrollador FullStack</span>
+    </h2>
+    <p class="text-lg text-gray-800 dark:text-white leading-relaxed max-w-lg">
+      Ingeniero de sistemas y desarrollador web con más de cuatro años de experiencia en el diseño,
+      desarrollo y mantenimiento de aplicaciones web.
+    </p>
+    <div class="flex items-center space-x-4">
+      <span class="text-gray-800 dark:text-white font-medium">Sígueme en:</span>
+      <div class="flex space-x-3">
+        <a
+          href="https://github.com/luisgomezadev"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-10 h-10 bg-gray-800 text-white dark:bg-white rounded-full flex items-center shadow-2xl justify-center dark:text-gray-800 hover:text-white dark:hover:bg-white dark:hover:text-gray-800 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+          aria-label="Visit GitHub"
+        >
+          <GitHub class="w-6 h-6" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/luisgomezdev/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-10 h-10 bg-gray-800 text-white dark:bg-white rounded-full flex items-center shadow-2xl justify-center dark:text-gray-800 hover:text-white dark:hover:bg-white dark:hover:text-gray-800 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+          aria-label="Visit LinkedIn"
+        >
+          <LinkedIn class="w-6 h-6" />
+        </a>
       </div>
     </div>
-  </CardItem>
-  <CardItem class="col-span-6 lg:col-span-2 row-span-1 flex flex-col py-5 px-7 gap-2">
-    <h2 class="text-2xl font-bold z-[1]">Sobre mí</h2>
-    <p class="text-base w-full z-[1] opacity-80">
-      Ingeniero de Sistemas y Desarrollador Web de Cartagena, Colombia. Apasionado por crear
-      soluciones tecnológicas eficientes.
-    </p>
-  </CardItem>
-  <CardItem
-    class="col-span-3 lg:col-span-1 row-span-1 flex items-center justify-center flex-col gap-2"
-  >
-    <p class="text-7xl z-[1] font-bold flex items-center gap-1">
-      <span>+</span><span>4</span>
-    </p>
-    <p class="text-sm font-semibold max-w-fit opacity-80 z-[1]">Años de experiencia</p>
-  </CardItem>
-  <CardItem
-    class="col-span-3 lg:col-span-1 row-span-1 flex items-center justify-center flex-col gap-3"
-  >
-    <div class="relative flex items-center justify-center">
-      <img class="w-12" src="/images/memoji.png" alt="Memoji" />
-      <div
-        class="w-22 h-22 bg-[#98D0FF] absolute rounded-full opacity-30 border-2 border-white animate__animated animate__pulse animate__infinite animate__fast"
-      >
-      </div>
+    <div class="flex items-center gap-4">
+      <ButtonLink href="/files/CV_Luis_Gomez_2025.pdf">
+        <CvIcon color="#000" size={20} />
+        Descargar mi CV
+      </ButtonLink>
+      <ButtonLink href="mailto:luisgomeza@gmail">
+        <EmailIcon color="#000" size={20} />
+        Contactar
+      </ButtonLink>
     </div>
-    <div class="mt-3">
-      <span class="text-sm font-semibold max-w-fit opacity-80">Cartagena, Colombia</span>
+  </div>
+  <div class="relative flex justify-center items-center">
+    <div class="relative">
+      <img
+        src="/images/foto_perfil.webp"
+        alt="Luis Gómez"
+        class="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-cover rounded-full shadow-2xl hover:-translate-y-2 transition-all duration-300"
+      />
     </div>
-  </CardItem>
+    <div
+      class="absolute top-0 left-8 sm:left-20 w-12 h-12 sm:w-16 sm:h-16 bg-gray-800 text-white dark:bg-white dark:text-gray-800 dark:border rounded-full drop-shadow-2xl shadow-lg dark:shadow-gray-800 flex items-center justify-center hover:scale-110 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-float"
+    >
+      <AngularIcon class="w-6 h-6 sm:w-8 sm:h-8" />
+    </div>
+    <div
+      class="absolute top-0 right-8 md:right-0 w-12 h-12 sm:w-16 sm:h-16 bg-gray-800 text-white dark:bg-white dark:text-gray-800 dark:border rounded-full drop-shadow-2xl shadow-lg dark:shadow-gray-800 flex items-center justify-center hover:scale-110 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-float"
+    >
+      <TypeScriptIcon class="w-6 h-6 sm:w-8 sm:h-8" />
+    </div>
+    <div
+      class="absolute bottom-0 left-8 sm:left-10 w-12 h-12 sm:w-16 sm:h-16 bg-gray-800 text-white dark:bg-white dark:text-gray-800 dark:border rounded-full drop-shadow-2xl shadow-lg dark:shadow-gray-800 flex items-center justify-center hover:scale-110 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-float"
+    >
+      <SpringIcon class="w-6 h-6 sm:w-8 sm:h-8" />
+    </div>
+    <div
+      class="absolute bottom-8 sm:bottom-10 right-10 sm:right-12 w-12 h-12 sm:w-16 sm:h-16 bg-gray-800 text-white dark:bg-white dark:text-gray-800 dark:border rounded-full drop-shadow-2xl shadow-lg dark:shadow-gray-800 flex items-center justify-center hover:scale-110 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-float"
+    >
+      <VueIcon class="w-6 h-6 sm:w-8 sm:h-8" />
+    </div>
+  </div>
 </section>
 <style>
-  .bg_gradient {
-    background: #000000;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.014) 100%);
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
   }
 </style>

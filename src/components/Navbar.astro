@@ -4,24 +4,18 @@ import CvIcon from '../assets/icons/CvIcon.astro';
 import ButtonLink from './ButtonLink.astro';
 ---
 
-<header class="h-[5rem] fixed top-0 left-0 z-10 w-full p-3 sm:p-0">
+<header class="fixed top-0 left-0 w-full p-3 sm:p-0 sm:shadow-lg z-50">
   <nav
-    class="mx-auto max-w-6xl w-full text-white flex items-center py-2 sm:py-5 px-5 justify-between backdrop-blur-3xl rounded-2xl sm:rounded-none bg-gray-600/30 sm:bg-transparent border-2 sm:border-0 border-gray-500"
+    class="mx-auto max-w-7xl w-full text-white flex items-center backdrop-blur-3xl sm:backdrop-blur-none py-2 sm:py-5 px-5 justify-between rounded-2xl sm:rounded-none sm:bg-gray-800 bg-transparent border-2 sm:border-0 border-gray-500"
   >
     <div class="w-7 h-7 bg-white items-center justify-center dark:bg-moonlit p-4 hidden sm:flex">
       <span class="text-black text-med font-semibold">LG</span>
     </div>
-    <ul class="flex items-center gap-6 justify-between w-full sm:w-auto">
+    <ul class="flex items-center gap-x-3 sm:gap-x-10 justify-between w-full sm:w-auto">
       <li><a href="#inicio">Inicio</a></li>
       <li><a href="#experiencia">Experiencia</a></li>
       <li><a href="#proyectos">Proyectos</a></li>
       <li><a href="#habilidades">Habilidades</a></li>
-      <li class="hidden lg:block">
-        <ButtonLink href="/files/CV_Luis_Gomez_2025.pdf">
-          <CvIcon color="#000" size={20} />
-          <span class="hidden lg:flex">Descargar CV</span>
-        </ButtonLink>
-      </li>
     </ul>
   </nav>
 </header>

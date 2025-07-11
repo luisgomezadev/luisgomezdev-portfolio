@@ -20,8 +20,8 @@ export const SKILLS = [
     icon: "/skills/angular.webp",
   },
   {
-    name: "Angular Material",
-    icon: "/skills/material.png",
+    name: "VueJS",
+    icon: "/skills/vue.webp",
   },
   {
     name: "Astro",
