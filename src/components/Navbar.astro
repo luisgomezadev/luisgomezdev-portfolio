@@ -1,3 +1,11 @@
+---
+import HomeIcon from '../assets/icons/HomeIcon.astro';
+import ExperienceIcon from '../assets/icons/ExperienceIcon.astro';
+import CodeIcon from '../assets/icons/CodeIcon.astro';
+import SkillIcon from '../assets/icons/SkillIcon.astro';
+import MailIcon from '../assets/icons/MailIcon.astro';
+---
+
 <header class="fixed top-0 left-0 w-full p-3 sm:p-0 sm:shadow-lg z-50">
   <nav
     class="mx-auto max-w-7xl w-full text-white flex items-center backdrop-blur-3xl sm:backdrop-blur-none py-2 sm:py-5 px-5 justify-between rounded-2xl sm:rounded-none sm:bg-gray-800 bg-transparent border-2 sm:border-0 border-gray-500"
@@ -5,12 +13,31 @@
     <div class="w-7 h-7 bg-white items-center justify-center dark:bg-moonlit p-4 hidden sm:flex">
       <span class="text-black text-med font-semibold">LG</span>
     </div>
-    <ul class="flex items-center gap-x-3 sm:gap-x-10 justify-between w-full sm:w-auto">
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#experiencia">Experiencia</a></li>
-      <li><a href="#proyectos">Proyectos</a></li>
-      <li><a href="#habilidades">Habilidades</a></li>
-      <li class="hidden md:inline-block"><a href="#contacto">Contacto</a></li>
+    <ul class="flex items-center gap-x-3 sm:gap-x-12 justify-between w-full sm:w-auto">
+      <li>
+        <a href="#inicio" class="flex gap-2">
+          <div class="hidden md:block">
+            <HomeIcon />
+          </div>Inicio</a
+        >
+      </li>
+      <li>
+        <a href="#experiencia" class="flex gap-2">
+          <div class="hidden md:block"><ExperienceIcon /></div>Experiencia</a
+        >
+      </li>
+      <li>
+        <a href="#proyectos" class="flex gap-2"
+          ><div class="hidden md:block"><CodeIcon /></div>Proyectos</a
+        >
+        <li>
+          <a href="#habilidades" class="flex gap-2"
+            ><div class="hidden md:block"><SkillIcon /></div>Habilidades</a>
+        </li>
+        <li class="hidden md:flex gap-2">
+          <MailIcon /><a href="#contacto">Contacto</a>
+        </li>
+      </li>
     </ul>
   </nav>
 </header>

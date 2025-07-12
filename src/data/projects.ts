@@ -29,7 +29,7 @@ export const PROJECTS = [
   },
   {
     title: "Tronos",
-    description: "Software que permite manejar los procesos académicos, como la gestión de estudiantes, docentes, notas y otros aspectos relacionados, en la universidad Unicolombo. Encargado del desarrollo frontend con Angular, enfocado en la integración de microservicios.",
+    description: "Software que permite manejar los procesos académicos, como la gestión de estudiantes, docentes, notas y otros aspectos relacionados, en la universidad Unicolombo. Encargado del desarrollo frontend con Angular, enfocado en la integración de microservicios y corrección de bugs y mejoras.",
     className: 'lg:row-span-2 lg:col-span-4',
     experience: "Experiencia Laboral",
     technologies: [

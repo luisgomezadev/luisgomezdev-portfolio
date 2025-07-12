@@ -1,23 +1,19 @@
 ---
-import Section from "./Section.astro";
-import CardItem from "./CardItem.astro";
-import { SKILLS } from "../data/skills";
+import Section from './Section.astro';
+import CardItem from './CardItem.astro';
+import { SKILLS } from '../data/skills';
 
 const { id } = Astro.props;
 ---
 
-<Section
-  title="Habilidades"
-  id={id}
-  subtitle="Tecnologías y herramientas que manejo"
->
+<Section title="Habilidades" id={id} subtitle="Tecnologías y herramientas que manejo">
   <CardItem class="py-8 px-8 lg:px-12">
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
       {
         SKILLS.map((skill) => (
-          <div class="flex flex-col items-center text-center">
+          <div class="flex flex-col items-center group text-center cursor-pointer">
             <img
-              class="w-16 h-16 mb-2 object-contain"
+              class="w-16 h-16 mb-2 object-contain md:grayscale group-hover:grayscale-0 transition-all duration-300"
               src={skill.icon}
               alt={skill.name}
               loading="lazy"

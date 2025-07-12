@@ -15,7 +15,7 @@ const { id } = Astro.props;
 
 <section
   id={id}
-  class="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-5rem)] py-12 scroll-mt-30"
+  class="grid lg:grid-cols-2 gap-x-12 gap-y-24 items-center min-h-[calc(100vh-5rem)] py-12 scroll-mt-30"
 >
   <div class="flex flex-col gap-6">
     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 dark:text-white">
@@ -35,34 +35,22 @@ const { id } = Astro.props;
     <div class="flex items-center space-x-4">
       <span class="text-gray-800 dark:text-white font-medium">Sígueme en:</span>
       <div class="flex space-x-3">
-        <a
-          href="https://github.com/luisgomezadev"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="w-10 h-10 bg-gray-800 text-white dark:bg-white rounded-full flex items-center shadow-2xl justify-center dark:text-gray-800 hover:text-white dark:hover:bg-white dark:hover:text-gray-800 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-          aria-label="Visit GitHub"
-        >
+        <ButtonLink href="https://github.com/luisgomezadev">
           <GitHub class="w-6 h-6" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/luisgomezdev/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="w-10 h-10 bg-gray-800 text-white dark:bg-white rounded-full flex items-center shadow-2xl justify-center dark:text-gray-800 hover:text-white dark:hover:bg-white dark:hover:text-gray-800 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-          aria-label="Visit LinkedIn"
-        >
+        </ButtonLink>
+        <ButtonLink href="https://www.linkedin.com/in/luisgomezdev/">
           <LinkedIn class="w-6 h-6" />
-        </a>
+        </ButtonLink>
       </div>
     </div>
     <div class="flex items-center gap-4">
-      <ButtonLink href="/files/CV_Luis_Gomez_2025.pdf">
-        <CvIcon color="#000" size={20} />
-        Descargar mi CV
-      </ButtonLink>
       <ButtonLink href="mailto:luisgomez24g@gmail.com">
         <EmailIcon color="#000" size={20} />
         Contactar
+      </ButtonLink>
+      <ButtonLink class="bg-transparent border-2 border-white text-white" href="/files/CV_Luis_Gomez_2025.pdf">
+        <CvIcon color="#FFF" size={20} />
+        Descargar mi CV
       </ButtonLink>
     </div>
   </div>
