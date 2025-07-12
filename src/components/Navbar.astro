@@ -10,33 +10,61 @@ import MailIcon from '../assets/icons/MailIcon.astro';
   <nav
     class="mx-auto max-w-7xl w-full text-white flex items-center backdrop-blur-3xl sm:backdrop-blur-none py-2 sm:py-5 px-5 justify-between rounded-2xl sm:rounded-none sm:bg-gray-800 bg-transparent border-2 sm:border-0 border-gray-500"
   >
+    <!-- Logo -->
     <div class="w-7 h-7 bg-white items-center justify-center dark:bg-moonlit p-4 hidden sm:flex">
       <span class="text-black text-med font-semibold">LG</span>
     </div>
+
+    <!-- Navegación -->
     <ul class="flex items-center gap-x-3 sm:gap-x-12 justify-between w-full sm:w-auto">
       <li>
-        <a href="#inicio" class="flex gap-2">
-          <div class="hidden md:block">
-            <HomeIcon />
-          </div>Inicio</a
-        >
+        <a href="#inicio" class="group relative flex gap-2 items-center">
+          <div class="hidden md:block"><HomeIcon /></div>
+          Inicio
+          <span
+            class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full group-hover:left-0"
+          ></span>
+        </a>
       </li>
+
       <li>
-        <a href="#experiencia" class="flex gap-2">
-          <div class="hidden md:block"><ExperienceIcon /></div>Experiencia</a
-        >
+        <a href="#experiencia" class="group relative flex gap-2 items-center">
+          <div class="hidden md:block"><ExperienceIcon /></div>
+          Experiencia
+          <span
+            class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full group-hover:left-0"
+          ></span>
+        </a>
       </li>
+
       <li>
-        <a href="#proyectos" class="flex gap-2"
-          ><div class="hidden md:block"><CodeIcon /></div>Proyectos</a
-        >
-        <li>
-          <a href="#habilidades" class="flex gap-2"
-            ><div class="hidden md:block"><SkillIcon /></div>Habilidades</a>
-        </li>
-        <li class="hidden md:flex gap-2">
-          <MailIcon /><a href="#contacto">Contacto</a>
-        </li>
+        <a href="#proyectos" class="group relative flex gap-2 items-center">
+          <div class="hidden md:block"><CodeIcon /></div>
+          Proyectos
+          <span
+            class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full group-hover:left-0"
+          ></span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#habilidades" class="group relative flex gap-2 items-center">
+          <div class="hidden md:block"><SkillIcon /></div>
+          Habilidades
+          <span
+            class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full group-hover:left-0"
+          ></span>
+        </a>
+      </li>
+
+      <li class="hidden md:flex group relative gap-2 items-center">
+        <MailIcon />
+        <a href="#contacto" class="group-hover:text-white">
+          Contacto
+          <span
+            class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full group-hover:left-0"
+          ></span>
+        </a>
       </li>
     </ul>
   </nav>
