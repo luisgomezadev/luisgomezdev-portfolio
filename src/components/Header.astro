@@ -28,7 +28,7 @@ const { id } = Astro.props;
     >
       <span class="typing-text">Desarrollador FullStack</span>
     </h2>
-    <p class="text-lg text-gray-800 dark:text-gray-300 leading-relaxed max-w-lg">
+    <p class="text-lg text-gray-800 opacity-70 dark:text-gray-200 leading-relaxed max-w-lg">
       Ingeniero de sistemas y desarrollador web con más de cuatro años de experiencia en el diseño,
       desarrollo y mantenimiento de aplicaciones web.
     </p>
@@ -48,7 +48,10 @@ const { id } = Astro.props;
         <EmailIcon color="#000" size={20} />
         Contactar
       </ButtonLink>
-      <ButtonLink class="bg-transparent border-2 border-white text-white" href="/files/CV_Luis_Gomez_2025.pdf">
+      <ButtonLink
+        class="bg-transparent border-2 border-white text-white"
+        href="/files/CV_Luis_Gomez_2025.pdf"
+      >
         <CvIcon color="#FFF" size={20} />
         Descargar mi CV
       </ButtonLink>
@@ -63,25 +66,33 @@ const { id } = Astro.props;
       />
     </div>
     <div
-      class="absolute top-0 left-8 sm:left-20 w-12 h-12 sm:w-16 sm:h-16 bg-gray-800 text-white dark:bg-white dark:text-gray-800 dark:border rounded-full drop-shadow-2xl shadow-lg dark:shadow-gray-800 flex items-center justify-center hover:scale-110 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-float"
+      class="absolute top-0 left-8 sm:left-20 w-12 h-12 sm:w-16 sm:h-16 bg-gray-800 dark:bg-white dark:text-gray-800 dark:border rounded-full drop-shadow-2xl shadow-lg dark:shadow-gray-800 flex items-center justify-center hover:scale-110 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-float group"
     >
-      <AngularIcon class="w-6 h-6 sm:w-8 sm:h-8" />
+      <span class="group-hover:text-red-700 transition-all duration-300"
+        ><AngularIcon class="w-6 h-6 sm:w-8 sm:h-8" /></span
+      >
     </div>
     <div
-      class="absolute top-0 right-8 md:right-0 w-12 h-12 sm:w-16 sm:h-16 bg-gray-800 text-white dark:bg-white dark:text-gray-800 dark:border rounded-full drop-shadow-2xl shadow-lg dark:shadow-gray-800 flex items-center justify-center hover:scale-110 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-float"
+      class="absolute top-0 right-8 md:right-0 w-12 h-12 sm:w-16 sm:h-16 bg-gray-800 text-white dark:bg-white dark:text-gray-800 dark:border rounded-full drop-shadow-2xl shadow-lg dark:shadow-gray-800 flex items-center justify-center hover:scale-110 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-float group"
     >
-      <TypeScriptIcon class="w-6 h-6 sm:w-8 sm:h-8" />
+      <span class="group-hover:text-blue-700 transition-all duration-300"
+        ><TypeScriptIcon class="w-6 h-6 sm:w-8 sm:h-8" /></span
+      >
     </div>
     <div
-      class="absolute bottom-0 left-8 sm:left-10 w-12 h-12 sm:w-16 sm:h-16 bg-gray-800 text-white dark:bg-white dark:text-gray-800 dark:border rounded-full drop-shadow-2xl shadow-lg dark:shadow-gray-800 flex items-center justify-center hover:scale-110 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-float"
+      class="absolute bottom-0 left-8 sm:left-10 w-12 h-12 sm:w-16 sm:h-16 bg-gray-800 text-white dark:bg-white dark:text-gray-800 dark:border rounded-full drop-shadow-2xl shadow-lg dark:shadow-gray-800 flex items-center justify-center hover:scale-110 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-float group"
     >
-      <SpringIcon class="w-6 h-6 sm:w-8 sm:h-8" />
+      <span class="group-hover:text-green-600 transition-all duration-300"
+        ><SpringIcon class="w-6 h-6 sm:w-8 sm:h-8" /></span
+      >
     </div>
-    <div
-      class="absolute bottom-8 sm:bottom-10 right-10 sm:right-12 w-12 h-12 sm:w-16 sm:h-16 bg-gray-800 text-white dark:bg-white dark:text-gray-800 dark:border rounded-full drop-shadow-2xl shadow-lg dark:shadow-gray-800 flex items-center justify-center hover:scale-110 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-float"
+    <span
+      class="absolute bottom-8 sm:bottom-10 right-10 sm:right-12 w-12 h-12 sm:w-16 sm:h-16 bg-gray-800 text-white dark:bg-white dark:text-gray-800 dark:border rounded-full drop-shadow-2xl shadow-lg dark:shadow-gray-800 flex items-center justify-center hover:scale-110 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-float group"
     >
-      <VueIcon class="w-6 h-6 sm:w-8 sm:h-8" />
-    </div>
+      <span class="group-hover:text-[#42b883] transition-all duration-300"
+        ><VueIcon class="w-6 h-6 sm:w-8 sm:h-8" /></span
+      >
+    </span>
   </div>
 </section>
 <style>
