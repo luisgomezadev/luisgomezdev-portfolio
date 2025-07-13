@@ -24,9 +24,7 @@ const { id } = Astro.props;
             <div class="flex justify-between items-center mb-2 gap-4">
               <div class="flex items-center gap-1 md:gap-3 opacity-70">
                 <ProjectIcon class="w-6 h-6" />
-                <span class="text-sm md:text-lg font-semibold uppercase">
-                  {project.experience}
-                </span>
+                <span class="text-sm md:text-lg font-semibold uppercase">{project.experience}</span>
               </div>
               <div class="flex gap-2">
                 {project.live && (
@@ -48,14 +46,16 @@ const { id } = Astro.props;
                 <span class="text-sm font-semibold">{t}</span>
               ))}
             </div>
-            {project.image && (
-              <img
-                class="w-full h-auto object-cover rounded-lg"
-                src={project.image}
-                alt={project.title}
-                loading="lazy"
-              />
-            )}
+            <div class="overflow-hidden rounded-lg">
+              {project.image && (
+                <img
+                  class="w-full h-auto object-cover rounded-lg hover:scale-110 transition-all duration-300"
+                  src={project.image}
+                  alt={project.title}
+                  loading="lazy"
+                />
+              )}
+            </div>
           </div>
         </CardItem>
       ))
