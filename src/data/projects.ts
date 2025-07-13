@@ -47,7 +47,7 @@ export const PROJECTS = [
     image: "/projects_images/playm.webp",
     link: "https://github.com/luisgomezadev/Backend-PlayMatch",
     live: 'https://playmatch-lgsoftworks.vercel.app/',
-    className: 'lg:row-span-3 lg:col-span-4',
+    className: 'lg:row-span-4 lg:col-span-4',
     experience: "Experiencia Personal",
     technologies: [
       "Java",
@@ -59,18 +59,17 @@ export const PROJECTS = [
     ]
   },
   {
-    title: "Agenda de Personas",
-    description: "Aplicación Full Stack desarrollada durante mi formación inicial. Implementa operaciones CRUD sobre un listado de personas, con backend en Spring Boot y frontend en Angular, utilizando Bootstrap para diseño responsivo.",
-    link: "https://github.com/luisgomezadev/api-angular-spring",
-    className: 'lg:row-span-2 lg:col-span-4',
+    title: "Doon",
+    description: "Aplicación web desarrollada con Vue.js 3 y estilizada con Tailwind CSS, que permite gestionar tareas de forma intuitiva y rápida. Diseñada con un enfoque minimalista y moderno, utiliza localStorage para almacenar la información localmente en el navegador.",
+    image: "/projects_images/doon.webp",
+    live: 'https://doon-teal.vercel.app/',
+    link: "https://github.com/luisgomezadev/doon",
+    className: 'lg:row-span-3 lg:col-span-4',
     experience: "Experiencia Personal",
     technologies: [
       "TypeScript",
-      "Angular",
-      "Bootstrap",
-      "Spring Boot",
-      "Java",
-      "MySQL"
+      "VueJS",
+      "TailwindCSS"
     ]
   }
 ];
