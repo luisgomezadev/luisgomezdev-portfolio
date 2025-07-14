@@ -17,7 +17,7 @@ const { id } = Astro.props;
   id={id}
   class="grid lg:grid-cols-2 gap-x-12 gap-y-24 items-center min-h-[calc(100vh-5rem)] py-12 scroll-mt-30"
 >
-  <div class="flex flex-col gap-6">
+  <div class="flex flex-col gap-6" data-aos="fade-right">
     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 dark:text-white">
       Hola, soy Luis Gómez 👋
     </h1>
@@ -55,7 +55,7 @@ const { id } = Astro.props;
       </ButtonLink>
     </div>
   </div>
-  <div class="relative flex justify-center items-center">
+  <div class="relative flex justify-center items-center" data-aos="fade-up">
     <div class="relative">
       <img
         src="/images/foto_perfil.webp"
@@ -106,6 +106,36 @@ const { id } = Astro.props;
 
     50% {
       transform: translateY(-10px);
+    }
+  }
+
+  .animate-fade-in-left {
+    animation: fadeInLeft 1s ease-out both;
+  }
+
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 1.2s ease-out both;
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 </style>

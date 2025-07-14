@@ -40,6 +40,21 @@ const { title, description } = Astro.props;
     <Navbar />
     <main class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-22 mb-14 flex flex-col gap-20">
       <slot />
+      <Fragment
+        set:html={`
+          <script type="module">
+            import AOS from 'https://cdn.skypack.dev/aos';
+
+            window.addEventListener('DOMContentLoaded', () => {
+              AOS.init({
+                once: true,
+                duration: 1000,
+                easing: 'ease-out',
+              });
+            });
+          </script>
+        `}
+      />
     </main>
     <Footer />
   </body>
