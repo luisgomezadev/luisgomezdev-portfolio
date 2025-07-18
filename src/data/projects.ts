@@ -59,7 +59,7 @@ export const PROJECTS = [
     ]
   },
   {
-    title: "Landing Page | Daniel Kelly Fit",
+    title: "Landing Page | Daniel Kelly",
     description: "Landing page responsive para un entrenador personal, desarrollada con Astro y Tailwind CSS. Presenta una estructura clara y moderna que destaca los servicios, eventos, entre otras cosas, optimizando el rendimiento, accesibilidad y velocidad de carga. El proyecto se enfoca en ofrecer una experiencia visual atractiva y profesional, con código limpio, semántico y fácil de escalar.",
     image: "/projects_images/landing.webp",
     live: 'https://danielkellyfit.vercel.app/',
