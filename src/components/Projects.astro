@@ -42,8 +42,12 @@ const { id } = Astro.props;
             <h3 class="text-2xl font-bold mb-2 text-green-500">{project.title}</h3>
             <p class="text-base opacity-80">{project.description}</p>
             <div class="flex items-center flex-wrap gap-2 mb-4 mt-2">
-              {project.technologies.map((t) => (
-                <span class="text-sm font-semibold">{t}</span>
+              {project.technologies.map((tech) => (
+                <span
+                  class={`inline-block text-xs font-medium px-3 py-1 mr-2 mb-2 rounded-full border ${tech.color} border-current bg-white/10 backdrop-blur-sm`}
+                >
+                  {tech.name}
+                </span>
               ))}
             </div>
             <div class="overflow-hidden rounded-lg">

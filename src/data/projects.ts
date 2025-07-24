@@ -6,12 +6,12 @@ export const PROJECTS = [
     className: 'lg:row-span-4 lg:col-span-4',
     experience: "Experiencia Laboral",
     technologies: [
-      "HTML",
-      "CSS",
-      "Sass",
-      "TypeScript",
-      "Angular",
-      "Angular Material"
+      { name: "HTML", color: "text-orange-500" },
+      { name: "CSS", color: "text-blue-600" },
+      { name: "Sass", color: "text-pink-500" },
+      { name: "TypeScript", color: "text-blue-500" },
+      { name: "Angular", color: "text-red-600" },
+      { name: "Material", color: "text-yellow-600" }
     ]
   },
   {
@@ -21,10 +21,10 @@ export const PROJECTS = [
     className: 'lg:row-span-3 lg:col-span-4',
     experience: "Experiencia Laboral",
     technologies: [
-      "HTML",
-      "CSS",
-      "Sass",
-      "Vue.js"
+      { name: "HTML", color: "text-orange-500" },
+      { name: "CSS", color: "text-blue-600" },
+      { name: "Sass", color: "text-pink-500" },
+      { name: "Vue.js", color: "text-emerald-500" }
     ]
   },
   {
@@ -36,12 +36,12 @@ export const PROJECTS = [
     className: 'lg:row-span-4 lg:col-span-4',
     experience: "Experiencia Personal",
     technologies: [
-      "Java",
-      "Spring Boot",
-      "Spring Security",
-      "MySQL",
-      "Angular",
-      "TailwindCSS"
+      { name: "Java", color: "text-[#007396]" }, // color específico de Java
+      { name: "Spring Boot", color: "text-green-600" },
+      { name: "Spring Security", color: "text-green-700" },
+      { name: "MySQL", color: "text-cyan-700" },
+      { name: "Angular", color: "text-red-600" },
+      { name: "TailwindCSS", color: "text-sky-400" }
     ]
   },
   {
@@ -50,12 +50,12 @@ export const PROJECTS = [
     className: 'lg:row-span-2 lg:col-span-4',
     experience: "Experiencia Laboral",
     technologies: [
-      "HTML",
-      "CSS",
-      "Sass",
-      "TypeScript",
-      "Angular",
-      "Angular Material"
+      { name: "HTML", color: "text-orange-500" },
+      { name: "CSS", color: "text-blue-600" },
+      { name: "Sass", color: "text-pink-500" },
+      { name: "TypeScript", color: "text-blue-500" },
+      { name: "Angular", color: "text-red-600" },
+      { name: "Material", color: "text-yellow-600" }
     ]
   },
   {
@@ -67,8 +67,8 @@ export const PROJECTS = [
     className: 'lg:row-span-4 lg:col-span-4',
     experience: "Experiencia Personal",
     technologies: [
-      "Astro",
-      "TailwindCSS"
+      { name: "Astro", color: "text-purple-500" },
+      { name: "TailwindCSS", color: "text-sky-400" }
     ]
   },
   {
@@ -80,9 +80,9 @@ export const PROJECTS = [
     className: 'lg:row-span-3 lg:col-span-4',
     experience: "Experiencia Personal",
     technologies: [
-      "TypeScript",
-      "VueJS",
-      "TailwindCSS"
+      { name: "TypeScript", color: "text-blue-500" },
+      { name: "VueJS", color: "text-emerald-500" },
+      { name: "TailwindCSS", color: "text-sky-400" }
     ]
   },
 ];
