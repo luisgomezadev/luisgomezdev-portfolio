@@ -8,7 +8,7 @@ import MailIcon from '../assets/icons/MailIcon.astro';
 
 <header class="fixed top-0 left-0 w-full p-3 sm:p-0 duration-300 z-50 transition-all">
   <nav
-    class="duration-300 mx-auto max-w-7xl w-full text-white flex items-center backdrop-blur-3xl sm:backdrop-blur-none py-2 sm:py-5 px-5 justify-between rounded-2xl sm:rounded-none bg-green-400/20 sm:bg-transparent sm:h-auto h-16 border-2 sm:border-0 border-gray-500 transition-all"
+    class="duration-300 mx-auto max-w-7xl w-full text-white flex items-center backdrop-blur-3xl sm:backdrop-blur-none py-2 sm:py-5 px-5 justify-between rounded-2xl sm:rounded-none bg-green-400/20 sm:bg-transparent sm:h-auto h-12 border-2 sm:border-0 border-gray-500 transition-all"
   >
     <!-- Logo -->
     <div class="w-7 h-7 bg-white items-center justify-center dark:bg-moonlit p-4 hidden sm:flex">
@@ -75,10 +75,10 @@ import MailIcon from '../assets/icons/MailIcon.astro';
     window.addEventListener('scroll', () => {
       const nav = document.querySelector('header');
       if (window.scrollY > 50) {
-        nav?.classList.add('sm:bg-green-950', 'sm:shadow-md');
+        nav?.classList.add('sm:bg-[#111]', 'sm:shadow-md');
         nav?.classList.remove('bg-transparent');
       } else {
-        nav?.classList.remove('sm:bg-green-950', 'sm:shadow-md');
+        nav?.classList.remove('sm:bg-[#111]', 'sm:shadow-md');
         nav?.classList.add('bg-transparent');
       }
     });
