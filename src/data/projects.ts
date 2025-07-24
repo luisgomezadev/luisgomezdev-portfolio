@@ -29,7 +29,7 @@ export const PROJECTS = [
   },
   {
     title: "PlayMatch",
-    description: "Aplicación desarrolada con Spring Boot y Angular que permite registrar y consultar canchas sinteticas, hacer reservas, gestionar equipos, entre otras cosas. Esta aplicación es parte de un proyecto personal que busca facilitar la organización de partidos de fútbol entre amigos.",
+    description: "Aplicación desarrolada con Spring Boot y Angular que permite registrar y consultar canchas sinteticas, hacer reservas, entre otras cosas. Esta aplicación es parte de un proyecto personal que busca facilitar la organización de reservas de las canchas.",
     image: "/projects_images/playm.webp",
     link: "https://github.com/luisgomezadev/Backend-PlayMatch",
     live: 'https://playmatch-lgsoftworks.vercel.app/',
