@@ -1,30 +1,26 @@
 ---
-import Section from "./Section.astro";
-import CardItem from "./CardItem.astro";
-import ButtonLink from "./ButtonLink.astro";
-import GitHub from "../assets/icons/GitHub.astro";
-import LinkedIn from "../assets/icons/LinkedIn.astro";
-import EmailIcon from "../assets/icons/EmailIcon.astro";
+import Section from './Section.astro';
+import CardItem from './CardItem.astro';
+import ButtonLink from './ButtonLink.astro';
+import GitHub from '../assets/icons/GitHub.astro';
+import LinkedIn from '../assets/icons/LinkedIn.astro';
+import EmailIcon from '../assets/icons/EmailIcon.astro';
 
 const { id } = Astro.props;
 ---
 
-<Section
-  title="Contacto"
-  id={id}
-  subtitle="¿Tienes alguna pregunta o quieres colaborar?"
->
+<Section title="Contacto" id={id} subtitle="¿Tienes alguna pregunta o quieres colaborar?">
   <CardItem class="py-8 px-8 lg:px-12">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-16">
       <div class="col-span-1 md:col-span-1 flex flex-col gap-2">
-        <h2 class="text-2xl font-bold z-[1]">Contáctame</h2>
+        <h2 class="text-2xl font-bold z-[1] text-green-500">Contáctame</h2>
         <p class="text-base w-full z-[1] opacity-70 text-pretty">
-          Estoy siempre abierto a nuevas oportunidades y colaboraciones. Si
-          tienes alguna pregunta o proyecto en mente, no dudes en contactarme.
+          Estoy siempre abierto a nuevas oportunidades y colaboraciones. Si tienes alguna pregunta o
+          proyecto en mente, no dudes en contactarme.
         </p>
       </div>
       <div class="col-span-1 md:col-span-1 flex flex-col gap-2">
-        <h2 class="text-2xl font-bold z-[1]">Redes</h2>
+        <h2 class="text-2xl font-bold z-[1] text-green-500 hidden md:block">Redes</h2>
         <div class="flex gap-4">
           <ButtonLink href="https://github.com/luisgomezadev">
             <GitHub color="#000" size={20} />
