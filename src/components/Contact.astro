@@ -1,41 +1,46 @@
 ---
-import Section from './Section.astro';
-import CardItem from './CardItem.astro';
-import ButtonLink from './ButtonLink.astro';
-import GitHub from '../assets/icons/GitHub.astro';
-import LinkedIn from '../assets/icons/LinkedIn.astro';
-import EmailIcon from '../assets/icons/EmailIcon.astro';
+import Section from './Section.astro'
+import CardItem from './CardItem.astro'
+import ButtonLink from './ButtonLink.astro'
+import GitHub from '../assets/icons/GitHub.astro'
+import LinkedIn from '../assets/icons/LinkedIn.astro'
+import EmailIcon from '../assets/icons/EmailIcon.astro'
 
-const { id } = Astro.props;
+const { id } = Astro.props
 ---
 
-<Section title="Contacto" id={id} subtitle="¿Tienes alguna pregunta o quieres colaborar?">
-  <CardItem class="py-8 px-8 lg:px-12">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-16">
-      <div class="col-span-1 md:col-span-1 flex flex-col gap-2">
-        <h2 class="text-2xl font-bold z-[1] text-green-500">Contáctame</h2>
+<Section
+  title="Contacto"
+  id={id}
+  subtitle="¿Tienes alguna pregunta o quieres colaborar?"
+  class="bg-[#EEE]"
+>
+  <div class="py-3 px-3 md:px-0 max-w-6xl mx-auto">
+    <div class="flex flex-col md:flex-row gap-6 md:gap-16">
+      <div class="flex flex-col gap-2 justify-center">
+        <h2 class="text-2xl font-bold z-[1] text-red-800">Contáctame</h2>
         <p class="text-base w-full z-[1] opacity-70 text-pretty">
           Estoy siempre abierto a nuevas oportunidades y colaboraciones. Si tienes alguna pregunta o
           proyecto en mente, no dudes en contactarme.
         </p>
       </div>
-      <div class="col-span-1 md:col-span-1 flex flex-col gap-2">
-        <h2 class="text-2xl font-bold z-[1] text-green-500 hidden md:block">Redes</h2>
-        <div class="flex gap-4">
-          <ButtonLink href="https://github.com/luisgomezadev">
-            <GitHub color="#000" size={20} />
-            <span class="hidden lg:flex">GitHub</span>
-          </ButtonLink>
-          <ButtonLink href="https://www.linkedin.com/in/luisgomezdev/">
-            <LinkedIn color="#000" size={20} />
-            <span class="hidden lg:flex">LinkedIn</span>
-          </ButtonLink>
-          <ButtonLink href="mailto:luisgomez24g@gmail.com">
-            <EmailIcon color="#000" size={20} />
-            <span class="hidden lg:flex">Email</span>
-          </ButtonLink>
-        </div>
+      <div class="flex items-center gap-4">
+        <ButtonLink href="https://github.com/luisgomezadev" class="text-white bg-black px-4">
+          <GitHub size={20} />
+          <span class="hidden lg:flex">GitHub</span>
+        </ButtonLink>
+        <ButtonLink
+          href="https://www.linkedin.com/in/luisgomezdev/"
+          class="text-white bg-black px-4"
+        >
+          <LinkedIn size={20} />
+          <span class="hidden lg:flex">LinkedIn</span>
+        </ButtonLink>
+        <ButtonLink href="mailto:luisgomez24g@gmail.com" class="text-white bg-black px-4">
+          <EmailIcon size={20} />
+          <span class="hidden lg:flex">Email</span>
+        </ButtonLink>
       </div>
     </div>
-  </CardItem>
+  </div>
 </Section>

@@ -1,18 +1,11 @@
 ---
-const { href, class: className = "bg-white" } = Astro.props;
+const { href, class: className = 'bg-black' } = Astro.props
 ---
 
 <a
-  class={`flex items-center border-2 border-white font-medium text-black px-3 py-2 rounded-lg gap-2 hover:scale-105 transition-all duration-300 cursor-pointer ${className}`}
+  class={`flex items-center border-2 border-black font-medium px-2 py-2 rounded-full gap-2 hover:scale-105 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer ${className}`}
   href={href}
   target="_blank"
 >
   <slot />
 </a>
-
-<style>
-  a:hover {
-    box-shadow: 0 .5em .5em -.4em #FFF;
-    transform: translateY(-.15em);
-  }
-</style>

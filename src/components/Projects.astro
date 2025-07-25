@@ -1,67 +1,112 @@
 ---
-import Section from './Section.astro';
-import CardItem from './CardItem.astro';
-import ProjectIcon from '../assets/icons/ProjectIcon.astro';
-import ButtonLink from './ButtonLink.astro';
-import GitHub from '../assets/icons/GitHub.astro';
-import WebIcon from '../assets/icons/WebIcon.astro';
+import Section from './Section.astro'
+import CardItem from './CardItem.astro'
+import ProjectIcon from '../assets/icons/ProjectIcon.astro'
+import ButtonLink from './ButtonLink.astro'
+import GitHub from '../assets/icons/GitHub.astro'
+import WebIcon from '../assets/icons/WebIcon.astro'
 
-import { PROJECTS } from '../data/projects';
+import { PROJECTS } from '../data/projects'
 
-const { id } = Astro.props;
+const { id } = Astro.props
 ---
 
 <Section
   title="Proyectos"
   id={id}
   subtitle="Algunos de los proyectos que he colaborado y desarrollado"
+  class="bg-[#EEE]"
 >
-  <div class="w-full grid auto-rows-[auto] lg:auto-rows-[150px] grid-cols-8 gap-4">
+  <div class="lg:py-8 px-4 lg:px-6 max-w-6xl mx-auto flex flex-col gap-24">
     {
       PROJECTS.map((project, index) => (
-        <CardItem class={`py-8 px-8 lg:px-12 row-span-1 col-span-8 ${project.className}`}>
-          <div class="flex flex-col h-full gap-2">
-            <div class="flex justify-between items-center mb-2 gap-4">
-              <div class="flex items-center gap-1 md:gap-3 opacity-70">
-                <ProjectIcon class="w-6 h-6" />
-                <span class="text-sm md:text-lg font-semibold uppercase">{project.experience}</span>
-              </div>
-              <div class="flex gap-4 md:gap-2">
-                {project.live && (
-                  <ButtonLink href={project.live}>
-                    <WebIcon color="#000" size={20} />
-                  </ButtonLink>
-                )}
-                {project.link && (
-                  <ButtonLink href={project.link}>
-                    <GitHub color="#000" size={20} />
-                  </ButtonLink>
-                )}
-              </div>
+        <article class="flex flex-col-reverse md:flex-row gap-x-12 gap-y-5">
+          <div class="flex-1 flex items-center">
+            <img
+              class="w-full h-auto object-cover rounded-lg hover:scale-105 transition-all duration-300"
+              src={project.image}
+              alt={project.title}
+              loading="lazy"
+            />
+          </div>
+          <div class="w-full md:max-w-lg lg:max-w-xl">
+            <div class="flex items-center gap-3 opacity-70 mb-3">
+              <ProjectIcon class="w-6 h-6" />
+              <span class="text-sm md:text-lg font-semibold uppercase">{project.experience}</span>
             </div>
-            <h3 class="text-2xl font-bold mb-2 text-green-500">{project.title}</h3>
+            <h3 class="text-2xl font-bold mb-2 text-red-800">{project.title}</h3>
             <p class="text-base opacity-80">{project.description}</p>
-            <div class="flex items-center flex-wrap gap-2 mb-4 mt-2">
+            <div class="flex items-center flex-wrap gap-2 mb-2 mt-4">
               {project.technologies.map((tech) => (
                 <span
-                  class={`inline-block text-xs font-medium px-3 py-1 mr-2 mb-2 rounded-full border ${tech.color} border-current bg-white/10 backdrop-blur-sm`}
+                  class={`inline-block text-xs font-medium px-3 py-1 mr-2 mb-2 rounded-full border ${tech.color} border-current bg-black/5 backdrop-blur-sm`}
                 >
                   {tech.name}
                 </span>
               ))}
             </div>
-            <div class="overflow-hidden rounded-lg">
-              {project.image && (
-                <img
-                  class="w-full h-auto object-cover rounded-lg hover:scale-110 transition-all duration-300"
-                  src={project.image}
-                  alt={project.title}
-                  loading="lazy"
-                />
+            <div class="flex items-center gap-4 mt-4">
+              {project.live && (
+                <ButtonLink href={project.live} class="text-white border-red-800 bg-red-800 px-4">
+                  <WebIcon color="#FFF" size={20} />
+                  Ver demo
+                </ButtonLink>
+              )}
+              {project.link && (
+                <ButtonLink
+                  class="bg-transparent border-2 border-black text-black px-4"
+                  href={project.link}
+                >
+                  <GitHub color="#000" size={20} />
+                  Ver código
+                </ButtonLink>
               )}
             </div>
           </div>
-        </CardItem>
+        </article>
+        // <CardItem class={`py-8 px-8 lg:px-12 row-span-1 col-span-8 ${project.className}`}>
+        //   <div class="flex flex-col h-full gap-2">
+        //     <div class="flex justify-between items-center mb-2 gap-4">
+        //       <div class="flex items-center gap-1 md:gap-3 opacity-70">
+        //         <ProjectIcon class="w-6 h-6" />
+        //         <span class="text-sm md:text-lg font-semibold uppercase">{project.experience}</span>
+        //       </div>
+        //       <div class="flex gap-4 md:gap-2">
+        //         {project.live && (
+        //           <ButtonLink href={project.live}>
+        //             <WebIcon color="#000" size={20} />
+        //           </ButtonLink>
+        //         )}
+        //         {project.link && (
+        //           <ButtonLink href={project.link}>
+        //             <GitHub color="#000" size={20} />
+        //           </ButtonLink>
+        //         )}
+        //       </div>
+        //     </div>
+        //     <h3 class="text-2xl font-bold mb-2 text-green-500">{project.title}</h3>
+        //     <p class="text-base opacity-80">{project.description}</p>
+        //     <div class="flex items-center flex-wrap gap-2 mb-4 mt-2">
+        //       {project.technologies.map((tech) => (
+        //         <span
+        //           class={`inline-block text-xs font-medium px-3 py-1 mr-2 mb-2 rounded-full border ${tech.color} border-current bg-white/10 backdrop-blur-sm`}
+        //         >
+        //           {tech.name}
+        //         </span>
+        //       ))}
+        //     </div>
+        //     <div class="overflow-hidden rounded-lg">
+        //       {project.image && (
+        //         <img
+        //           class="w-full h-auto object-cover rounded-lg hover:scale-110 transition-all duration-300"
+        //           src={project.image}
+        //           alt={project.title}
+        //           loading="lazy"
+        //         />
+        //       )}
+        //     </div>
+        //   </div>
+        // </CardItem>
       ))
     }
   </div>

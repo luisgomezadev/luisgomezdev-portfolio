@@ -1,16 +1,24 @@
 ---
-import CardItem from './CardItem.astro';
-import Section from './Section.astro';
+import CardItem from './CardItem.astro'
+import Section from './Section.astro'
 
-const { id } = Astro.props;
+const { id } = Astro.props
 ---
 
 <Section title="Experiencia" id={id}>
-  <CardItem class="py-8 px-8 lg:px-12">
-    <div class="flex justify-between items-center flex-wrap-reverse gap-8">
+  <div class="lg:py-8 px-4 lg:px-6 max-w-6xl mx-auto">
+    <div class="flex justify-between items-center flex-wrap gap-x-5 gap-y-8">
+      <picture class="flex justify-center items-center w-full lg:w-auto flex-1">
+        <img
+          class="size-64 object-cover rounded"
+          loading="lazy"
+          src="/images/zabud.webp"
+          alt="Logo Zabud"
+        />
+      </picture>
       <div class="flex flex-col gap-4 max-w-3xl">
         <h4 class="text-2xl font-bold">Desarrollador Full-Stack</h4>
-        <p class="text-base opacity-70">Zabud Technologies | 2019 - 2024</p>
+        <p class="text-base opacity-80">Zabud Technologies | 2019 - 2024</p>
         <ul class="list-disc pl-5">
           <li>
             Desarrollo de microservicios en Java con Spring Boot, aplicando arquitectura hexagonal
@@ -27,9 +35,6 @@ const { id } = Astro.props;
           </li>
         </ul>
       </div>
-      <picture class="flex justify-center items-center w-full lg:w-auto flex-1">
-        <img class="size-40 object-cover rounded" loading="lazy" src="/images/zabud.webp" alt="Logo Zabud" />
-      </picture>
     </div>
-  </CardItem>
+  </div>
 </Section>

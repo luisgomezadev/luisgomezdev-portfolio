@@ -1,10 +1,7 @@
 ---
-const { class: className = '', dataAos = 'fade-up' } = Astro.props;
+const { class: className = '' } = Astro.props
 ---
 
-<div
-  class={`bg-black/20 border border-black/50 overflow-hidden relative rounded-2xl ${className}`}
-  data-aos={dataAos}
->
+<div class={`bg-black/20 border border-black/50 overflow-hidden relative rounded-2xl ${className}`}>
   <slot />
 </div>

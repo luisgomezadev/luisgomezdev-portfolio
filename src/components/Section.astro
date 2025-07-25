@@ -1,11 +1,11 @@
 ---
-const { title, subtitle, id } = Astro.props;
+const { title, subtitle, id, class: className = 'bg-white' } = Astro.props
 ---
 
-<section id={id} class="scroll-mt-24">
-  <div class="text-center mb-8">
+<section id={id} class={`scroll-mt-16 py-16 ${className}`}>
+  <section class="text-center mb-8">
     <h3 class="text-3xl font-semibold">{title}</h3>
-    {subtitle && <p class="opacity-70 text-base">{subtitle}</p>}
-  </div>
+    {subtitle && <p class="opacity-70 text-base px-4">{subtitle}</p>}
+  </section>
   <slot />
 </section>

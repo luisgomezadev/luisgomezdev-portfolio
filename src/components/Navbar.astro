@@ -1,31 +1,30 @@
 ---
-import HomeIcon from '../assets/icons/HomeIcon.astro';
-import ExperienceIcon from '../assets/icons/ExperienceIcon.astro';
-import CodeIcon from '../assets/icons/CodeIcon.astro';
-import SkillIcon from '../assets/icons/SkillIcon.astro';
-import MailIcon from '../assets/icons/MailIcon.astro';
+import HomeIcon from '../assets/icons/HomeIcon.astro'
+import ExperienceIcon from '../assets/icons/ExperienceIcon.astro'
+import CodeIcon from '../assets/icons/CodeIcon.astro'
+import SkillIcon from '../assets/icons/SkillIcon.astro'
+import MailIcon from '../assets/icons/MailIcon.astro'
 ---
 
-<header class="fixed top-0 left-0 w-full p-3 sm:p-0 duration-300 z-50 transition-all">
+<header
+  class="fixed top-0 left-0 w-full p-3 md:p-0 duration-300 z-30 transition-all backdrop-blur-3xl bg-transparent"
+>
   <nav
-    class="duration-300 mx-auto max-w-7xl w-full text-white flex items-center backdrop-blur-3xl sm:backdrop-blur-none py-2 sm:py-5 px-5 justify-between rounded-2xl sm:rounded-none bg-green-400/20 sm:bg-transparent sm:h-auto h-12 border-2 sm:border-0 border-gray-500 transition-all"
+    class="duration-300 mx-auto max-w-7xl w-full text-black flex items-center py-2 md:py-5 justify-between h-auto transition-all md:px-3"
   >
+    <a
+      href="#inicio"
+      class="w-8 flex items-center gap-2 font-bold transition-transform duration-300 hover:scale-110"
+    >
+      <img src="/logo_personal.webp" alt="Logo Luis Gomez Dev" />
+      <span class="text-2xl tracking-wide text-black">LGDev.</span>
+    </a>
 
-    <div class="w-7 h-7 bg-white items-center justify-center dark:bg-moonlit p-4 hidden sm:flex">
-      <span class="text-black text-med font-semibold">LG</span>
-    </div>
+    <!-- Menú Hamburguesa -->
+    <button id="menuToggle" class="md:hidden text-3xl z-50 relative"> ☰ </button>
 
-    <ul class="flex items-center gap-x-3 sm:gap-x-12 justify-between w-full sm:w-auto">
-      <li>
-        <a href="#inicio" class="group relative flex gap-2 items-center">
-          <div class="hidden md:block"><HomeIcon /></div>
-          Inicio
-          <span
-            class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full group-hover:left-0"
-          ></span>
-        </a>
-      </li>
-
+    <!-- Menú Desktop -->
+    <ul class="hidden md:flex items-center gap-x-7 sm:gap-x-12 text-black">
       <li>
         <a href="#experiencia" class="group relative flex gap-2 items-center">
           <div class="hidden md:block"><ExperienceIcon /></div>
@@ -35,7 +34,6 @@ import MailIcon from '../assets/icons/MailIcon.astro';
           ></span>
         </a>
       </li>
-
       <li>
         <a href="#proyectos" class="group relative flex gap-2 items-center">
           <div class="hidden md:block"><CodeIcon /></div>
@@ -45,7 +43,6 @@ import MailIcon from '../assets/icons/MailIcon.astro';
           ></span>
         </a>
       </li>
-
       <li>
         <a href="#habilidades" class="group relative flex gap-2 items-center">
           <div class="hidden md:block"><SkillIcon /></div>
@@ -55,10 +52,9 @@ import MailIcon from '../assets/icons/MailIcon.astro';
           ></span>
         </a>
       </li>
-
-      <li class="hidden md:flex group relative gap-2 items-center">
-        <MailIcon />
-        <a href="#contacto" class="group-hover:text-white">
+      <li>
+        <a href="#contacto" class="group relative flex gap-2 items-center">
+          <div class="hidden md:block"><MailIcon /></div>
           Contacto
           <span
             class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full group-hover:left-0"
@@ -66,20 +62,42 @@ import MailIcon from '../assets/icons/MailIcon.astro';
         </a>
       </li>
     </ul>
+
+    <!-- Menú Mobile -->
+    <div
+      id="mobileMenu"
+      class="fixed top-0 right-0 w-full h-screen bg-white/95 text-black flex flex-col items-center justify-center gap-8 text-2xl font-medium transform translate-x-full transition-transform duration-500 md:hidden z-40 backdrop-blur-3xl"
+    >
+      <a href="#experiencia" onclick="toggleMenu()">Experiencia</a>
+      <a href="#proyectos" onclick="toggleMenu()">Proyectos</a>
+      <a href="#habilidades" onclick="toggleMenu()">Habilidades</a>
+      <a href="#contacto" onclick="toggleMenu()">Contacto</a>
+    </div>
   </nav>
 </header>
 
-<script>
+<script lang="ts">
   if (typeof window !== 'undefined') {
+    const nav = document.querySelector('header')
+    const menu = document.getElementById('mobileMenu')
+    const toggle = document.getElementById('menuToggle')
+
     window.addEventListener('scroll', () => {
-      const nav = document.querySelector('header');
       if (window.scrollY > 50) {
-        nav?.classList.add('sm:bg-[#111]', 'sm:shadow-md');
-        nav?.classList.remove('bg-transparent');
+        nav?.classList.add('bg-white/80', 'shadow-md')
+        nav?.classList.remove('bg-transparent')
       } else {
-        nav?.classList.remove('sm:bg-[#111]', 'sm:shadow-md');
-        nav?.classList.add('bg-transparent');
+        nav?.classList.remove('bg-white/80', 'shadow-md')
+        nav?.classList.add('bg-transparent')
       }
-    });
+    })
+
+    window.toggleMenu = () => {
+      menu?.classList.toggle('translate-x-full')
+    }
+
+    toggle?.addEventListener('click', () => {
+      window.toggleMenu()
+    })
   }
 </script>
