@@ -25,18 +25,27 @@ const { id } = Astro.props
         </p>
       </div>
       <div class="flex items-center gap-4">
-        <ButtonLink href="https://github.com/luisgomezadev" class="text-white bg-black px-4">
+        <ButtonLink
+          href="https://github.com/luisgomezadev"
+          title="GitHub Luis Gomez"
+          class="text-white bg-black px-4"
+        >
           <GitHub size={20} />
           <span class="hidden lg:flex">GitHub</span>
         </ButtonLink>
         <ButtonLink
+          title="LinkedIn Luis Gomez"
           href="https://www.linkedin.com/in/luisgomezdev/"
           class="text-white bg-black px-4"
         >
           <LinkedIn size={20} />
           <span class="hidden lg:flex">LinkedIn</span>
         </ButtonLink>
-        <ButtonLink href="mailto:luisgomez24g@gmail.com" class="text-white bg-black px-4">
+        <ButtonLink
+          href="mailto:luisgomez24g@gmail.com"
+          title="Enviar correo a Luis Gomez"
+          class="text-white bg-black px-4"
+        >
           <EmailIcon size={20} />
           <span class="hidden lg:flex">Email</span>
         </ButtonLink>

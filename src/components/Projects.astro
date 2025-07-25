@@ -39,7 +39,7 @@ const { id } = Astro.props
             <div class="flex items-center flex-wrap gap-2 mb-2 mt-4">
               {project.technologies.map((tech) => (
                 <span
-                  class={`inline-block text-xs font-medium px-3 py-1 mr-2 mb-2 rounded-full border ${tech.color} border-current bg-black/5 backdrop-blur-sm`}
+                  class={`inline-block text-xs font-medium px-3 py-1 mr-2 mb-2 rounded-full border ${tech.color} border-current bg-white/80 backdrop-blur-sm`}
                 >
                   {tech.name}
                 </span>
@@ -47,13 +47,18 @@ const { id } = Astro.props
             </div>
             <div class="flex items-center gap-4 mt-4">
               {project.live && (
-                <ButtonLink href={project.live} class="text-white border-red-800 bg-red-800 px-4">
+                <ButtonLink
+                  href={project.live}
+                  title={`Ver demo de proyecto ${project.title}`}
+                  class="text-white border-red-800 bg-red-800 px-4"
+                >
                   <WebIcon color="#FFF" size={20} />
                   Ver demo
                 </ButtonLink>
               )}
               {project.link && (
                 <ButtonLink
+                  title={`Ver repositorio de proyecto ${project.title}`}
                   class="bg-transparent border-2 border-black text-black px-4"
                   href={project.link}
                 >
@@ -64,49 +69,6 @@ const { id } = Astro.props
             </div>
           </div>
         </article>
-        // <CardItem class={`py-8 px-8 lg:px-12 row-span-1 col-span-8 ${project.className}`}>
-        //   <div class="flex flex-col h-full gap-2">
-        //     <div class="flex justify-between items-center mb-2 gap-4">
-        //       <div class="flex items-center gap-1 md:gap-3 opacity-70">
-        //         <ProjectIcon class="w-6 h-6" />
-        //         <span class="text-sm md:text-lg font-semibold uppercase">{project.experience}</span>
-        //       </div>
-        //       <div class="flex gap-4 md:gap-2">
-        //         {project.live && (
-        //           <ButtonLink href={project.live}>
-        //             <WebIcon color="#000" size={20} />
-        //           </ButtonLink>
-        //         )}
-        //         {project.link && (
-        //           <ButtonLink href={project.link}>
-        //             <GitHub color="#000" size={20} />
-        //           </ButtonLink>
-        //         )}
-        //       </div>
-        //     </div>
-        //     <h3 class="text-2xl font-bold mb-2 text-green-500">{project.title}</h3>
-        //     <p class="text-base opacity-80">{project.description}</p>
-        //     <div class="flex items-center flex-wrap gap-2 mb-4 mt-2">
-        //       {project.technologies.map((tech) => (
-        //         <span
-        //           class={`inline-block text-xs font-medium px-3 py-1 mr-2 mb-2 rounded-full border ${tech.color} border-current bg-white/10 backdrop-blur-sm`}
-        //         >
-        //           {tech.name}
-        //         </span>
-        //       ))}
-        //     </div>
-        //     <div class="overflow-hidden rounded-lg">
-        //       {project.image && (
-        //         <img
-        //           class="w-full h-auto object-cover rounded-lg hover:scale-110 transition-all duration-300"
-        //           src={project.image}
-        //           alt={project.title}
-        //           loading="lazy"
-        //         />
-        //       )}
-        //     </div>
-        //   </div>
-        // </CardItem>
       ))
     }
   </div>

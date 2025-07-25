@@ -36,20 +36,33 @@ const { id } = Astro.props
       <div class="flex items-center space-x-4">
         <span class="text-gray-800 dark:text-black font-medium">Sígueme por:</span>
         <div class="flex space-x-3">
-          <ButtonLink href="https://github.com/luisgomezadev" class="text-white bg-black">
+          <ButtonLink
+            href="https://github.com/luisgomezadev"
+            title="GitHub Luis Gomez"
+            class="text-white bg-black"
+          >
             <GitHub class="w-6 h-6" />
           </ButtonLink>
-          <ButtonLink href="https://www.linkedin.com/in/luisgomezdev/" class="text-white bg-black">
+          <ButtonLink
+            href="https://www.linkedin.com/in/luisgomezdev/"
+            title="LinkedIn Luis Gomez"
+            class="text-white bg-black"
+          >
             <LinkedIn class="w-6 h-6" />
           </ButtonLink>
         </div>
       </div>
       <div class="flex items-center gap-4 mt-4">
-        <ButtonLink href="mailto:luisgomez24g@gmail.com" class="text-white bg-black px-4">
+        <ButtonLink
+          href="mailto:luisgomez24g@gmail.com"
+          title="Enviar correo a Luis Gomez"
+          class="text-white bg-black px-4"
+        >
           <EmailIcon color="#FFF" size={20} />
           Contactar
         </ButtonLink>
         <ButtonLink
+         title="Descargar CV de Luis Gomez" 
           class="bg-transparent border-2 border-black text-black px-4"
           href="/files/CV_Luis_Gomez_2025.pdf"
         >
