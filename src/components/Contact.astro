@@ -1,7 +1,6 @@
 ---
-import Section from './Section.astro'
-import CardItem from './CardItem.astro'
-import ButtonLink from './ButtonLink.astro'
+import Section from './shared/Section.astro'
+import ButtonLink from './shared/ButtonLink.astro'
 import GitHub from '../assets/icons/GitHub.astro'
 import LinkedIn from '../assets/icons/LinkedIn.astro'
 import EmailIcon from '../assets/icons/EmailIcon.astro'
@@ -15,7 +14,7 @@ const { id } = Astro.props
   subtitle="¿Tienes alguna pregunta o quieres colaborar?"
   class="bg-[#EEE]"
 >
-  <div class="py-3 px-3 md:px-0 max-w-6xl mx-auto">
+  <div class="py-3 px-3 xl:px-0 max-w-6xl mx-auto">
     <div class="flex flex-col md:flex-row gap-6 md:gap-16">
       <div class="flex flex-col gap-2 justify-center">
         <h2 class="text-2xl font-bold z-[1] text-red-800">Contáctame</h2>
