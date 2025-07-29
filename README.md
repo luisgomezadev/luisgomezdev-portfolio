@@ -6,7 +6,7 @@ Este es mi portafolio personal desarrollado con [Astro](https://astro.build/) y 
 
 - 🌟 [Astro](https://astro.build/) – Framework moderno para sitios rápidos y estáticos.
 - 🎨 [Tailwind CSS](https://tailwindcss.com/) – Utilidad para estilos rápidos, responsivos y modernos.
-- 🧩 [Iconos SVG]([https://lucide.dev/](https://tabler.io/icons)) – Para representar secciones visualmente.
+- 🧩 [Iconos SVG](https://tabler.io/icons) – Para representar secciones visualmente.
 
 ## 🖥 Vista previa
 
