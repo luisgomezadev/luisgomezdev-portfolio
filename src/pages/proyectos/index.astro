@@ -10,77 +10,81 @@ import { PROJECTS } from '../../data/projects'
 ---
 
 <Layout title="Luis Gomez Dev | Proyectos">
-  <div class="max-w-6xl mx-auto pb-12 md:pb-8 pt-14 md:pt-40 px-4">
-    <div class="flex justify-between items-center gap-6 mb-8">
-      <h1 class="text-4xl font-bold mb-2 text-red-800">Todos los proyectos</h1>
-      <ButtonLink
-        href="/"
-        title="Volver al inicio"
-        target=""
-        class="text-black border-black bg-transparent px-4"
-      >
-        <BackIcon color="#000" size={20} />
-        Volver
-      </ButtonLink>
-    </div>
+  <section class="bg-[#EEE] pb-12 md:pb-8 pt-14 md:pt-40 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex justify-between items-center gap-6 mb-8">
+        <h1 class="text-4xl font-bold mb-2 text-red-800">Todos los proyectos</h1>
+        <ButtonLink
+          href="/"
+          title="Volver al inicio"
+          target=""
+          class="text-black border-black bg-transparent px-4"
+        >
+          <BackIcon color="#000" size={20} />
+          Volver
+        </ButtonLink>
+      </div>
 
-    <div class="lg:py-8 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-      {
-        PROJECTS.map((project, index) => (
-          <article class="flex flex-col gap-x-12 gap-y-5 border bg-white/40 border-gray-300 rounded-xl overflow-hidden shadow">
-            <div class="">
-              <img
-                class="w-full h-40 md:h-52 object-cover hover:scale-105 transition-all duration-300"
-                src={project.image}
-                alt={project.title}
-                loading="lazy"
-              />
-            </div>
-            <div class="flex flex-col h-full p-6">
-              <div class="flex items-center gap-3 opacity-70 mb-3">
-                <ProjectIcon class="w-6 h-6" />
-                <span class="text-sm md:text-lg font-semibold uppercase">{project.experience}</span>
+      <div class="lg:py-8 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+        {
+          PROJECTS.map((project, index) => (
+            <article class="flex flex-col gap-x-12 gap-y-5 border bg-white/40 border-gray-300 rounded-xl overflow-hidden shadow">
+              <div class="">
+                <img
+                  class="w-full h-40 md:h-52 object-cover hover:scale-105 transition-all duration-300"
+                  src={project.image}
+                  alt={project.title}
+                  loading="lazy"
+                />
               </div>
-              <h3 class="text-2xl font-bold mb-2 text-red-800">{project.title}</h3>
-              <div class="flex-1">
-                <p class="text-base opacity-80">{project.description}</p>
-                <div class="flex items-center flex-wrap gap-2 mb-2 mt-4">
-                  {project.technologies.map((tech) => (
-                    <span
-                      class={`inline-block text-xs font-medium px-3 py-0.5 mr-2 mb-2 ${tech.color} rounded-full bg-white/80 backdrop-blur-sm`}
+              <div class="flex flex-col h-full p-6">
+                <div class="flex items-center gap-3 opacity-70 mb-3">
+                  <ProjectIcon class="w-6 h-6" />
+                  <span class="text-sm md:text-lg font-semibold uppercase">
+                    {project.experience}
+                  </span>
+                </div>
+                <h3 class="text-2xl font-bold mb-2 text-red-800">{project.title}</h3>
+                <div class="flex-1">
+                  <p class="text-base opacity-80">{project.description}</p>
+                  <div class="flex items-center flex-wrap gap-2 mb-2 mt-4">
+                    {project.technologies.map((tech) => (
+                      <span
+                        class={`inline-block text-xs font-medium px-3 py-0.5 mr-2 mb-2 ${tech.color} rounded-full bg-white/80 backdrop-blur-sm`}
+                      >
+                        {tech.name}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-4 mt-4">
+                  {project.live && (
+                    <ButtonLink
+                      href={project.live}
+                      title={`Ver demo de proyecto ${project.title}`}
+                      class="text-red-800 border-red-800 bg-transparent px-4"
                     >
-                      {tech.name}
-                    </span>
-                  ))}
+                      <WebIcon color="#9f0712" size={20} />
+                      Ver demo
+                    </ButtonLink>
+                  )}
+                  {project.link && (
+                    <ButtonLink
+                      title={`Ver repositorio de proyecto ${project.title}`}
+                      class="bg-transparent border-2 border-black text-black px-4"
+                      href={project.link}
+                    >
+                      <GitHub color="#000" size={20} />
+                      Ver código
+                    </ButtonLink>
+                  )}
                 </div>
               </div>
-
-              <div class="flex items-center gap-4 mt-4">
-                {project.live && (
-                  <ButtonLink
-                    href={project.live}
-                    title={`Ver demo de proyecto ${project.title}`}
-                    class="text-red-800 border-red-800 bg-transparent px-4"
-                  >
-                    <WebIcon color="#9f0712" size={20} />
-                    Ver demo
-                  </ButtonLink>
-                )}
-                {project.link && (
-                  <ButtonLink
-                    title={`Ver repositorio de proyecto ${project.title}`}
-                    class="bg-transparent border-2 border-black text-black px-4"
-                    href={project.link}
-                  >
-                    <GitHub color="#000" size={20} />
-                    Ver código
-                  </ButtonLink>
-                )}
-              </div>
-            </div>
-          </article>
-        ))
-      }
+            </article>
+          ))
+        }
+      </div>
     </div>
-  </div>
+  </section>
 </Layout>
