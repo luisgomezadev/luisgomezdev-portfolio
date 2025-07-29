@@ -1,4 +1,4 @@
-# 💼 Portafolio de [Tu Nombre]
+# 💼 Portafolio de Luis Gómez
 
 Este es mi portafolio personal desarrollado con [Astro](https://astro.build/) y estilizado con [Tailwind CSS](https://tailwindcss.com/). Aquí encontrarás información sobre mí, mis habilidades, experiencia y proyectos destacados.
 
