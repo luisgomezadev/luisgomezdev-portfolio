@@ -1,8 +1,9 @@
 ---
 import Navbar from '../components/Navbar.astro'
 import Footer from '../components/Footer.astro'
+import { ClientRouter } from 'astro:transitions'
 
-const { title, description } = Astro.props
+const { title } = Astro.props
 ---
 
 <!doctype html>
@@ -12,7 +13,10 @@ const { title, description } = Astro.props
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/x-icon" href="/logo_personal_blanco.webp" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={description} />
+    <meta
+      name="description"
+      content="Bienvenidos a mi portafolio. Soy Luis Gómez, desarrollador web con más de cuatro años de experiencia en el diseño, desarrollo y mantenimiento de aplicaciones web."
+    />
     <title>{title}</title>
     <meta
       name="keywords"
@@ -35,6 +39,7 @@ const { title, description } = Astro.props
       property="twitter:description"
       content="Bienvenidos a mi portafolio. Soy Luis Gómez, ingeniero de sistemas y desarrollador web con más de cuatro años de experiencia en el diseño, desarrollo y mantenimiento de aplicaciones web."
     />
+    <ClientRouter />
   </head>
   <body class="text-gray-800 bg-white">
     <Navbar />

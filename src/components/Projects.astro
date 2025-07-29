@@ -16,59 +16,78 @@ const { id } = Astro.props
   subtitle="Algunos de los proyectos que he colaborado y desarrollado"
   class="bg-[#EEE]"
 >
-  <div class="lg:py-8 px-4 lg:px-6 max-w-6xl mx-auto flex flex-col gap-24">
+  <div class="lg:py-8 px-4 lg:px-6 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
     {
-      PROJECTS.map((project, index) => (
-        <article class="flex flex-col-reverse md:flex-row gap-x-12 gap-y-5">
-          <div class="flex-1 flex items-center">
-            <img
-              class="w-full h-auto object-cover rounded-lg hover:scale-105 transition-all duration-300"
-              src={project.image}
-              alt={project.title}
-              loading="lazy"
-            />
-          </div>
-          <div class="w-full md:max-w-lg lg:max-w-xl">
-            <div class="flex items-center gap-3 opacity-70 mb-3">
-              <ProjectIcon class="w-6 h-6" />
-              <span class="text-sm md:text-lg font-semibold uppercase">{project.experience}</span>
-            </div>
-            <h3 class="text-2xl font-bold mb-2 text-red-800">{project.title}</h3>
-            <p class="text-base opacity-80">{project.description}</p>
-            <div class="flex items-center flex-wrap gap-2 mb-2 mt-4">
-              {project.technologies.map((tech) => (
-                <span
-                  class={`inline-block text-xs font-medium px-3 py-1 mr-2 mb-2 rounded-full border ${tech.color} border-current bg-white/80 backdrop-blur-sm`}
-                >
-                  {tech.name}
-                </span>
-              ))}
-            </div>
-            <div class="flex items-center gap-4 mt-4">
-              {project.live && (
-                <ButtonLink
-                  href={project.live}
-                  title={`Ver demo de proyecto ${project.title}`}
-                  class="text-white border-red-800 bg-red-800 px-4"
-                >
-                  <WebIcon color="#FFF" size={20} />
-                  Ver demo
-                </ButtonLink>
-              )}
-              {project.link && (
-                <ButtonLink
-                  title={`Ver repositorio de proyecto ${project.title}`}
-                  class="bg-transparent border-2 border-black text-black px-4"
-                  href={project.link}
-                >
-                  <GitHub color="#000" size={20} />
-                  Ver código
-                </ButtonLink>
-              )}
-            </div>
-          </div>
-        </article>
-      ))
+      PROJECTS.map(
+        (project, index) =>
+          project.home && (
+            <article class="flex flex-col gap-x-12 gap-y-5 border bg-white/40 border-gray-300 rounded-xl overflow-hidden shadow">
+              <div class="">
+                <img
+                  class="w-full h-40 md:h-52 object-cover hover:scale-105 transition-all duration-300"
+                  src={project.image}
+                  alt={project.title}
+                  loading="lazy"
+                />
+              </div>
+              <div class="flex flex-col h-full p-6">
+                <div class="flex items-center gap-3 opacity-70 mb-3">
+                  <ProjectIcon class="w-6 h-6" />
+                  <span class="text-sm md:text-lg font-semibold uppercase">
+                    {project.experience}
+                  </span>
+                </div>
+                <h3 class="text-2xl font-bold mb-2 text-red-800">{project.title}</h3>
+                <div class="flex-1">
+                  <p class="text-base opacity-80">{project.description}</p>
+                  <div class="flex items-center flex-wrap gap-2 mb-2 mt-4">
+                    {project.technologies.map((tech) => (
+                      <span
+                        class={`inline-block text-xs font-medium px-3 py-1 mr-2 mb-2 rounded-full border ${tech.color} border-current bg-white/80 backdrop-blur-sm`}
+                      >
+                        {tech.name}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-4 mt-4">
+                  {project.live && (
+                    <ButtonLink
+                      href={project.live}
+                      title={`Ver demo de proyecto ${project.title}`}
+                      class="text-red-800 border-red-800 bg-transparent px-4"
+                    >
+                      <WebIcon color="#9f0712" size={20} />
+                      Ver demo
+                    </ButtonLink>
+                  )}
+                  {project.link && (
+                    <ButtonLink
+                      title={`Ver repositorio de proyecto ${project.title}`}
+                      class="bg-transparent border-2 border-black text-black px-4"
+                      href={project.link}
+                    >
+                      <GitHub color="#000" size={20} />
+                      Ver código
+                    </ButtonLink>
+                  )}
+                </div>
+              </div>
+            </article>
+          )
+      )
     }
+  </div>
+  <div class="w-full flex items-center justify-center mt-12">
+    <ButtonLink
+      href="/proyectos"
+      title="Ver todos los proyectos"
+      target=""
+      class="text-white border-red-800 bg-red-800 px-4"
+    >
+      <WebIcon color="#FFF" size={20} />
+      Ver todos
+    </ButtonLink>
   </div>
 </Section>
