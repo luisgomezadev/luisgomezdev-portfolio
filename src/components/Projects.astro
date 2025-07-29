@@ -43,7 +43,7 @@ const { id } = Astro.props
                   <div class="flex items-center flex-wrap gap-2 mb-2 mt-4">
                     {project.technologies.map((tech) => (
                       <span
-                        class={`inline-block text-xs font-medium px-3 py-1 mr-2 mb-2 rounded-full border ${tech.color} border-current bg-white/80 backdrop-blur-sm`}
+                        class={`inline-block text-xs font-medium px-3 py-0.5 mr-2 mb-2 ${tech.color} rounded-full bg-white/80 backdrop-blur-sm`}
                       >
                         {tech.name}
                       </span>
