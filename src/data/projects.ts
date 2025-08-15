@@ -10,12 +10,12 @@ export const PROJECTS = [
     experience: 'Experiencia Personal',
     home: true,
     technologies: [
-      { name: 'Java', color: 'text-[#007396]' }, // color específico de Java
-      { name: 'Spring Boot', color: 'text-green-600' },
-      { name: 'Spring Security', color: 'text-green-700' },
-      { name: 'MySQL', color: 'text-cyan-700' },
-      { name: 'Angular', color: 'text-red-600' },
-      { name: 'TailwindCSS', color: 'text-sky-400' },
+      "/skills/java.webp",
+      "/skills/spring.webp",
+      "/skills/security.webp",
+      "/skills/mysql.webp",
+      "/skills/angular.webp",
+      "/skills/tailwind.webp",
     ],
   },
   {
@@ -29,8 +29,8 @@ export const PROJECTS = [
     experience: 'Experiencia Personal',
     home: true,
     technologies: [
-      { name: 'Astro', color: 'text-purple-500' },
-      { name: 'TailwindCSS', color: 'text-sky-400' },
+      "/skills/astro.webp",
+      "/skills/tailwind.webp",
     ],
   },
   {
@@ -44,9 +44,9 @@ export const PROJECTS = [
     experience: 'Experiencia Personal',
     home: true,
     technologies: [
-      { name: 'TypeScript', color: 'text-blue-500' },
-      { name: 'VueJS', color: 'text-emerald-500' },
-      { name: 'TailwindCSS', color: 'text-sky-400' },
+      "/skills/ts.webp",
+      "/skills/vue.webp",
+      "/skills/tailwind.webp",
     ],
   },
 ]

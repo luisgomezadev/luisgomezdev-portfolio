@@ -1,5 +1,13 @@
 export const SKILLS = [
   {
+    name: 'HTML',
+    icon: '/skills/html.webp',
+  },
+  {
+    name: 'CSS',
+    icon: '/skills/css.webp',
+  },
+  {
     name: 'JavaScript',
     icon: '/skills/js.webp',
   },
