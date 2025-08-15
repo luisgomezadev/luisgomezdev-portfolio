@@ -4,7 +4,7 @@ const { title, subtitle, id, class: className = 'bg-white' } = Astro.props
 
 <section id={id} class={`scroll-mt-16 py-16 ${className}`}>
   <section class="text-center mb-8">
-    <h2 class="text-3xl font-semibold">{title}</h2>
+    <h1 class="text-3xl font-semibold">{title}</h1>
     {subtitle && <h3 class="opacity-70 text-base px-4">{subtitle}</h3>}
   </section>
   <slot />

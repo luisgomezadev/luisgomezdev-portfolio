@@ -1,9 +1,9 @@
 ---
-const { href, class: className = 'bg-black', title, target = '_blank' } = Astro.props
+const { href, class: className = 'bg-[#01013E]', title, target = '_blank' } = Astro.props
 ---
 
 <a
-  class={`flex items-center border-2 border-black font-medium px-2 py-2 rounded-full gap-2 hover:scale-105 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer ${className}`}
+  class={`flex items-center border-2 border-[#01013E] font-medium px-2 py-2 rounded-full gap-2 hover:scale-105 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-pointer ${className}`}
   href={href}
   target={target}
   title={title}
