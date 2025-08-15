@@ -1,6 +1,14 @@
-# 💻 Portafolio | Luis Gómez
+# 💼 Portafolio de Luis Gómez
 
-<div align="center">
-  <img src="https://img.shields.io/badge/Astro-100%25-orange" alt="Astro 100%">
-  <img src="https://img.shields.io/badge/TailwindCSS-100%25-blue" alt="TailwindCSS 100%">
-</div>
+Este es mi portafolio personal desarrollado con [Astro](https://astro.build/) y estilizado con [Tailwind CSS](https://tailwindcss.com/). Aquí encontrarás información sobre mí, mis habilidades, experiencia y proyectos destacados.
+
+## 🚀 Tecnologías utilizadas
+
+- 🌟 [Astro](https://astro.build/) – Framework moderno para sitios rápidos y estáticos.
+- 🎨 [Tailwind CSS](https://tailwindcss.com/) – Utilidad para estilos rápidos, responsivos y modernos.
+- 🧩 [Iconos SVG](https://tabler.io/icons) – Para representar secciones visualmente.
+
+## 🖥 Vista previa
+
+Puedes ver el sitio en línea aquí:  
+🔗 [https://luisgomezdev.vercel.app](https://luisgomezdev.vercel.app/)
