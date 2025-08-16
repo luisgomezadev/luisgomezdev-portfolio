@@ -4,50 +4,28 @@ import ButtonLink from './shared/ButtonLink.astro'
 import GitHub from '../assets/icons/GitHub.astro'
 import LinkedIn from '../assets/icons/LinkedIn.astro'
 import EmailIcon from '../assets/icons/EmailIcon.astro'
+import ContactCard from './shared/ContactCard.astro'
 
 const { id } = Astro.props
 ---
 
-<Section
-  title="Contacto"
-  id={id}
-  subtitle="¿Tienes alguna pregunta o quieres colaborar?"
->
+<Section title="Contacto" id={id} subtitle="¡Hablemos! Estoy abierto a nuevas oportunidades y colaboraciones.">
   <div class="py-3 px-3 xl:px-0 max-w-6xl mx-auto">
-    <div class="flex flex-col md:flex-row gap-6 md:gap-16">
-      <div class="flex flex-col gap-2 justify-center">
-        <h2 class="text-2xl font-bold z-[1] text-red-800">Contáctame</h2>
-        <p class="text-base w-full z-[1] opacity-70 text-pretty">
-          Estoy siempre abierto a nuevas oportunidades y colaboraciones. Si tienes alguna pregunta o
-          proyecto en mente, no dudes en contactarme.
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <ContactCard href="https://github.com/luisgomezadev" title="GitHub">
+        <GitHub size="32" slot="icon" />
+        <p slot="description">
+          Visita mi perfil de GitHub para ver mis proyectos y contribuciones.
         </p>
-      </div>
-      <div class="flex items-center gap-4">
-        <ButtonLink
-          href="https://github.com/luisgomezadev"
-          title="GitHub Luis Gomez"
-          class="text-white bg-black px-4"
-        >
-          <GitHub size={20} />
-          <span class="hidden lg:flex">GitHub</span>
-        </ButtonLink>
-        <ButtonLink
-          title="LinkedIn Luis Gomez"
-          href="https://www.linkedin.com/in/luisgomezdev/"
-          class="text-white bg-black px-4"
-        >
-          <LinkedIn size={20} />
-          <span class="hidden lg:flex">LinkedIn</span>
-        </ButtonLink>
-        <ButtonLink
-          href="mailto:luisgomez24g@gmail.com"
-          title="Enviar correo a Luis Gomez"
-          class="text-white bg-black px-4"
-        >
-          <EmailIcon size={20} />
-          <span class="hidden lg:flex">Email</span>
-        </ButtonLink>
-      </div>
+      </ContactCard>
+      <ContactCard href="https://www.linkedin.com/in/luisgomezdev/" title="LinkedIn">
+        <LinkedIn size="32" slot="icon" />
+        <p slot="description">Conéctate conmigo en LinkedIn para oportunidades profesionales.</p>
+      </ContactCard>
+      <ContactCard href="mailto:luisgomez24g@gmail.com" title="Enviar correo">
+        <EmailIcon size="32" slot="icon" />
+        <p slot="description">Envíame un correo electrónico para consultas o colaboraciones.</p>
+      </ContactCard>
     </div>
   </div>
 </Section>

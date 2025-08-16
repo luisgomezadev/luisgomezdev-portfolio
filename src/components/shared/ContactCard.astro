@@ -1,0 +1,20 @@
+---
+const { href, title } = Astro.props
+---
+
+<article>
+  <a
+    class="flex gap-6 items-center border bg-white/40 border-gray-300 rounded-xl overflow-hidden shadow py-4 px-4 hover:bg-black/5 transition-colors duration-300"
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <picture>
+      <slot name="icon" />
+    </picture>
+    <div>
+      <h1 class="text-2xl font-bold text-red-800">{title}</h1>
+      <slot name="description" />
+    </div>
+  </a>
+</article>

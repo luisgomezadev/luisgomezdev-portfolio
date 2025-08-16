@@ -1,29 +1,10 @@
 ---
-import GitHub from '../assets/icons/GitHub.astro'
-import LinkedIn from '../assets/icons/LinkedIn.astro'
-import ButtonLink from './shared/ButtonLink.astro'
 ---
 
-<footer class="bg-[#111] text-white py-8">
-  <div class="flex justify-between max-w-6xl mx-auto items-center px-3 xl:px-0">
-    <p class="text-sm text-gray-300">
+<section class="bg-[#111] py-12">
+  <footer class="flex justify-center max-w-6xl mx-auto items-center px-3 xl:px-0">
+    <p class="text-sm text-gray-200">
       © {new Date().getFullYear()} Luis Gómez Dev.
     </p>
-    <div class="flex items-center gap-3">
-      <ButtonLink
-        title="GitHub Luis Gomez"
-        href="https://github.com/luisgomezadev"
-        class="text-white bg-transparent border-none"
-      >
-        <GitHub class="w-6 h-6" />
-      </ButtonLink>
-      <ButtonLink
-        title="LinkedIn Luis Gomez"
-        href="https://www.linkedin.com/in/luisgomezdev/"
-        class="text-white bg-transparent border-none"
-      >
-        <LinkedIn class="w-6 h-6" />
-      </ButtonLink>
-    </div>
-  </div>
-</footer>
+  </footer>
+</section>

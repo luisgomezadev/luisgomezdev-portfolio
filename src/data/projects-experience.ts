@@ -30,7 +30,7 @@ export const PROJECTS_EXPERIENCE = [
     id: 'tronos',
     title: 'Tronos',
     description:
-      'Software que permite manejar los procesos académicos, como la gestión de estudiantes, docentes, notas y otros aspectos relacionados, en la universidad Unicolombo. Encargado del desarrollo frontend con Angular, enfocado en la integración de microservicios y corrección de bugs y mejoras.',
+      'Software que permite manejar los procesos académicos, como la gestión de estudiantes, docentes, notas y otros aspectos relacionados, en la universidad Unicolombo. Encargado del desarrollo frontend con Angular y backend con Spring Boot, enfocado en la creación e integración de microservicios y corrección de bugs y mejoras.',
     technologies: [
       "/skills/html.webp",
       "/skills/css.webp",
