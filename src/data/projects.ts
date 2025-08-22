@@ -10,12 +10,22 @@ export const PROJECTS = [
     experience: 'Experiencia Personal',
     home: true,
     technologies: [
-      "/skills/java.webp",
-      "/skills/spring.webp",
-      "/skills/security.webp",
-      "/skills/mysql.webp",
-      "/skills/angular.webp",
-      "/skills/tailwind.webp",
+      {
+        name: 'Java',
+        image: '/skills/java.webp',
+      },
+      {
+        name: 'Spring Boot',
+        image: '/skills/spring.webp',
+      },
+      {
+        name: 'Angular',
+        image: '/skills/angular.webp',
+      },
+      {
+        name: 'MySQL',
+        image: '/skills/mysql.webp',
+      }
     ],
   },
   {
@@ -29,8 +39,14 @@ export const PROJECTS = [
     experience: 'Experiencia Personal',
     home: true,
     technologies: [
-      "/skills/astro.webp",
-      "/skills/tailwind.webp",
+      {
+        name: 'Astro',
+        image: '/skills/astro.webp',
+      },
+      {
+        name: 'Tailwind CSS',
+        image: '/skills/tailwind.webp',
+      }
     ],
   },
   {
@@ -44,9 +60,14 @@ export const PROJECTS = [
     experience: 'Experiencia Personal',
     home: true,
     technologies: [
-      "/skills/ts.webp",
-      "/skills/vue.webp",
-      "/skills/tailwind.webp",
+      {
+        name: 'Vue.js',
+        image: '/skills/vue.webp',
+      },
+      {
+        name: 'Tailwind CSS',
+        image: '/skills/tailwind.webp',
+      }
     ],
   },
 ]

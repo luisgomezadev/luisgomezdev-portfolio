@@ -11,51 +11,47 @@ const { id } = Astro.props
 ---
 
 <Section
-  title="Proyectos"
+  title="Portafolio"
   id={id}
   subtitle="Algunos de los proyectos que he desarrollado como enfoque personal y profesional"
+  class="bg-white"
 >
-  <div class="lg:py-8 px-4 lg:px-6 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+  <div class="lg:py-8 px-4 lg:px-6 max-w-6xl mx-auto grid grid-cols-1 gap-8">
     {
       PROJECTS.map(
         (project, index) =>
           project.home && (
-            <article class="flex flex-col gap-x-12 gap-y-5 border bg-white/40 border-gray-300 rounded-xl overflow-hidden shadow py-3">
-              <div class="">
+            <article class="flex flex-col md:flex-row gap-x-12 border bg-white/10 border-gray-300 rounded-xl overflow-hidden shadow p-3">
+              <div class="flex items-center justify-center w-full md:w-[1500px] overflow-hidden">
                 <img
-                  class="w-full object-cover"
+                  class="w-full object-cover rounded-xl"
                   src={project.image}
                   alt={project.title}
                   loading="lazy"
                 />
               </div>
-              <div class="flex flex-col h-full p-6">
-                <div class="flex items-center gap-3 opacity-70 mb-3">
-                  <ProjectIcon class="w-6 h-6" />
-                  <span class="text-sm md:text-lg font-semibold uppercase">
-                    {project.experience}
-                  </span>
+              <div class="flex flex-col p-4">
+                <h1 class="text-2xl font-bold text-red-800 mb-4">{project.title}</h1>
+
+                <div class="flex flex-wrap gap-3 mb-4">
+                  {project.technologies.map((tech) => (
+                    <div class="flex items-center gap-2 bg-black/5 px-3 py-1 rounded-lg shadow">
+                      <img src={tech.image} class="w-4 object-contain" alt={tech.name} />
+                      <span class="text-sm text-gray-700">{tech.name}</span>
+                    </div>
+                  ))}
                 </div>
-                <h1 class="text-2xl font-bold mb-2 text-red-800">{project.title}</h1>
-                <div class="flex-1">
-                  <p class="text-base opacity-80">{project.description}</p>
-                  <h2 class="text-black text-lg my-4 font-semibold">Tecnologías utilizadas</h2>
-                  <div class="flex flex-wrap gap-3">
-                    {project.technologies.map((tech) => (
-                      <img src={tech} class="w-8 object-contain" alt="" />
-                    ))}
-                  </div>
-                </div>
+                <p class="text-base opacity-80">{project.description}</p>
 
                 <div class="flex items-center gap-4 mt-8">
                   {project.live && (
                     <ButtonLink
                       href={project.live}
-                      title={`Ver demo de proyecto ${project.title}`}
+                      title={`Vista previa de proyecto ${project.title}`}
                       class="text-red-800 border-red-800 bg-transparent px-4"
                     >
                       <WebIcon color="#9f0712" size={20} />
-                      Ver demo
+                      Vista previa
                     </ButtonLink>
                   )}
                   {project.link && (
