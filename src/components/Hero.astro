@@ -82,24 +82,25 @@ const { id } = Astro.props
         <ButtonLink
           title="Descargar CV de Luis Gomez"
           class="px-4 bg-gray-300/50 text-blue-600"
-          textColor="text-blue-600"
+          textColor="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
           href="/files/CV_Luis_Gomez_2025.pdf"
         >
-          <CvIcon color="#1E5CFC" size={20} />
+          <CvIcon color="#8631FB" size={20} />
           Descargar mi CV
         </ButtonLink>
       </div>
     </div>
     <div class="relative flex justify-center items-center">
       <div
-        class="relative rounded-full animate-fade-in-up overflow-hidden border-4 border-blue-600"
+        class="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 p-1 rounded-full animate-fade-in-up"
       >
         <img
           src="/luis_perfil.webp"
           alt="Luis Gómez"
-          class="bg-gray-100 w-72 h-72 sm:w-96 sm:h-96 lg:w-[420px] lg:h-[420px] object-cover grayscale"
+          class="bg-gray-100 rounded-full w-72 h-72 sm:w-96 sm:h-96 lg:w-[420px] lg:h-[420px] object-cover grayscale"
         />
       </div>
+
       <!-- <div
         class="absolute top-6 left-8 sm:left-20 w-12 h-12 sm:w-16 sm:h-16 bg-white text-gray-800 border rounded-full drop-shadow-2xl shadow-lg shadow-gray-800 flex items-center justify-center hover:scale-110 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-float group"
       >
