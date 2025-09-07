@@ -1,9 +1,15 @@
 ---
-const { href, class: className = 'bg-transparent', title, target = '_blank' } = Astro.props
+const {
+  href,
+  class: className = '',
+  title,
+  target = '_blank',
+  textColor = 'text-white',
+} = Astro.props
 ---
 
 <a
-  class={`flex items-center border-2 border-black font-medium px-2 py-2 rounded-lg gap-2 shadow-sm hover:shadow-red-800 hover:bg-black/5 transition-all duration-300 cursor-pointer ${className}`}
+  class={`flex items-center font-medium px-2 py-2 rounded-full gap-2 shadow-lg hover:shadow-gray-400 cursor-pointer hover:scale-105 transition-all duration-300 ${textColor}  ${className}`}
   href={href}
   target={target}
   title={title}

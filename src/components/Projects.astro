@@ -16,7 +16,7 @@ const { id } = Astro.props
   subtitle="Algunos de los proyectos que he desarrollado como enfoque personal y profesional"
   class="bg-white"
 >
-  <div class="lg:py-8 px-4 lg:px-6 max-w-6xl mx-auto grid grid-cols-1 gap-8">
+  <div class="lg:py-8 px-4 lg:px-6 max-w-7xl mx-auto grid grid-cols-1 gap-8">
     {
       PROJECTS.map(
         (project, index) =>
@@ -31,7 +31,9 @@ const { id } = Astro.props
                 />
               </div>
               <div class="flex flex-col p-4">
-                <h1 class="text-2xl font-bold text-red-800 mb-4">{project.title}</h1>
+                <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
+                  {project.title}
+                </h1>
 
                 <div class="flex flex-wrap gap-3 mb-4">
                   {project.technologies.map((tech) => (
@@ -48,19 +50,20 @@ const { id } = Astro.props
                     <ButtonLink
                       href={project.live}
                       title={`Vista previa de proyecto ${project.title}`}
-                      class="text-red-800 border-red-800 bg-transparent px-4"
+                      class="bg-gradient-to-r from-blue-600 to-purple-600 px-4"
                     >
-                      <WebIcon color="#9f0712" size={20} />
+                      <WebIcon size={20} />
                       Vista previa
                     </ButtonLink>
                   )}
                   {project.link && (
                     <ButtonLink
                       title={`Ver repositorio de proyecto ${project.title}`}
-                      class="bg-transparent border-2 border-black text-black px-4"
+                      class="px-4 bg-gray-300/50 text-blue-600"
+                      textColor="text-blue-600"
                       href={project.link}
                     >
-                      <GitHub color="#000" size={20} />
+                      <GitHub color="#1E5CFC" size={20} />
                       Ver código
                     </ButtonLink>
                   )}

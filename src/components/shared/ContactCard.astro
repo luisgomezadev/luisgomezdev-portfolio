@@ -13,7 +13,11 @@ const { href, title } = Astro.props
       <slot name="icon" />
     </picture>
     <div>
-      <h1 class="text-2xl font-bold text-red-800">{title}</h1>
+      <h1
+        class="text-2xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
+      >
+        {title}
+      </h1>
       <slot name="description" />
     </div>
   </a>

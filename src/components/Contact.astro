@@ -9,8 +9,12 @@ import ContactCard from './shared/ContactCard.astro'
 const { id } = Astro.props
 ---
 
-<Section title="Contacto" id={id} subtitle="¡Hablemos! Estoy abierto a nuevas oportunidades y colaboraciones.">
-  <div class="py-3 px-3 xl:px-0 max-w-6xl mx-auto">
+<Section
+  title="Contacto"
+  id={id}
+  subtitle="¡Hablemos! Estoy abierto a nuevas oportunidades y colaboraciones."
+>
+  <div class="py-3 px-4 max-w-7xl mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <ContactCard href="https://github.com/luisgomezadev" title="GitHub">
         <GitHub size="32" slot="icon" />
