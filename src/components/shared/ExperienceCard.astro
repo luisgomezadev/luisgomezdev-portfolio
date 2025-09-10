@@ -1,0 +1,16 @@
+---
+const { position, company, period, delay } = Astro.props
+---
+
+<article class="rounded-xl border border-gray-300 p-4" data-aos="fade-up" data-aos-delay={delay}>
+  <h1
+    class="text-2xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-4"
+  >
+    {position}
+  </h1>
+  <h2 class="font-medium">{company}</h2>
+  <span class="text-sm opacity-80">{period}</span>
+  <div class="mt-4">
+    <slot />
+  </div>
+</article>

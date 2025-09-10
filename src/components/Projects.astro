@@ -21,7 +21,9 @@ const { id } = Astro.props
       PROJECTS.map(
         (project, index) =>
           project.home && (
-            <article class="flex flex-col md:flex-row gap-x-12 border bg-white/10 border-gray-300 rounded-xl overflow-hidden shadow p-3">
+            <article
+              class="flex flex-col md:flex-row gap-x-12 border bg-white/10 border-gray-300 rounded-xl overflow-hidden shadow p-3"
+              data-aos="fade-up">
               <div class="flex items-center justify-center w-full md:w-[1500px] overflow-hidden">
                 <img
                   class="w-full object-cover rounded-xl"

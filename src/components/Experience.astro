@@ -1,98 +1,48 @@
 ---
 import Section from './shared/Section.astro'
-import Modal from './shared/Modal.astro'
-import { PROJECTS_EXPERIENCE } from '../data/projects-experience'
+import ExperienceCard from './shared/ExperienceCard.astro'
 
 const { id } = Astro.props
 ---
 
-<Section title="Experiencia" id={id} class="bg-[#EEE]">
+<Section
+  title="Experiencia"
+  subtitle="Mi trayectoria como desarrollador profesional"
+  id={id}
+  class="bg-[#FFF]"
+>
   <div class="lg:py-8 px-4 lg:px-6 max-w-7xl mx-auto">
-    <h2 class="border-b-2 border-gray-300 text-2xl font-bold mb-3">Desarrollador Full-Stack</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-8">
-      <div class="flex flex-col gap-4 max-w-3xl">
-        <p class="text-base opacity-80">Zabud Technologies | 2019 - 2024</p>
-        <ul class="list-disc pl-5">
-          <li>
-            Desarrollo de microservicios en Java con Spring Boot, aplicando arquitectura hexagonal
-            para lograr sistemas escalables y mantenibles.
-          </li>
-          <li>
-            Optimización de interfaces web con Angular y Vue.js, enfocándome en el rendimiento, la
-            accesibilidad y una experiencia de usuario fluida.
-          </li>
-          <li>Integración eficiente entre frontend y backend mediante consumo de APIs REST.</li>
-          <li>
-            Implementación de pruebas unitarias en aplicaciones Angular utilizando Karma y Jasmine
-            para asegurar calidad y estabilidad del código.
-          </li>
-          <li>
-            Trabajo en equipos ágiles bajo metodologías SCRUM, aplicando buenas prácticas de
-            desarrollo colaborativo.
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h2 class="text-base font-semibold mb-6">Algunos de los proyectos en los que participé</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-          <div class="relative group cursor-pointer" data-open-modal="modal-aldea">
-            <img
-              class="w-full h-28 object-cover rounded-lg shadow transition duration-300 group-hover:blur-sm"
-              src="/projects_images/icon/aldea.webp"
-              alt="Proyecto Aldea"
-            />
-            <div
-              class="absolute inset-0 bg-black/60 flex items-center justify-center rounded-lg opacity-0 group-hover:opacity-100 px-5 transition duration-300"
-            >
-              <span class="text-white font-semibold text-base text-center"
-                >Ver información del proyecto</span
-              >
-            </div>
-          </div>
-          <div class="relative group cursor-pointer" data-open-modal="modal-tronos">
-            <img
-              class="w-full h-28 object-cover rounded-lg shadow transition duration-300 group-hover:blur-sm"
-              src="/projects_images/icon/tronos.webp"
-              alt="Proyecto Tronos"
-            />
-            <div
-              class="absolute inset-0 bg-black/60 flex items-center justify-center rounded-lg opacity-0 group-hover:opacity-100 px-5 transition duration-300"
-            >
-              <span class="text-white font-semibold text-base text-center"
-                >Ver información del proyecto</span
-              >
-            </div>
-          </div>
-          <div class="relative group cursor-pointer" data-open-modal="modal-zonaser">
-            <img
-              class="w-full h-28 object-cover rounded-lg shadow transition duration-300 group-hover:blur-sm"
-              src="/projects_images/icon/zonaser.webp"
-              alt="Proyecto Zonaser"
-            />
-            <div
-              class="absolute inset-0 bg-black/60 flex items-center justify-center rounded-lg opacity-0 group-hover:opacity-100 px-5 transition duration-300"
-            >
-              <span class="text-white font-semibold text-base text-center"
-                >Ver información del proyecto</span
-              >
-            </div>
-          </div>
-          {
-            PROJECTS_EXPERIENCE.map((project) => (
-              <Modal id={`modal-${project.id}`} title={project.title}>
-                <h2 class="text-black text-lg mb-3 font-semibold">Descripción y Funciones</h2>
-                <p class="text-base text-pretty">{project.description}</p>
-                <h2 class="text-black text-lg my-4 font-semibold">Tecnologías utilizadas</h2>
-                <div class="flex flex-wrap gap-5">
-                  {project.technologies.map((tech) => (
-                    <img src={tech} class="w-8 object-contain" alt="" />
-                  ))}
-                </div>
-              </Modal>
-            ))
-          }
-        </div>
-      </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <ExperienceCard
+        position="Desarrollador Full-Stack"
+        company="Freelance"
+        period="2024 - Presente"
+        delay="100"
+      >
+        Desarrollo de aplicaciones web completas, desde el frontend con Angular/Vue 3 hasta el backend
+        con Spring Boot, asegurando integración fluida y rendimiento. También diseño y lanzo landing
+        pages con Astro, optimizadas para SEO y velocidad.
+      </ExperienceCard>
+      <ExperienceCard
+        position="Front End - Junior"
+        company="Mutual SER | Prestador de servicios"
+        period="2020 - 2022"
+        delay="200"
+      >
+        Desarrollo de interfaces de usuario responsivas y optimizadas utilizando Vue 3 y JavaScript.
+        Implementación de mejores prácticas de desarrollo y colaboración con diseñadores y
+        desarrolladores backend para crear experiencias de usuario atractivas.
+      </ExperienceCard>
+      <ExperienceCard
+        position="Full Stack - Semisenior"
+        company="Zabud Technologies"
+        period="2019 - 2024"
+        delay="300"
+      >
+        Desarrollo y mantenimiento de aplicaciones web utilizando Angular, TypeScript, JavaScript y
+        Spring Boot, colaborando en equipos ágiles para entregar soluciones eficientes, escalables y
+        alineadas con las necesidades del negocio.
+      </ExperienceCard>
     </div>
   </div>
 </Section>

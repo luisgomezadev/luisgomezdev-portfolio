@@ -5,6 +5,7 @@ import Projects from '../components/Projects.astro'
 import Skills from '../components/Skills.astro'
 import Experience from '../components/Experience.astro'
 import Contact from '../components/Contact.astro'
+import 'aos/dist/aos.css'
 ---
 
 <Layout title="Luis Gomez | Desarrollador Web Full-Stack">
@@ -14,3 +15,14 @@ import Contact from '../components/Contact.astro'
   <Skills id="habilidades" />
   <Contact id="contacto" />
 </Layout>
+
+<script>
+  import AOS from 'aos'
+
+  window.addEventListener('DOMContentLoaded', () => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    })
+  })
+</script>

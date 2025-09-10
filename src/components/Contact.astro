@@ -16,20 +16,26 @@ const { id } = Astro.props
 >
   <div class="py-3 px-4 max-w-7xl mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <ContactCard href="https://github.com/luisgomezadev" title="GitHub">
-        <GitHub size="32" slot="icon" />
-        <p slot="description">
-          Visita mi perfil de GitHub para ver mis proyectos y contribuciones.
-        </p>
-      </ContactCard>
-      <ContactCard href="https://www.linkedin.com/in/luisgomezdev/" title="LinkedIn">
-        <LinkedIn size="32" slot="icon" />
-        <p slot="description">Conéctate conmigo en LinkedIn para oportunidades profesionales.</p>
-      </ContactCard>
-      <ContactCard href="mailto:luisgomez24g@gmail.com" title="Enviar correo">
-        <EmailIcon size="32" slot="icon" />
-        <p slot="description">Envíame un correo electrónico para consultas o colaboraciones.</p>
-      </ContactCard>
+      <div data-aos="fade-up" data-aos-delay="100">
+        <ContactCard href="https://github.com/luisgomezadev" title="GitHub">
+          <GitHub size="32" slot="icon" />
+          <p slot="description">
+            Visita mi perfil de GitHub para ver mis proyectos y contribuciones.
+          </p>
+        </ContactCard>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="150">
+        <ContactCard href="https://www.linkedin.com/in/luisgomezdev/" title="LinkedIn">
+          <LinkedIn size="32" slot="icon" />
+          <p slot="description">Conéctate conmigo en LinkedIn para oportunidades profesionales.</p>
+        </ContactCard>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="200">
+        <ContactCard href="mailto:luisgomez24g@gmail.com" title="Enviar correo">
+          <EmailIcon size="32" slot="icon" />
+          <p slot="description">Envíame un correo electrónico para consultas o colaboraciones.</p>
+        </ContactCard>
+      </div>
     </div>
   </div>
 </Section>
