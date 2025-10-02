@@ -15,7 +15,7 @@ const { id } = Astro.props
 
 <section
   id={id}
-  class="h-auto md:min-h-screen scroll-mt-16 overflow-x-hidden transition-all duration-500 bg-gradient-to-br from-blue-50 via-white to-purple-50 text-gray-800"
+  class="h-auto md:min-h-screen scroll-mt-16 overflow-x-hidden transition-all duration-500 bg-gradient-to-br from-gray-50 via-white to-purple-50 text-gray-800"
 >
   <header
     class="max-w-7xl mx-auto px-4 lg:px-6 py-20 md:py-32 gap-x-12 gap-y-10 items-center h-auto md:h-screen flex flex-col md:flex-row justify-between"
@@ -24,7 +24,7 @@ const { id } = Astro.props
       <div>
         <p class="text-lg md:mb-4 text-gray-600">Hola, mi nombre es</p>
         <h1
-          class="text-4xl md:text-5xl lg:text-7xl font-bold md:mb-3 leading-20 md:leading-24 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
+          class="text-4xl md:text-5xl lg:text-7xl font-bold md:mb-3 leading-20 md:leading-24 text-blue-800"
         >
           Luis Gómez Arteaga
         </h1>
@@ -42,27 +42,27 @@ const { id } = Astro.props
           <ButtonLink
             href="https://github.com/luisgomezadev"
             title="GitHub Luis Gomez"
-            class="bg-gradient-to-r from-blue-600 to-purple-600"
+            class="bg-blue-800"
           >
             <GitHub class="w-6 h-6" />
           </ButtonLink>
           <ButtonLink
             href="https://www.linkedin.com/in/luisgomezdev/"
             title="LinkedIn Luis Gomez"
-            class="bg-gradient-to-r from-blue-600 to-purple-600"
+            class="bg-blue-800"
           >
             <LinkedIn class="w-6 h-6" />
           </ButtonLink>
           <ButtonLink
             href="mailto:luisgomez24g@gmail.com"
             title="Enviar correo a Luis Gomez"
-            class="block md:hidden bg-gradient-to-r from-blue-600 to-purple-600"
+            class="block md:hidden bg-blue-800"
           >
             <EmailIcon class="w-6 h-6" />
           </ButtonLink>
           <ButtonLink
             title="Descargar CV de Luis Gomez"
-            class="px-4 block md:hidden bg-gradient-to-r from-blue-600 to-purple-600"
+            class="px-4 block md:hidden bg-blue-800"
             href="/files/CV_Luis_Gomez_2025.pdf"
           >
             <CvIcon color="#FFF" size={20} />
@@ -74,26 +74,24 @@ const { id } = Astro.props
         <ButtonLink
           href="mailto:luisgomez24g@gmail.com"
           title="Enviar correo a Luis Gomez"
-          class="px-4 bg-gradient-to-r from-blue-600 to-purple-600"
+          class="px-4 bg-blue-800"
         >
           <EmailIcon color="#FFF" size={20} />
           Contactar
         </ButtonLink>
         <ButtonLink
           title="Descargar CV de Luis Gomez"
-          class="px-4 bg-gray-300/50 text-blue-600"
-          textColor="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
+          class="px-4 bg-gray-200 text-blue-600"
+          textColor="text-blue-800"
           href="/files/CV_Luis_Gomez_2025.pdf"
         >
-          <CvIcon color="#8631FB" size={20} />
+          <CvIcon color="#193cb8" size={20} />
           Descargar mi CV
         </ButtonLink>
       </div>
     </div>
     <div class="relative flex justify-center items-center">
-      <div
-        class="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 p-1 rounded-full animate-fade-in-up"
-      >
+      <div class="bg-blue-800 p-1 rounded-full animate-fade-in-up">
         <img
           src="/luis_perfil.webp"
           alt="Luis Gómez"

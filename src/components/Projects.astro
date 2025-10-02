@@ -12,7 +12,7 @@ const { id } = Astro.props
 <Section
   title="Portafolio"
   id={id}
-  subtitle="Algunos de los proyectos que he desarrollado como enfoque personal y profesional"
+  subtitle="Algunos de los proyectos que he desarrollado"
   class="bg-white"
 >
   <div class="lg:py-8 px-4 lg:px-6 max-w-7xl mx-auto grid grid-cols-1 gap-8">
@@ -21,8 +21,9 @@ const { id } = Astro.props
         (project, index) =>
           project.home && (
             <article
-              class="flex flex-col md:flex-row gap-x-12 border bg-white/10 border-gray-300 rounded-xl overflow-hidden shadow p-3"
-              data-aos="fade-up">
+              class="flex flex-col md:flex-row gap-x-12 border border-gray-200 rounded-xl overflow-hidden p-3 bg-blue-100/20 shadow-xl"
+              data-aos="fade-up"
+            >
               <div class="flex items-center justify-center w-full md:w-[1500px] overflow-hidden">
                 <img
                   class="w-full object-cover rounded-xl"
@@ -32,13 +33,11 @@ const { id } = Astro.props
                 />
               </div>
               <div class="flex flex-col p-4">
-                <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
-                  {project.title}
-                </h1>
+                <h1 class="text-2xl font-bold text-blue-800 mb-4">{project.title}</h1>
 
                 <div class="flex flex-wrap gap-3 mb-4">
                   {project.technologies.map((tech) => (
-                    <div class="flex items-center gap-2 bg-black/5 px-3 py-1 rounded-lg shadow">
+                    <div class="flex items-center gap-2 bg-black/10 px-3 py-1 rounded-lg shadow">
                       <img src={tech.image} class="w-4 object-contain" alt={tech.name} />
                       <span class="text-sm text-gray-700">{tech.name}</span>
                     </div>
@@ -51,7 +50,7 @@ const { id } = Astro.props
                     <ButtonLink
                       href={project.live}
                       title={`Ver demo de proyecto ${project.title}`}
-                      class="bg-gradient-to-r from-blue-600 to-purple-600 px-4"
+                      class="bg-blue-800 px-4"
                     >
                       <WebIcon size={20} />
                       Ver demo
@@ -61,10 +60,10 @@ const { id } = Astro.props
                     <ButtonLink
                       title={`Ver repositorio de proyecto ${project.title}`}
                       class="px-4 bg-gray-300/50"
-                      textColor="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
+                      textColor="text-blue-800"
                       href={project.link}
                     >
-                      <GitHub color="#8631FB" size={20} />
+                      <GitHub color="#193cb8" size={20} />
                       Ver código
                     </ButtonLink>
                   )}

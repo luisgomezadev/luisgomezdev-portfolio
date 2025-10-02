@@ -1,6 +1,8 @@
 ---
-import Navbar from '../components/Navbar.astro'
-import Footer from '../components/Footer.astro'
+import Navbar from '../components/shared/Navbar.astro'
+import Footer from '../components/shared/Footer.astro'
+import ButtonToTop from '../components/shared/ButtonToTop.astro'
+import MenuBottom from '../components/shared/MenuBottom.astro'
 import { ClientRouter } from 'astro:transitions'
 
 const { title } = Astro.props
@@ -57,11 +59,12 @@ const { title } = Astro.props
     <Navbar />
     <main class="flex flex-col md:pt-0 pt-12">
       <slot />
+      <ButtonToTop />
     </main>
     <Footer />
+    <MenuBottom />
   </body>
 </html>
-
 <style is:global>
   @import 'tailwindcss';
   @import 'animate.css/animate.min.css';

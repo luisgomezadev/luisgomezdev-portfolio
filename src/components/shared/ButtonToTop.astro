@@ -1,0 +1,44 @@
+<div
+  id="scrollToTopBtn"
+  class="md:fixed bottom-6 right-6 p-3 bg-blue-800 text-white rounded-full shadow-lg cursor-pointer opacity-0 transition-opacity duration-500 z-50 hover:bg-blue-600 hidden"
+  aria-label="Volver arriba"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="w-6 h-6"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</div>
+
+<script>
+  if (typeof window !== 'undefined') {
+    const button = document.getElementById('scrollToTopBtn')
+
+    const toggleVisibility = () => {
+      if (window.scrollY > 300) {
+        button?.classList.add('opacity-100')
+        button?.classList.remove('opacity-0')
+      } else {
+        button?.classList.remove('opacity-100')
+        button?.classList.add('opacity-0')
+      }
+    }
+
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      })
+    }
+
+    window.addEventListener('scroll', toggleVisibility)
+    button?.addEventListener('click', scrollToTop)
+  }
+</script>
