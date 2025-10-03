@@ -5,26 +5,26 @@ import SkillIcon from '../../assets/icons/SkillIcon.astro'
 import MailIcon from '../../assets/icons/MailIcon.astro'
 ---
 
-<div class="fixed md:hidden bottom-0 left-0 w-full border-t border-gray-300 bg-gray-50">
-  <nav class="flex items-center justify-between">
-    <a href="#experiencia" class="flex flex-col items-center p-4 active:bg-blue-50 text-sm">
-      <div><ExperienceIcon /></div>
-      Experiencia
-    </a>
+<div class="md:hidden p-2 fixed bottom-0 w-full z-50">
+  <div
+    class="border border-gray-300 bg-gray-50 shadow-2xl rounded-full z-50"
+  >
+    <nav class="flex items-center justify-around">
+      <a href="#experiencia" class="flex flex-col items-center p-4 text-sm">
+        <div><ExperienceIcon /></div>
+      </a>
 
-    <a href="#portafolio" class="flex flex-col items-center p-4 active:bg-blue-50 text-sm">
-      <div><CodeIcon /></div>
-      Portafolio
-    </a>
+      <a href="#portafolio" class="flex flex-col items-center p-4 text-sm">
+        <div><CodeIcon /></div>
+      </a>
 
-    <a href="#habilidades" class="flex flex-col items-center p-4 active:bg-blue-50 text-sm">
-      <div><SkillIcon /></div>
-      Habilidades
-    </a>
+      <a href="#habilidades" class="flex flex-col items-center p-4 text-sm">
+        <div><SkillIcon /></div>
+      </a>
 
-    <a href="#contacto" class="flex flex-col items-center p-4 active:bg-blue-50 text-sm">
-      <div><MailIcon /></div>
-      Contacto
-    </a>
-  </nav>
+      <a href="#contacto" class="flex flex-col items-center p-4 text-sm">
+        <div><MailIcon /></div>
+      </a>
+    </nav>
+  </div>
 </div>
