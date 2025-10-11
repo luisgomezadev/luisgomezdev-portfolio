@@ -68,16 +68,20 @@ import MailIcon from '../../assets/icons/MailIcon.astro'
 
 <script lang="ts">
   if (typeof window !== 'undefined') {
-    const nav = document.querySelector('header')
-    const menu = document.getElementById('mobileMenu')
+    const header = document.querySelector('header')
 
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
-        nav?.classList.add('bg-white/80 dark:bg-gray-900/80', 'shadow-md')
-        nav?.classList.remove('bg-transparent')
+        header?.classList.add('bg-white/80', 'dark:bg-gray-900/80', 'shadow-md', 'backdrop-blur-xl')
+        header?.classList.remove('bg-transparent', 'py-3')
       } else {
-        nav?.classList.remove('bg-white/80 dark:bg-gray-900/80', 'shadow-md')
-        nav?.classList.add('bg-transparent')
+        header?.classList.remove(
+          'bg-white/80',
+          'dark:bg-gray-900/80',
+          'shadow-md',
+          'backdrop-blur-xl'
+        )
+        header?.classList.add('bg-transparent', 'py-3')
       }
     })
   }
