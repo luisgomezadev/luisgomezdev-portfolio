@@ -9,7 +9,7 @@ const { id } = Astro.props
   title="Habilidades"
   id={id}
   subtitle="Tecnologías y herramientas que manejo"
-  class="bg-[#EEE]"
+  class="bg-[#EEE] dark:bg-[#0A162E]"
 >
   <div class="py-8 px-3 max-w-7xl mx-auto">
     <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
@@ -22,7 +22,7 @@ const { id } = Astro.props
               alt={skill.name}
               loading="lazy"
             />
-            <span class="text-lg font-semibold">{skill.name}</span>
+            <span class="text-lg font-semibold dark:text-white">{skill.name}</span>
           </div>
         ))
       }

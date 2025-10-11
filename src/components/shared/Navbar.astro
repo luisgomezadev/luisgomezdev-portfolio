@@ -9,17 +9,23 @@ import MailIcon from '../../assets/icons/MailIcon.astro'
   class="fixed top-0 left-0 w-full p-3 md:p-0 duration-300 z-30 transition-all backdrop-blur-3xl bg-transparent"
 >
   <nav
-    class="duration-300 mx-auto max-w-7xl w-full text-black flex items-center py-2 md:py-5 md:justify-between justify-center h-auto transition-all md:px-4 lg:px-6"
+    class="duration-300 mx-auto max-w-7xl w-full text-black dark:text-white flex items-center py-2 md:py-5 md:justify-between justify-center h-auto transition-all md:px-4 lg:px-6"
   >
     <a
       href="#inicio"
       class="flex items-center gap-2 font-bold transition-transform duration-300 hover:scale-105"
     >
-      <img src="/logo_personal.webp" alt="Logo Luis Gomez Dev" class="w-8" />
-      <span class="text-2xl tracking-wide text-black">LuisGomezDev</span>
+      <img src="/logo_personal.webp" alt="Logo Luis Gomez Dev" class="w-8 dark:hidden" />
+
+      <img
+        src="/logo_personal_blanco.webp"
+        alt="Logo Luis Gomez Dev (Dark)"
+        class="w-8 hidden dark:block"
+      />
+      <span class="text-2xl tracking-wide">LuisGomezDev</span>
     </a>
 
-    <ul class="hidden md:flex items-center gap-x-7 sm:gap-x-12 text-black">
+    <ul class="hidden md:flex items-center gap-x-7 sm:gap-x-12">
       <li>
         <a href="#experiencia" class="group relative flex gap-2 items-center">
           <div class="hidden md:block"><ExperienceIcon /></div>
@@ -57,7 +63,6 @@ import MailIcon from '../../assets/icons/MailIcon.astro'
         </a>
       </li>
     </ul>
-
   </nav>
 </header>
 
@@ -68,10 +73,10 @@ import MailIcon from '../../assets/icons/MailIcon.astro'
 
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
-        nav?.classList.add('bg-white/80', 'shadow-md')
+        nav?.classList.add('bg-white/80 dark:bg-gray-900/80', 'shadow-md')
         nav?.classList.remove('bg-transparent')
       } else {
-        nav?.classList.remove('bg-white/80', 'shadow-md')
+        nav?.classList.remove('bg-white/80 dark:bg-gray-900/80', 'shadow-md')
         nav?.classList.add('bg-transparent')
       }
     })
