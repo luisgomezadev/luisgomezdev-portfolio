@@ -1,11 +1,11 @@
 export const PROJECTS = [
   {
-    title: 'Play Match',
+    title: 'PlayMatch',
     description:
-      'Aplicación desarrolada con Spring Boot y Angular que permite registrar y consultar canchas sinteticas, hacer reservas, entre otras cosas. Esta aplicación es parte de un proyecto personal que busca facilitar la organización de reservas de las canchas.',
+      'Plataforma para la gestión y reserva de canchas sintéticas. Permite a los administradores registrar y administrar sus canchas, gestionar reservas y horarios, mientras que los usuarios pueden buscar disponibilidad y reservar de forma rápida y sencilla.',
     image: '/projects_images/playmatch.webp',
     link: 'https://github.com/luisgomezadev/frontend-playmatch',
-    live: 'https://playmatch-lgsoftworks.vercel.app/',
+    live: 'https://projectplaymatch.vercel.app/',
     className: 'lg:row-span-4 lg:col-span-4',
     experience: 'Experiencia Personal',
     home: true,
@@ -31,7 +31,7 @@ export const PROJECTS = [
   {
     title: 'Daniel Kelly | Página web',
     description:
-      'Página profesional para un entrenador personal, desarrollada con Astro y Tailwind CSS. Presenta una estructura clara y moderna que destaca los servicios, eventos, entre otras cosas, optimizando el rendimiento, accesibilidad y velocidad de carga.',
+      'Sitio web profesional para un entrenador personal, diseñado para presentar sus servicios, programas de entrenamiento, eventos y canales de contacto mediante una experiencia visual moderna, rápida y fácil de navegar.',
     image: '/projects_images/daniel.webp',
     live: 'https://danielkellyfit.vercel.app/',
     link: 'https://github.com/luisgomezadev/danielkellyfit-page',
@@ -52,7 +52,7 @@ export const PROJECTS = [
   {
     title: 'Doon',
     description:
-      'Aplicación web desarrollada con Vue.js 3 y estilizada con Tailwind CSS, que permite gestionar tareas de forma intuitiva y rápida. Diseñada con un enfoque minimalista y moderno, utiliza localStorage para almacenar la información localmente en el navegador.',
+      'Aplicación para la gestión de tareas que permite crear, organizar, editar y eliminar pendientes de forma sencilla. Su interfaz minimalista facilita el seguimiento de las actividades diarias para mejorar la productividad.',
     image: '/projects_images/doon.webp',
     live: 'https://doon-teal.vercel.app/',
     link: 'https://github.com/luisgomezadev/doon',
@@ -70,4 +70,4 @@ export const PROJECTS = [
       }
     ],
   },
-]
+];

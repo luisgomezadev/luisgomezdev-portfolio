@@ -4,12 +4,11 @@ const {
   class: className = '',
   title,
   target = '_blank',
-  textColor = 'text-white',
 } = Astro.props
 ---
 
 <a
-  class={`flex items-center font-medium px-2 py-2 rounded-full gap-2 shadow-lg hover:shadow-gray-400 dark:hover:shadow-gray-900 cursor-pointer hover:scale-105 transition-all duration-300 ${textColor}  ${className}`}
+  class={`rounded-2xl px-6 py-2 text-center font-semibold flex items-center gap-2 transition-all duration-300 cursor-pointer text-sm ${className}`}
   href={href}
   target={target}
   title={title}

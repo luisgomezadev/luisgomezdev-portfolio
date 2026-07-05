@@ -9,19 +9,13 @@ import MailIcon from '../../assets/icons/MailIcon.astro'
   class="fixed top-0 left-0 w-full p-3 md:p-0 duration-300 z-30 transition-all backdrop-blur-3xl bg-transparent"
 >
   <nav
-    class="duration-300 mx-auto max-w-7xl w-full text-black dark:text-white flex items-center py-2 md:py-5 md:justify-between justify-center h-auto transition-all md:px-4 lg:px-6"
+    class="duration-300 mx-auto max-w-7xl w-full text-black flex items-center py-2 md:py-5 md:justify-between justify-center h-auto transition-all md:px-4 lg:px-6"
   >
     <a
       href="#inicio"
       class="flex items-center gap-2 font-bold transition-transform duration-300 hover:scale-105"
     >
-      <img src="/logo_personal.webp" alt="Logo Luis Gomez Dev" class="w-8 dark:hidden" />
-
-      <img
-        src="/logo_personal_blanco.webp"
-        alt="Logo Luis Gomez Dev (Dark)"
-        class="w-8 hidden dark:block"
-      />
+      <img src="/logo_personal.webp" alt="Logo Luis Gomez Dev" class="w-8" />
       <span class="text-2xl tracking-wide">LuisGomezDev</span>
     </a>
 
@@ -31,16 +25,16 @@ import MailIcon from '../../assets/icons/MailIcon.astro'
           <div class="hidden md:block"><ExperienceIcon /></div>
           Experiencia
           <span
-            class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-blue-800 transition-all duration-300 group-hover:w-full group-hover:left-0"
+            class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full group-hover:left-0"
           ></span>
         </a>
       </li>
       <li>
-        <a href="#portafolio" class="group relative flex gap-2 items-center">
+        <a href="#proyectos" class="group relative flex gap-2 items-center">
           <div class="hidden md:block"><CodeIcon /></div>
-          Portafolio
+          Proyectos
           <span
-            class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-blue-800 transition-all duration-300 group-hover:w-full group-hover:left-0"
+            class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full group-hover:left-0"
           ></span>
         </a>
       </li>
@@ -49,7 +43,7 @@ import MailIcon from '../../assets/icons/MailIcon.astro'
           <div class="hidden md:block"><SkillIcon /></div>
           Habilidades
           <span
-            class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-blue-800 transition-all duration-300 group-hover:w-full group-hover:left-0"
+            class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full group-hover:left-0"
           ></span>
         </a>
       </li>
@@ -58,7 +52,7 @@ import MailIcon from '../../assets/icons/MailIcon.astro'
           <div class="hidden md:block"><MailIcon /></div>
           Contacto
           <span
-            class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-blue-800 transition-all duration-300 group-hover:w-full group-hover:left-0"
+            class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full group-hover:left-0"
           ></span>
         </a>
       </li>
@@ -72,12 +66,11 @@ import MailIcon from '../../assets/icons/MailIcon.astro'
 
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
-        header?.classList.add('bg-white/80', 'dark:bg-gray-900/80', 'shadow-md', 'backdrop-blur-xl')
+        header?.classList.add('bg-white/80', 'shadow-md', 'backdrop-blur-xl')
         header?.classList.remove('bg-transparent', 'py-3')
       } else {
         header?.classList.remove(
           'bg-white/80',
-          'dark:bg-gray-900/80',
           'shadow-md',
           'backdrop-blur-xl'
         )

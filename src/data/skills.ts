@@ -69,4 +69,9 @@ export const SKILLS = [
     icon: '/skills/mysql.webp',
     delay: 560,
   },
+  {
+    name: 'Docker',
+    icon: '/skills/docker.webp',
+    delay: 600,
+  }
 ]

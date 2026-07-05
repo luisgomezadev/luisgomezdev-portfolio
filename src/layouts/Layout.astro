@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 import Navbar from '../components/shared/Navbar.astro'
 import Footer from '../components/shared/Footer.astro'
 import ButtonToTop from '../components/shared/ButtonToTop.astro'
@@ -29,33 +31,33 @@ const { title } = Astro.props
     <meta name="generator" content={Astro.generator} />
     <meta
       name="description"
-      content="Bienvenidos a mi portafolio. Soy Luis Gómez, desarrollador web con más de cuatro años de experiencia en el diseño, desarrollo y mantenimiento de aplicaciones web."
+      content="Bienvenidos a mi portfolio. Soy Luis Gómez, desarrollador web con más de cuatro años de experiencia en el diseño, desarrollo y mantenimiento de aplicaciones web."
     />
     <title>{title}</title>
     <meta
       name="keywords"
-      content="Luis Gómez, Software Developer, Web Developer, FullStack Developer, Angular, TypeScript, JavaScript, Java, Tailwind, Desarrollador, Desarrollador Web, Desarrollador FullStack, Ingeniero de Sistemas, Portafolio, Portfolio"
+      content="Luis Gómez, Software Developer, Web Developer, FullStack Developer, Angular, TypeScript, JavaScript, Java, Tailwind, Desarrollador, Desarrollador Web, Desarrollador FullStack, Ingeniero de Sistemas, Portfolio"
     />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://luisgomeza.vercel.app/" />
-    <meta property="og:title" content="Luis Gómez | Portafolio" />
-    <meta property="og:site_name" content="Luis Gómez | Portafolio" />
+    <meta property="og:title" content="Luis Gómez | Portfolio" />
+    <meta property="og:site_name" content="Luis Gómez | Portfolio" />
     <meta
       property="og:description"
-      content="Bienvenidos a mi portafolio. Soy Luis Gómez, ingeniero de sistemas y desarrollador web con más de cuatro años de experiencia en el diseño, desarrollo y mantenimiento de aplicaciones web."
+      content="Bienvenidos a mi portfolio. Soy Luis Gómez, ingeniero de sistemas y desarrollador web con más de cuatro años de experiencia en el diseño, desarrollo y mantenimiento de aplicaciones web."
     />
 
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://luisgomeza.vercel.app/" />
-    <meta property="twitter:title" content="Luis Gómez | Portafolio" />
+    <meta property="twitter:title" content="Luis Gómez | Portfolio" />
     <meta
       property="twitter:description"
-      content="Bienvenidos a mi portafolio. Soy Luis Gómez, ingeniero de sistemas y desarrollador web con más de cuatro años de experiencia en el diseño, desarrollo y mantenimiento de aplicaciones web."
+      content="Bienvenidos a mi portfolio. Soy Luis Gómez, ingeniero de sistemas y desarrollador web con más de cuatro años de experiencia en el diseño, desarrollo y mantenimiento de aplicaciones web."
     />
     <ClientRouter />
   </head>
-  <body class="text-gray-800 bg-white dark:bg-[#050C1D] dark:text-white transition-colors duration-500">
+  <body class="text-gray-800 bg-white transition-colors duration-500">
     <Navbar />
     <main class="flex flex-col md:pt-0 pt-12">
       <slot />
@@ -65,9 +67,7 @@ const { title } = Astro.props
     <MenuBottom />
   </body>
 </html>
-<style is:global>
-  @import 'tailwindcss';
-  @import 'animate.css/animate.min.css';
+<style>
   html,
   body {
     margin: 0;

@@ -11,133 +11,110 @@ const { id } = Astro.props
 
 <section
   id={id}
-  class="h-auto md:min-h-screen scroll-mt-16 overflow-x-hidden transition-all duration-500 bg-gradient-to-br from-gray-50 via-white to-blue-100 dark:from-gray-900 dark:via-gray-950 dark:to-blue-950 text-gray-800"
+  class="relative h-auto scroll-mt-16 overflow-x-hidden transition-all duration-500 text-gray-800"
 >
   <header
-    class="max-w-7xl mx-auto px-4 lg:px-6 py-20 md:py-32 gap-x-12 gap-y-10 items-center h-auto md:h-screen flex flex-col md:flex-row justify-between"
+    class="relative z-10 max-w-7xl mx-auto px-4 lg:px-6 pt-12 md:pt-16 gap-x-12 gap-y-10 items-center h-auto flex flex-col md:flex-row justify-between"
   >
-    <div class="flex flex-col gap-4 text-center md:text-left animate-fade-in-left">
+    <div class="gap-4 text-center md:text-left animate-fade-in-left max-w-2xl">
       <div>
-        <p class="text-lg md:mb-4 text-gray-600 dark:text-gray-400">Hola, mi nombre es</p>
         <h1
-          class="text-4xl md:text-5xl lg:text-7xl font-bold md:mb-3 leading-20 md:leading-24 text-blue-800 dark:text-blue-600"
+          class="text-4xl md:text-5xl lg:text-[70px] font-bold md:mb-3 text-black md:leading-20 uppercase"
         >
-          Luis Gómez Arteaga
+          <span
+            class="inline-block border-b-4 border-primary hover:bg-primary/20 hover:tracking-tight transition-all duration-300 hover:rounded-sm hover:px-2"
+          >
+            desarrollador
+          </span>
+          de software y
+          <span
+            class="inline-block border-b-4 border-primary hover:bg-primary/20 hover:tracking-tight transition-all duration-300 hover:rounded-sm hover:px-2"
+          >
+            diseñador
+          </span>
+          web
         </h1>
       </div>
-      <h2 class="text-2xl lg:text-3xl font-semibold typing-text text-black dark:text-white">Desarrollador de Software</h2>
-      <p
-        class="text-lg text-pretty text-gray-800 opacity-80 dark:text-white/80 leading-relaxed max-w-2xl my-3 md:my-0"
-      >
-        Ingeniero de Sistemas con más de 4 años de experiencia. Experto en el ciclo de vida completo del software, dominando el stack Java/Spring Boot (Backend) y TypeScript/Angular (Frontend).
-      </p>
-      <div class="flex items-center space-x-4 justify-center md:justify-start">
-        <span class="text-gray-800 dark:text-white font-medium hidden md:block">Sígueme por:</span>
-        <div class="flex space-x-3">
-          <ButtonLink
-            href="https://github.com/luisgomezadev"
-            title="GitHub Luis Gomez"
-            class="bg-blue-800"
-          >
-            <GitHub class="w-6 h-6" />
-          </ButtonLink>
-          <ButtonLink
-            href="https://www.linkedin.com/in/luisgomezdev/"
-            title="LinkedIn Luis Gomez"
-            class="bg-blue-800"
-          >
-            <LinkedIn class="w-6 h-6" />
-          </ButtonLink>
-          <ButtonLink
-            href="mailto:luisgomez24g@gmail.com"
-            title="Enviar correo a Luis Gomez"
-            class="block md:hidden bg-blue-800"
-          >
-            <EmailIcon class="w-6 h-6" />
-          </ButtonLink>
-          <ButtonLink
-            title="Descargar CV de Luis Gomez"
-            class="px-4 block md:hidden bg-blue-800"
-            href="/files/CV_Luis_Gomez_2026.pdf"
-          >
-            <CvIcon color="#FFF" size={20} />
-            Descargar mi CV
-          </ButtonLink>
-        </div>
-      </div>
-      <div class="md:flex items-center gap-4 mt-4 hidden">
-        <ButtonLink
-          href="mailto:luisgomez24g@gmail.com"
-          title="Enviar correo a Luis Gomez"
-          class="px-4 bg-blue-800"
-        >
-          <EmailIcon color="#FFF" size={20} />
-          Contactar
-        </ButtonLink>
-        <ButtonLink
-          title="Descargar CV de Luis Gomez"
-          class="px-4 bg-gray-200 text-blue-600"
-          textColor="text-blue-800"
-          href="/files/CV_Luis_Gomez_2026.pdf"
-        >
-          <CvIcon color="#193cb8" size={20} />
-          Descargar mi CV
-        </ButtonLink>
-      </div>
     </div>
-    <div class="relative flex justify-center items-center">
-      <div class="bg-blue-800 dark:bg-blue-600 p-1 rounded-full animate-fade-in-up">
+
+    <div class="relative z-10 flex justify-center items-center">
+      <div class="relative z-10 animate-fade-in-up">
         <img
-          src="/images/perfil_linkedin.webp"
-          alt="Luis Gómez"
-          class="bg-gray-100 dark:bg-gray-800 rounded-full w-72 h-72 sm:w-96 sm:h-96 lg:w-[420px] lg:h-[420px] object-cover grayscale"
+          src="/images/perfil.webp"
+          alt="Luis Alberto Gómez Perfil"
+          class="w-72 h-72 sm:w-96 sm:h-96 lg:w-96 lg:h-96 object-cover grayscale"
         />
       </div>
     </div>
   </header>
+
+  <article
+    class="relative z-20 max-w-7xl mx-2 md:mx-auto px-4 lg:px-6 py-10 gap-x-12 gap-y-10 items-center h-auto flex flex-col md:flex-row justify-between text-lg md:text-xl text-white bg-secondary rounded-3xl"
+  >
+    <div class="max-w-2xl">
+      <p class="text-lg">
+        Hola, soy Luis Alberto Gómez, desarrollador de software especializado en la creación de aplicaciones web escalables y el diseño de interfaces modernas con Java, Spring Boot y Angular.
+      </p>
+      <footer class="flex gap-1 mt-10">
+        <ButtonLink
+          title="Descargar CV de Luis Gomez"
+          class="text-white bg-primary hover:bg-primary/90"
+          href="/files/CV_Luis_Gomez_2026.pdf"
+        >
+          <CvIcon size={20} />
+          Descargar mi CV
+        </ButtonLink>
+        <ButtonLink
+          href="mailto:luisgomez24g@gmail.com"
+          title="Enviar correo a Luis Gomez"
+          class="text-white bg-transparent hover:text-primary"
+        >
+          <EmailIcon size={20} />
+          Contactar
+        </ButtonLink>
+      </footer>
+    </div>
+    <div class="flex flex-col md:flex-row gap-4 ">
+      <div class="bg-gray-300 text-black rounded-2xl px-6 py-2 text-center font-semibold mt-6">
+        Desarrollador Full Stack Java · Spring Boot · Angular
+      </div>
+      <div
+        class="bg-white text-black text-2xl md:text-3xl rounded-2xl px-6 py-2 text-center font-semibold items-center md:flex leading-7"
+      >
+        +5 años de experiencia
+      </div>
+    </div>
+  </article>
 </section>
 
 <style>
-  .animate-float {
-    animation: float 3s ease-in-out infinite;
-  }
-
-  @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0px);
-    }
-
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-
   .animate-fade-in-left {
     animation: fadeInLeft 1s ease-out both;
   }
 
   @keyframes fadeInLeft {
-    0% {
+    from {
       opacity: 0;
       transform: translateX(-30px);
     }
-    100% {
+
+    to {
       opacity: 1;
       transform: translateX(0);
     }
   }
 
   .animate-fade-in-up {
-    animation: fadeInUp 1.2s ease-out both;
+    animation: fadeInUp 1s ease-out both;
   }
 
   @keyframes fadeInUp {
-    0% {
+    from {
       opacity: 0;
       transform: translateY(30px);
     }
-    100% {
+
+    to {
       opacity: 1;
       transform: translateY(0);
     }
