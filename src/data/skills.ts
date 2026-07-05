@@ -1,12 +1,12 @@
 export const SKILLS = [
   {
-    name: 'HTML',
-    icon: '/skills/html.webp',
+    name: 'Java',
+    icon: '/skills/java.webp',
     delay: 40,
   },
   {
-    name: 'CSS',
-    icon: '/skills/css.webp',
+    name: 'Spring Boot',
+    icon: '/skills/spring.webp',
     delay: 80,
   },
   {
@@ -20,58 +20,43 @@ export const SKILLS = [
     delay: 160,
   },
   {
-    name: 'Sass',
-    icon: '/skills/sass.webp',
-    delay: 200,
-  },
-  {
-    name: 'Tailwind CSS',
-    icon: '/skills/tailwind.webp',
-    delay: 240,
-  },
-  {
     name: 'Angular',
     icon: '/skills/angular.webp',
-    delay: 280,
+    delay: 200,
   },
   {
     name: 'VueJS',
     icon: '/skills/vue.webp',
-    delay: 320,
+    delay: 240,
   },
   {
     name: 'Astro',
     icon: '/skills/astro.webp',
-    delay: 360,
-  },
-  {
-    name: 'Git',
-    icon: '/skills/git.webp',
-    delay: 400,
-  },
-  {
-    name: 'Java',
-    icon: '/skills/java.webp',
-    delay: 440,
-  },
-  {
-    name: 'Spring Boot',
-    icon: '/skills/spring.webp',
-    delay: 480,
-  },
-  {
-    name: 'Postman',
-    icon: '/skills/postman.webp',
-    delay: 520,
+    delay: 280,
   },
   {
     name: 'MySQL',
     icon: '/skills/mysql.webp',
-    delay: 560,
+    delay: 320,
+  },
+  {
+    name: 'PostgreSQL',
+    icon: '/skills/postgresql.webp',
+    delay: 360,
   },
   {
     name: 'Docker',
     icon: '/skills/docker.webp',
-    delay: 600,
+    delay: 400,
+  },
+  {
+    name: 'Git',
+    icon: '/skills/git.webp',
+    delay: 440,
+  },
+  {
+    name: 'Postman',
+    icon: '/skills/postman.webp',
+    delay: 480,
   }
 ]

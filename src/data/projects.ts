@@ -23,8 +23,8 @@ export const PROJECTS = [
         image: '/skills/angular.webp',
       },
       {
-        name: 'MySQL',
-        image: '/skills/mysql.webp',
+        name: 'PostgreSQL',
+        image: '/skills/postgresql.webp',
       }
     ],
   },
