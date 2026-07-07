@@ -1,52 +1,95 @@
 ---
 import Section from './shared/Section.astro'
-import ExperienceCard from './shared/ExperienceCard.astro'
 
 const { id } = Astro.props
+
+const experiences = [
+  {
+    position: 'Desarrollador Full Stack',
+    company: 'Bancamía S.A.',
+    period: 'Oct 2025 — Jul 2026',
+    description:
+      'Diseñé documentación técnica para servicios Java/Spring Boot utilizando UML y BPMN, y desarrollé pruebas automatizadas para aplicaciones web y móviles con Python, Appium y PyAutoGUI, mejorando la comprensión del sistema y la eficiencia del proceso de QA.',
+  },
+  {
+    position: 'Freelance',
+    company: 'Independiente',
+    period: 'Nov 2024 — Oct 2025',
+    description:
+      'Desarrollé aplicaciones web a medida para diferentes clientes, participando en todo el proceso: desde el diseño de interfaces modernas hasta la implementación de APIs con Spring Boot, priorizando el rendimiento, la experiencia de usuario y la calidad del código.',
+  },
+  {
+    position: 'Front End — Junior',
+    company: 'Mutual SER',
+    period: 'Feb 2020 — Dic 2022',
+    description:
+      'Desarrollé interfaces web responsivas con Vue y JavaScript, creando componentes reutilizables y colaborando estrechamente con los equipos de diseño y backend para ofrecer una experiencia de usuario intuitiva y eficiente.',
+  },
+  {
+    position: 'Full Stack — Semisenior',
+    company: 'Zabud Technologies',
+    period: 'Dic 2019 — Oct 2024',
+    description:
+      'Participé en el desarrollo y mantenimiento de aplicaciones empresariales con Angular y Spring Boot, implementando nuevas funcionalidades, resolviendo incidencias y contribuyendo a la creación de soluciones escalables dentro de equipos ágiles.',
+  },
+]
 ---
 
 <Section
   title="Experiencia"
   subtitle="Mi trayectoria como desarrollador profesional"
   id={id}
+  class="bg-[#12161C]"
+  dark={true}
 >
-  <div class="lg:py-8 px-4 lg:px-6 max-w-7xl mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <ExperienceCard
-        position="Desarrollador Full Stack"
-        company="Bancamia SA"
-        period="Octubre 2025 - Julio 2026"
-        delay="100"
-      >
-        Diseñé documentación técnica para servicios Java/Spring Boot utilizando UML y BPMN, y desarrollé pruebas automatizadas para aplicaciones web y móviles con Python, Appium y PyAutoGUI, mejorando la comprensión del sistema y la eficiencia del proceso de QA.
-      </ExperienceCard>
+  <div class="py-8 px-4 lg:px-6 max-w-4xl mx-auto">
 
-      <ExperienceCard
-        position="Freelance"
-        company="Independiente"
-        period="Noviembre 2024 - Octubre 2025"
-        delay="200"
-      >
-        Desarrollé aplicaciones web a medida para diferentes clientes, participando en todo el proceso: desde el diseño de interfaces modernas hasta la implementación de APIs con Spring Boot, priorizando el rendimiento, la experiencia de usuario y la calidad del código.
-      </ExperienceCard>
+    <div class="relative pl-8 md:pl-10">
+      <div class="absolute left-1.75 md:left-2.25 top-2 bottom-2 w-px bg-[#8B96A8]/25"></div>
 
-      <ExperienceCard
-        position="Front End - Junior"
-        company="Mutual SER | Prestación de servicios"
-        period="Febrero 2020 - Diciembre 2022"
-        delay="300"
-      >
-        Desarrollé interfaces web responsivas con Vue y JavaScript, creando componentes reutilizables y colaborando estrechamente con los equipos de diseño y backend para ofrecer una experiencia de usuario intuitiva y eficiente.
-      </ExperienceCard>
+      {
+        experiences.map((exp, i) => (
+          <div
+            class="relative pb-12 last:pb-0 animate-fade-in-left"
+            style={`animation-delay: ${i * 100}ms`}
+          >
+            <span class="absolute -left-8 md:-left-10 top-1.5 w-3.5 h-3.5 rounded-full bg-[#12161C] border-2 border-[#1FA98C]" />
 
-      <ExperienceCard
-        position="Full Stack - Semisenior"
-        company="Zabud Technologies"
-        period="Diciembre 2019 - Octubre 2024"
-        delay="400"
-      >
-        Participé en el desarrollo y mantenimiento de aplicaciones empresariales con Angular y Spring Boot, implementando nuevas funcionalidades, resolviendo incidencias y contribuyendo a la creación de soluciones escalables dentro de equipos ágiles.
-      </ExperienceCard>
+            <p class="font-mono text-xs text-[#8B96A8] mb-1">{exp.period}</p>
+            <h3 class="font-serif text-xl md:text-2xl text-[#F5F3EE]">{exp.position}</h3>
+            <p class="font-mono text-sm text-[#1FA98C] mb-3">{exp.company}</p>
+            <p class="text-[#8B96A8] leading-relaxed max-w-2xl">{exp.description}</p>
+          </div>
+        ))
+      }
     </div>
   </div>
 </Section>
+
+<style>
+  .font-serif {
+    font-family: 'Fraunces', serif;
+  }
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .animate-fade-in-left {
+    animation: fadeInLeft 0.6s ease-out both;
+  }
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-in-left {
+      animation: none;
+    }
+  }
+</style>

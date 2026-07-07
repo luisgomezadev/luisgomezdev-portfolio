@@ -9,22 +9,37 @@ const { id } = Astro.props
   title="Habilidades"
   id={id}
   subtitle="Tecnologías y herramientas que manejo"
+  class="bg-[#12161C]"
+  dark={true}
 >
-  <div class="py-8 px-3 max-w-7xl mx-auto">
-    <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-8">
+  <div class="py-8 px-4 max-w-6xl mx-auto">
+    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-x-6 gap-y-10">
       {
         SKILLS.map((skill) => (
-          <div class="flex flex-col items-center text-center" data-aos="zoom-in" data-aos-delay={skill.delay}>
+          <div
+            class="group relative flex flex-col items-center text-center py-3"
+            data-aos="fade-up"
+            data-aos-delay={skill.delay}
+          >
+            <span class="absolute top-0 left-2 w-3 h-3 border-t border-l border-[#8B96A8]/30 transition-all duration-300 group-hover:border-[#1FA98C] group-hover:-translate-x-0.5 group-hover:-translate-y-0.5" />
+            <span class="absolute bottom-0 right-2 w-3 h-3 border-b border-r border-[#8B96A8]/30 transition-all duration-300 group-hover:border-[#1FA98C] group-hover:translate-x-0.5 group-hover:translate-y-0.5" />
+
             <img
-              class="w-16 h-16 mb-2 object-contain"
+              class="w-10 h-10 mb-3 object-contain grayscale opacity-80 transition-all duration-300 group-hover:grayscale-0 group-hover:opacity-100"
               src={skill.icon}
               alt={skill.name}
               loading="lazy"
             />
-            <span class="text-lg font-semibold">{skill.name}</span>
+            <span class="font-mono text-xs text-[#8B96A8] transition-colors duration-300 group-hover:text-[#F5F3EE]">
+              {skill.name}
+            </span>
           </div>
         ))
       }
     </div>
   </div>
 </Section>
+
+<style>
+  .font-mono { font-family: 'JetBrains Mono', monospace; }
+</style>

@@ -9,50 +9,50 @@ import MailIcon from '../../assets/icons/MailIcon.astro'
   class="fixed top-0 left-0 w-full p-3 md:p-0 duration-300 z-30 transition-all backdrop-blur-3xl bg-transparent"
 >
   <nav
-    class="duration-300 mx-auto max-w-7xl w-full text-black flex items-center py-2 lg:py-5 lg:justify-between justify-center h-auto transition-all md:px-4 lg:px-6"
+    class="duration-300 mx-auto max-w-7xl w-full text-[#F5F3EE] flex items-center py-2 lg:py-5 lg:justify-between justify-center h-auto transition-all md:px-4 lg:px-6"
   >
-    <a
+    <a 
       href="#inicio"
       class="flex items-center gap-2 font-bold transition-transform duration-300 hover:scale-105"
     >
-      <img src="/logo_personal.webp" alt="Logo Luis Gomez Dev" class="w-8" />
-      <span class="text-2xl tracking-wide">LuisGomezDev</span>
+      <img src="/logo_personal_blanco.webp" alt="Logo Luis Gomez Dev" class="w-8" />
+      <span class="font-mono text-xl tracking-tight">LuisGomezDev</span>
     </a>
 
     <ul class="hidden lg:flex items-center gap-x-7 sm:gap-x-12">
       <li>
-        <a href="#experiencia" class="group relative flex gap-2 items-center">
-          <div class="hidden md:block"><ExperienceIcon /></div>
+        <a href="#experiencia" class="group relative flex gap-2 items-center text-[#F5F3EE]/90 hover:text-[#F5F3EE]">
+          <div class="hidden md:block text-[#8B96A8]"><ExperienceIcon /></div>
           Experiencia
           <span
-            class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full group-hover:left-0"
+            class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-[#1FA98C] transition-all duration-300 group-hover:w-full group-hover:left-0"
           ></span>
         </a>
       </li>
       <li>
-        <a href="#habilidades" class="group relative flex gap-2 items-center">
-          <div class="hidden md:block"><SkillIcon /></div>
+        <a href="#habilidades" class="group relative flex gap-2 items-center text-[#F5F3EE]/90 hover:text-[#F5F3EE]">
+          <div class="hidden md:block text-[#8B96A8]"><SkillIcon /></div>
           Habilidades
           <span
-            class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full group-hover:left-0"
+            class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-[#1FA98C] transition-all duration-300 group-hover:w-full group-hover:left-0"
           ></span>
         </a>
       </li>
       <li>
-        <a href="#proyectos" class="group relative flex gap-2 items-center">
-          <div class="hidden md:block"><CodeIcon /></div>
+        <a href="#proyectos" class="group relative flex gap-2 items-center text-[#F5F3EE]/90 hover:text-[#F5F3EE]">
+          <div class="hidden md:block text-[#8B96A8]"><CodeIcon /></div>
           Proyectos
           <span
-            class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full group-hover:left-0"
+            class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-[#1FA98C] transition-all duration-300 group-hover:w-full group-hover:left-0"
           ></span>
         </a>
       </li>
       <li>
-        <a href="#contacto" class="group relative flex gap-2 items-center">
-          <div class="hidden md:block"><MailIcon /></div>
+        <a href="#contacto" class="group relative flex gap-2 items-center text-[#F5F3EE]/90 hover:text-[#F5F3EE]">
+          <div class="hidden md:block text-[#8B96A8]"><MailIcon /></div>
           Contacto
           <span
-            class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full group-hover:left-0"
+            class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-[#1FA98C] transition-all duration-300 group-hover:w-full group-hover:left-0"
           ></span>
         </a>
       </li>
@@ -66,11 +66,11 @@ import MailIcon from '../../assets/icons/MailIcon.astro'
 
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
-        header?.classList.add('bg-white/80', 'shadow-md', 'backdrop-blur-xl')
+        header?.classList.add('bg-[#12161C]/80', 'shadow-md', 'backdrop-blur-xl')
         header?.classList.remove('bg-transparent', 'py-3')
       } else {
         header?.classList.remove(
-          'bg-white/80',
+          'bg-[#12161C]/80',
           'shadow-md',
           'backdrop-blur-xl'
         )

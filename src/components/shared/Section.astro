@@ -1,11 +1,24 @@
 ---
-const { title, subtitle, id, class: className = 'bg-white' } = Astro.props
+const {
+  title,
+  subtitle,
+  id,
+  class: className = 'bg-white',
+  dark = false,
+} = Astro.props
+
+const titleColor = dark ? 'text-[#F5F3EE]' : 'text-[#12161C]'
+const subtitleColor = dark ? 'text-[#8B96A8]' : 'text-black/60'
 ---
 
-<section id={id} class={`scroll-mt-16 py-8 ${className}`}>
+<section id={id} class={`scroll-mt-16 py-12 ${className}`}>
   <section class="text-center mb-8">
-    <h1 class="text-3xl font-semibold">{title}</h1>
-    {subtitle && <h3 class="opacity-70 text-base px-4">{subtitle}</h3>}
+    <h1 class={`font-serif text-3xl font-semibold ${titleColor}`}>{title}</h1>
+    {subtitle && <h3 class={`${subtitleColor} text-base px-4 mt-1`}>{subtitle}</h3>}
   </section>
   <slot />
 </section>
+
+<style>
+  .font-serif { font-family: 'Fraunces', serif; }
+</style>

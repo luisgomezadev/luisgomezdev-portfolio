@@ -1,10 +1,9 @@
 ---
 import Section from './shared/Section.astro'
-import ButtonLink from './shared/ButtonLink.astro'
+import ContactCard from './shared/ContactCard.astro'
 import GitHub from '../assets/icons/GitHub.astro'
 import LinkedIn from '../assets/icons/LinkedIn.astro'
 import EmailIcon from '../assets/icons/EmailIcon.astro'
-import ContactCard from './shared/ContactCard.astro'
 
 const { id } = Astro.props
 ---
@@ -13,27 +12,34 @@ const { id } = Astro.props
   title="Contacto"
   id={id}
   subtitle="¡Hablemos! Estoy abierto a nuevas oportunidades y colaboraciones."
+  class="bg-[#12161C]"
+  dark={true}
 >
-  <div class="py-3 px-4 max-w-7xl mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  <div class="py-3 px-4 max-w-5xl mx-auto">
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <div data-aos="fade-up" data-aos-delay="100">
         <ContactCard href="https://github.com/luisgomezadev" title="GitHub">
-          <GitHub size="32" slot="icon" />
-          <p slot="description">
+          <GitHub size="28" slot="icon" />
+          <p slot="description" class="text-[#8B96A8]">
             Visita mi perfil de GitHub para ver mis proyectos y contribuciones.
           </p>
         </ContactCard>
       </div>
       <div data-aos="fade-up" data-aos-delay="150">
         <ContactCard href="https://www.linkedin.com/in/luisgomezdev/" title="LinkedIn">
-          <LinkedIn size="32" slot="icon" />
-          <p slot="description">Conéctate conmigo en LinkedIn para oportunidades profesionales.</p>
+          <LinkedIn size="28" slot="icon" />
+          <p slot="description" class="text-[#8B96A8]">
+            Conéctate conmigo en LinkedIn para oportunidades profesionales.
+          </p>
         </ContactCard>
       </div>
       <div data-aos="fade-up" data-aos-delay="200">
         <ContactCard href="mailto:luisgomez24g@gmail.com" title="Enviar correo">
-          <EmailIcon size="32" slot="icon" />
-          <p slot="description">Envíame un correo electrónico para consultas o colaboraciones.</p>
+          <EmailIcon size="28" slot="icon" />
+          <p slot="description" class="text-[#8B96A8]">
+            Envíame un correo electrónico para consultas o colaboraciones.
+          </p>
         </ContactCard>
       </div>
     </div>
