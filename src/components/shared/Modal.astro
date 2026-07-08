@@ -11,11 +11,9 @@ const { id = 'app-modal', title = 'Modal' } = Astro.props
   aria-labelledby={`${id}-title`}
   aria-hidden="true"
 >
-  <!-- Backdrop -->
   <div class="absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300" data-backdrop>
   </div>
 
-  <!-- Panel del modal -->
   <div
     class="relative mx-auto w-[92%] max-w-lg rounded-2xl bg-white p-6 shadow-xl outline-none opacity-0 translate-y-6 scale-95 transition-all duration-300"
     tabindex="-1"
