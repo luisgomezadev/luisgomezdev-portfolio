@@ -1,11 +1,14 @@
 export const PROJECTS = [
   {
-    title: 'PlayMatch',
+    title: 'TapiMatch',
     description:
       'Plataforma para la gestión y reserva de canchas sintéticas. Permite a los administradores registrar y administrar sus canchas, gestionar reservas y horarios, mientras que los usuarios pueden buscar disponibilidad y reservar de forma rápida y sencilla.',
-    image: '/projects_images/playmatch.webp',
-    link: 'https://github.com/luisgomezadev/frontend-playmatch',
-    live: 'https://projectplaymatch.vercel.app/',
+    image: '/projects_images/tapimatch.webp',
+    link: 'https://github.com/luisgomezadev/frontend-tapimatch',
+    linkText: 'Frontend',
+    linkBackend: 'https://github.com/luisgomezadev/backend-tapimatch',
+    linkBackendText: 'Backend',
+    live: 'https://tapimatch.vercel.app/',
     className: 'lg:row-span-4 lg:col-span-4',
     experience: 'Experiencia Personal',
     home: true,

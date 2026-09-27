@@ -74,7 +74,17 @@ const { id } = Astro.props
                       href={project.link}
                     >
                       <GitHub size={20} />
-                      Ver código
+                      {project.linkText || 'Ver código'}
+                    </ButtonLink>
+                  )}
+                  {project.linkBackend && (
+                    <ButtonLink
+                      title={`Ver repositorio backend de proyecto ${project.title}`}
+                      class="border border-[#8B96A8]/40 text-[#F5F3EE] bg-transparent hover:border-[#1FA98C] hover:text-[#1FA98C]"
+                      href={project.linkBackend}
+                    >
+                      <GitHub size={20} />
+                      {project.linkBackendText || 'Ver backend'}
                     </ButtonLink>
                   )}
                 </div>
