@@ -3,6 +3,10 @@
 @theme {
   --color-primary: #1FA98C;
   --color-secondary: #F2A93C;
+  --color-background: #F1E5D5;
+  --color-secondary-background: #F5EFE6;
+  --color-background-hero: #F6EFE4;
+  --color-accent: #2B2A28;
 
   --animate-fade-up: fade-up 0.7s ease-out both;
   --animate-fade-in-right: fade-in-right 0.8s ease-out both;

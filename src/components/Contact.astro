@@ -29,7 +29,7 @@ const contacts = [
 
 <section
   id={id}
-  class="relative scroll-mt-16 overflow-x-hidden bg-[#F5EFE6] text-[#2B2A28]"
+  class="relative scroll-mt-16 overflow-x-hidden bg-secondary-background text-accent"
 >
   <div class="max-w-6xl mx-auto px-4 lg:px-6 py-24">
     <!-- Encabezado -->
@@ -54,7 +54,7 @@ const contacts = [
                 title={contact.title}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="flex h-full flex-col gap-4 bg-[#F1E5D5]/60 border border-[#2B2A28]/10 rounded-3xl p-6 sm:p-8 hover:bg-white hover:border-primary hover:-translate-y-0.5 transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+                class="flex h-full flex-col gap-4 bg-[#F1E5D5]/60 border border-accent/10 rounded-3xl p-6 sm:p-8 hover:bg-white hover:border-primary hover:-translate-y-0.5 transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
               >
                 <span
                   class="flex w-12 h-12 items-center justify-center rounded-xl bg-[#12161C] text-[#F6EFE4]"
@@ -62,7 +62,7 @@ const contacts = [
                   <Icon size={24} />
                 </span>
                 <span class="text-xl font-bold leading-tight text-[#0E7A65]">{contact.title}</span>
-                <span class="leading-relaxed text-[#2B2A28]/90">{contact.description}</span>
+                <span class="leading-relaxed text-accent/90">{contact.description}</span>
               </a>
             </li>
           )

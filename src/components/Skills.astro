@@ -11,7 +11,7 @@ const groups = SKILLS.reduce<Record<string, typeof SKILLS>>((acc, skill) => {
 
 <section
   id={id}
-  class="relative scroll-mt-16 overflow-x-hidden bg-[#F5EFE6] text-[#2B2A28]"
+  class="relative scroll-mt-16 overflow-x-hidden bg-secondary-background text-accent"
 >
   <div class="max-w-6xl mx-auto px-4 lg:px-6 py-24">
     <!-- Encabezado -->
@@ -31,7 +31,7 @@ const groups = SKILLS.reduce<Record<string, typeof SKILLS>>((acc, skill) => {
     <div>
       {
         Object.entries(groups).map(([category, skills]) => (
-          <div class="grid gap-6 md:grid-cols-12 border-t border-[#2B2A28]/10 py-8">
+          <div class="grid gap-6 md:grid-cols-12 border-t border-accent/10 py-8">
             <h3 class="md:col-span-3 md:sticky md:top-24 self-start text-lg sm:text-xl font-bold text-[#0E7A65] leading-snug md:max-w-56">
               {category}
             </h3>

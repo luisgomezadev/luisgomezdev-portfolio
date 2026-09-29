@@ -8,6 +8,10 @@ export const SKILLS = [
 
   // Backend y APIs
   { name: 'Spring Boot', icon: '/skills/spring.webp', category: 'Backend y APIs' },
+  { name: 'Spring Security', icon: '/skills/spring-security.webp', category: 'Backend y APIs' },
+  { name: 'Spring Data JPA', icon: '/skills/spring-data-jpa.webp', category: 'Backend y APIs' },
+  { name: 'JWT', icon: '/skills/jwt.webp', category: 'Backend y APIs' },
+  { name: 'REST API', icon: '/skills/rest-api.webp', category: 'Backend y APIs' },
   { name: 'Kafka', icon: '/skills/kafka.webp', category: 'Backend y APIs' },
   { name: 'JUnit', icon: '/skills/junit.webp', category: 'Backend y APIs' },
   { name: 'Postman', icon: '/skills/postman.webp', category: 'Backend y APIs' },
