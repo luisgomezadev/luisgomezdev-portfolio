@@ -32,6 +32,30 @@ export const PROJECTS = [
     ],
   },
   {
+    title: 'Fitora',
+    description:
+      'Aplicación para la gestión de gimnasios con dos tipos de usuario, administrador y recepcionista, desde los cuales se gestionan los módulos de clientes, planes, membresías y asistencia. Está en desarrollo y, por ahora, cuenta con el backend: una API protegida con Spring Security y autenticación mediante JWT.',
+    image: '/projects_images/fitora.webp',
+    linkBackend: 'https://github.com/luisgomezadev/fitora-backend ',
+    linkBackendText: 'Ver código',
+    experience: 'Experiencia Personal',
+    home: true,
+    technologies: [
+      {
+        name: 'Spring Boot',
+        image: '/skills/spring.webp',
+      },
+      {
+        name: 'Spring Security',
+        image: '/skills/spring-security.webp',
+      },
+      {
+        name: 'JWT',
+        image: '/skills/jwt.webp',
+      }
+    ],
+  },
+  {
     title: 'Daniel Kelly | Página web',
     description:
       'Sitio web profesional para un entrenador personal, diseñado para presentar sus servicios, programas de entrenamiento, eventos y canales de contacto mediante una experiencia visual moderna, rápida y fácil de navegar.',
