@@ -5,36 +5,62 @@ import EmailIcon from '../assets/icons/EmailIcon.astro'
 import ButtonLink from './shared/ButtonLink.astro'
 
 const { id } = Astro.props
+
+const highlights = ['Java', 'Spring Boot', 'Angular']
 ---
 
 <section
   id={id}
-  class="relative min-h-screen scroll-mt-16 overflow-x-hidden bg-[#12161C] flex items-center"
+  class="relative min-h-screen scroll-mt-16 overflow-x-hidden bg-[#F6EFE4] text-[#2B2A28] flex items-center"
 >
   <div
-    class="relative z-10 max-w-6xl mx-auto px-4 lg:px-6 py-24 flex flex-col-reverse md:flex-row items-center justify-between gap-12 w-full"
+    class="max-w-6xl mx-auto w-full px-4 lg:px-6 pt-28 pb-24 grid gap-14 md:grid-cols-12 items-center"
   >
-    <div class="max-w-xl text-center md:text-left animate-fade-in-left">
-      <p class="font-mono text-sm text-[#1FA98C] mb-3 tracking-tight">Luis Alberto Gómez Arteaga</p>
+    <!-- Texto -->
+    <div class="md:col-span-7 text-center md:text-left">
+      <p class="motion-safe:animate-fade-up text-sm font-medium text-[#6B665F] mb-4">
+       Ingeniero de Software · Desarrollador Full Stack
+      </p>
 
-      <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-[#F5F3EE]">
-        Desarrollador de
-        <span class="block italic text-[#1FA98C]">software</span>
+      <h1
+        class="motion-safe:animate-fade-up [animation-delay:100ms] text-[clamp(3.25rem,10vw,6rem)] font-extrabold leading-[0.95] tracking-tight"
+      >
+        Luis Gómez<br />Arteaga
       </h1>
 
-      <p class="mt-6 text-lg text-[#8B96A8] max-w-md mx-auto md:mx-0">
+      <p
+        class="motion-safe:animate-fade-up [animation-delay:250ms] inline-block mt-5 -rotate-2 bg-[#12161C] text-[#F6EFE4] text-lg sm:text-xl font-extrabold uppercase tracking-wide px-5 py-2 rounded-sm"
+      >
+        Ingeniero de Software
+      </p>
+
+      <p
+        class="motion-safe:animate-fade-up [animation-delay:400ms] mt-8 text-lg leading-relaxed text-[#6B665F] max-w-md mx-auto md:mx-0"
+      >
         Construyo aplicaciones web escalables con Java, Spring Boot y Angular, cuidando tanto el
         rendimiento del backend como la experiencia de quien usa la interfaz.
       </p>
 
-      <p class="font-mono text-sm text-[#8B96A8] mt-5 tracking-tight">
-        java · spring boot · angular <span class="text-[#F2A93C]">// +5 años</span>
-      </p>
+      <ul
+        class="motion-safe:animate-fade-up [animation-delay:500ms] mt-6 flex flex-wrap gap-x-6 gap-y-2 justify-center md:justify-start text-sm font-medium"
+        aria-label="Tecnologías principales"
+      >
+        {
+          highlights.map((item) => (
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-secondary" aria-hidden="true" />
+              {item}
+            </li>
+          ))
+        }
+      </ul>
 
-      <footer class="flex gap-3 mt-8 justify-center md:justify-start">
+      <footer
+        class="motion-safe:animate-fade-up [animation-delay:600ms] flex flex-wrap gap-3 mt-10 justify-center md:justify-start"
+      >
         <ButtonLink
           title="Descargar CV de Luis Gomez"
-          class="bg-[#1FA98C] text-[#12161C] font-semibold hover:bg-[#1FA98C]/90"
+          class="rounded-full bg-primary text-[#12161C] font-semibold uppercase tracking-wide hover:bg-primary/90"
           href="/files/CV_Luis_Gomez_2026.pdf"
         >
           <CvIcon size={20} />
@@ -43,7 +69,7 @@ const { id } = Astro.props
         <ButtonLink
           href="mailto:luisgomez24g@gmail.com"
           title="Enviar correo a Luis Gomez"
-          class="border border-[#8B96A8]/40 text-[#F5F3EE] bg-transparent hover:border-[#1FA98C] hover:text-[#1FA98C]"
+          class="rounded-full border border-[#2B2A28]/20 bg-transparent text-[#2B2A28] font-semibold uppercase tracking-wide hover:border-primary hover:text-[#12161C] hover:bg-white/60"
         >
           <EmailIcon size={20} />
           Contactar
@@ -51,74 +77,24 @@ const { id } = Astro.props
       </footer>
     </div>
 
-    <div class="relative animate-fade-in-up group">
+    <!-- Foto -->
+    <div
+      class="motion-safe:animate-fade-in-right [animation-delay:200ms] md:col-span-5 relative w-fit mx-auto md:mx-0 md:justify-self-end"
+    >
       <span
-        class="absolute -top-3 -left-3 w-10 h-10 border-t-2 border-l-2 border-[#1FA98C] transition-all duration-300 group-hover:-top-4 group-hover:-left-4"
-      ></span>
-      <span
-        class="absolute -bottom-3 -right-3 w-10 h-10 border-b-2 border-r-2 border-[#1FA98C] transition-all duration-300 group-hover:-bottom-4 group-hover:-right-4"
-      ></span>
+        class="absolute inset-0 translate-x-4 translate-y-4 rounded-4xl bg-secondary/30"
+        aria-hidden="true"></span>
       <img
         src="/images/perfil_linkedin.webp"
         alt="Luis Alberto Gómez Perfil"
-        class="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-cover md:grayscale hover:grayscale-0 transition-all duration-500"
+        class="relative block w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-cover rounded-4xl shadow-xl shadow-[#2B2A28]/15"
       />
+      <p
+        class="motion-safe:animate-fade-up [animation-delay:800ms] absolute -bottom-4 -left-4 flex items-center gap-2 bg-white rounded-full px-4 py-2 text-sm font-semibold shadow-lg shadow-[#2B2A28]/10"
+      >
+        <span class="w-2 h-2 rounded-full bg-primary" aria-hidden="true"></span>
+        +5 años de experiencia
+      </p>
     </div>
   </div>
 </section>
-
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,500&family=JetBrains+Mono:wght@400;500&display=swap');
-
-  .font-serif {
-    font-family: 'Fraunces', serif;
-  }
-  .font-mono {
-    font-family: 'JetBrains Mono', monospace;
-  }
-
-  .cursor-blink {
-    animation: blink 1s step-end infinite;
-  }
-  @keyframes blink {
-    50% {
-      opacity: 0;
-    }
-  }
-
-  .animate-fade-in-left {
-    animation: fadeInLeft 1s ease-out both;
-  }
-  @keyframes fadeInLeft {
-    from {
-      opacity: 0;
-      transform: translateX(-30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  .animate-fade-in-up {
-    animation: fadeInUp 1s ease-out both;
-  }
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .animate-fade-in-left,
-    .animate-fade-in-up,
-    .cursor-blink {
-      animation: none;
-    }
-  }
-</style>

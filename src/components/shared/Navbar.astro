@@ -1,81 +1,56 @@
 ---
-import ExperienceIcon from '../../assets/icons/ExperienceIcon.astro'
-import CodeIcon from '../../assets/icons/CodeIcon.astro'
-import SkillIcon from '../../assets/icons/SkillIcon.astro'
-import MailIcon from '../../assets/icons/MailIcon.astro'
+const links = [
+  { href: '#experiencia', label: 'Experiencia' },
+  { href: '#habilidades', label: 'Habilidades' },
+  { href: '#proyectos', label: 'Proyectos' },
+  { href: '#contacto', label: 'Contacto' },
+]
 ---
 
 <header
-  class="fixed top-0 left-0 w-full p-3 md:p-0 duration-300 z-30 transition-all backdrop-blur-3xl bg-transparent"
+  class="site-nav fixed top-0 left-0 w-full z-30 h-16 bg-[#F6EFE4]/80 backdrop-blur-md text-[#2B2A28]"
 >
   <nav
-    class="duration-300 mx-auto max-w-7xl w-full text-[#F5F3EE] flex items-center py-2 lg:py-5 lg:justify-between justify-center h-auto transition-all md:px-4 lg:px-6"
+    class="max-w-6xl mx-auto h-full px-4 lg:px-6 flex items-center justify-center lg:justify-between"
   >
-    <a 
+    <a
       href="#inicio"
-      class="flex items-center gap-2 font-bold transition-transform duration-300 hover:scale-105"
+      class="flex items-center gap-3 rounded-full focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
     >
-      <img src="/logo_personal_blanco.webp" alt="Logo Luis Gomez Dev" class="w-8" />
-      <span class="font-mono text-xl tracking-tight">LuisGomezDev</span>
+      <span class="flex items-center justify-center w-10 h-10 bg-[#12161C] rounded-xl">
+        <img src="/logo_personal_blanco.webp" alt="Logo Luis Gomez Dev" class="w-6" />
+      </span>
+      <span class="text-xl font-bold tracking-tight">LuisGomezDev</span>
     </a>
 
-    <ul class="hidden lg:flex items-center gap-x-7 sm:gap-x-12">
-      <li>
-        <a href="#experiencia" class="group relative flex gap-2 items-center text-[#F5F3EE]/90 hover:text-[#F5F3EE]">
-          <div class="hidden md:block text-[#8B96A8]"><ExperienceIcon /></div>
-          Experiencia
-          <span
-            class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-[#1FA98C] transition-all duration-300 group-hover:w-full group-hover:left-0"
-          ></span>
-        </a>
-      </li>
-      <li>
-        <a href="#habilidades" class="group relative flex gap-2 items-center text-[#F5F3EE]/90 hover:text-[#F5F3EE]">
-          <div class="hidden md:block text-[#8B96A8]"><SkillIcon /></div>
-          Habilidades
-          <span
-            class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-[#1FA98C] transition-all duration-300 group-hover:w-full group-hover:left-0"
-          ></span>
-        </a>
-      </li>
-      <li>
-        <a href="#proyectos" class="group relative flex gap-2 items-center text-[#F5F3EE]/90 hover:text-[#F5F3EE]">
-          <div class="hidden md:block text-[#8B96A8]"><CodeIcon /></div>
-          Proyectos
-          <span
-            class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-[#1FA98C] transition-all duration-300 group-hover:w-full group-hover:left-0"
-          ></span>
-        </a>
-      </li>
-      <li>
-        <a href="#contacto" class="group relative flex gap-2 items-center text-[#F5F3EE]/90 hover:text-[#F5F3EE]">
-          <div class="hidden md:block text-[#8B96A8]"><MailIcon /></div>
-          Contacto
-          <span
-            class="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-[#1FA98C] transition-all duration-300 group-hover:w-full group-hover:left-0"
-          ></span>
-        </a>
-      </li>
+    <ul class="hidden lg:flex items-center gap-1 bg-[#2B2A28]/[0.06] rounded-full p-1">
+      {
+        links.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class="block rounded-full px-4 py-2 text-sm font-semibold uppercase tracking-wide text-[#2B2A28]/80 hover:bg-white hover:text-[#2B2A28] transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-primary"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
     </ul>
+
+    <a
+      href="/files/CV_Luis_Gomez_2026.pdf"
+      class="hidden lg:inline-block rounded-full bg-primary text-[#12161C] px-6 py-2.5 text-sm font-semibold uppercase tracking-wide hover:bg-primary/90 transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#12161C]"
+    >
+      Descargar CV
+    </a>
   </nav>
 </header>
 
-<script lang="ts">
-  if (typeof window !== 'undefined') {
-    const header = document.querySelector('header')
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header?.classList.add('bg-[#12161C]/80', 'shadow-md', 'backdrop-blur-xl')
-        header?.classList.remove('bg-transparent', 'py-3')
-      } else {
-        header?.classList.remove(
-          'bg-[#12161C]/80',
-          'shadow-md',
-          'backdrop-blur-xl'
-        )
-        header?.classList.add('bg-transparent', 'py-3')
-      }
-    })
+  .site-nav {
+    font-family: 'Outfit', ui-sans-serif, system-ui, sans-serif;
   }
-</script>
+</style>

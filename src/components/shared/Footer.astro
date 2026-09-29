@@ -2,14 +2,19 @@
 
 ---
 
-<section class="bg-[#12161C] pb-28 lg:pb-12 pt-8 border-t border-[#8B96A8]/15">
-  <footer class="flex justify-center max-w-7xl mx-auto items-center px-3 xl:px-0">
-    <p class="font-mono text-xs text-[#8B96A8]">
-      © {new Date().getFullYear()} <span class="text-[#1FA98C]">luis-gomez</span>.dev
-    </p>
-  </footer>
-</section>
+<footer class="site-footer bg-[#12161C] text-[#F6EFE4]/80 pb-28 lg:pb-10 pt-10">
+  <div
+    class="max-w-6xl mx-auto px-4 lg:px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm"
+  >
+    <p>© {new Date().getFullYear()} Luis Alberto Gómez Arteaga</p>
+    <p class="font-semibold text-primary">luis-gomez.dev</p>
+  </div>
+</footer>
 
 <style>
-  .font-mono { font-family: 'JetBrains Mono', monospace; }
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+  .site-footer {
+    font-family: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+  }
 </style>

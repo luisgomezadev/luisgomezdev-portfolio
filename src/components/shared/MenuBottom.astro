@@ -3,28 +3,37 @@ import ExperienceIcon from '../../assets/icons/ExperienceIcon.astro'
 import CodeIcon from '../../assets/icons/CodeIcon.astro'
 import SkillIcon from '../../assets/icons/SkillIcon.astro'
 import MailIcon from '../../assets/icons/MailIcon.astro'
+
+const links = [
+  { href: '#experiencia', label: 'Experiencia', icon: ExperienceIcon },
+  { href: '#habilidades', label: 'Habilidades', icon: SkillIcon },
+  { href: '#proyectos', label: 'Proyectos', icon: CodeIcon },
+  { href: '#contacto', label: 'Contacto', icon: MailIcon },
+]
 ---
 
-<div class="lg:hidden px-4 pb-4 fixed bottom-0 w-full z-50">
-  <div
-    class="border border-[#8B96A8]/25 bg-[#1D232C]/95 backdrop-blur-xl shadow-2xl shadow-black/40 rounded-full z-50"
+<div class="lg:hidden fixed bottom-0 left-0 w-full z-50 px-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
+  <nav
+    aria-label="Navegación principal"
+    class="bg-[#F6EFE4]/90 backdrop-blur-xl border border-[#2B2A28]/10 shadow-xl shadow-[#2B2A28]/15 rounded-full"
   >
-    <nav class="flex items-center justify-around">
-      <a href="#experiencia" class="group flex flex-col items-center p-4 text-sm text-[#8B96A8] hover:text-[#1FA98C] transition-colors duration-300">
-        <div><ExperienceIcon /></div>
-      </a>
-
-      <a href="#habilidades" class="group flex flex-col items-center p-4 text-sm text-[#8B96A8] hover:text-[#1FA98C] transition-colors duration-300">
-        <div><SkillIcon /></div>
-      </a>
-
-      <a href="#proyectos" class="group flex flex-col items-center p-4 text-sm text-[#8B96A8] hover:text-[#1FA98C] transition-colors duration-300">
-        <div><CodeIcon /></div>
-      </a>
-
-      <a href="#contacto" class="group flex flex-col items-center p-4 text-sm text-[#8B96A8] hover:text-[#1FA98C] transition-colors duration-300">
-        <div><MailIcon /></div>
-      </a>
-    </nav>
-  </div>
+    <ul class="flex items-center justify-around p-1">
+      {
+        links.map((link) => {
+          const Icon = link.icon
+          return (
+            <li>
+              <a
+                href={link.href}
+                aria-label={link.label}
+                class="flex items-center justify-center p-3.5 rounded-full text-[#6B665F] hover:bg-white hover:text-[#0E7A65] active:bg-primary/20 transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-primary"
+              >
+                <Icon />
+              </a>
+            </li>
+          )
+        })
+      }
+    </ul>
+  </nav>
 </div>
